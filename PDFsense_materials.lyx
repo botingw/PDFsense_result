@@ -1,0 +1,8339 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass revtex4
+\begin_preamble
+\PassOptionsToPackage{english}{babel}
+
+\usepackage{float}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage{epsfig}
+% need for subequations
+% defines \lesssim, etc
+% need for figures
+% useful for program listings
+% use if color is used in text
+%\linespread{1.5}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\def\ltap{\raisebox{-.6ex}{\rlap{$\,\sim\,$}} \raisebox{.4ex}{$\,<\,$}}
+\def\gtap{\raisebox{-.6ex}{\rlap{$\,\sim\,$}} \raisebox{.4ex}{$\,>\,$}}
+\def\lra{\leftrightarrow}
+\def\naive{na\"{\i}ve}
+\newcommand{\as}{\alpha_{\mathrm{S}}}
+\newcommand{\f}[2]{\frac{#1}{#2}}
+\def\beq{\begin{equation}}
+\def\b0{\beta_0}
+\def\bone{\beta_1}
+\def\btwo{\beta_2}
+\def\eeq{\end{equation}}
+\def\beeq{\begin{eqnarray}}
+\def\eeeq{\end{eqnarray}}
+\def\bom#1{{\mbox{\boldmath $#1$}}}
+\def\to{\rightarrow}
+\def\ito{\leftarrow}
+\def\nn{\nonumber}
+\def\arrowlimit#1{\mathrel{\mathop{\longrightarrow}\limits_{#1}}}
+\def\qt{q_T}
+\newcommand{\asFPi}{\frac{\as}{4\pi}}
+\def\ptmin{p_{T{\rm min}}}
+\def\ptmax{p_{T{\rm max}}}
+\def\ms{${\overline {\rm MS}}$}
+\def\tL{{\widetilde L}}
+\newcommand{\ib}{\bar{\imath}}
+\end_preamble
+\options aps,prd,superscriptaddress,nofootinbib,showpacs,showkeys,floatfix
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding iso8859-15
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks false
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref section
+\pdf_pdfusetitle false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Preprint
+SMU-HEP-?-?
+\end_layout
+
+\begin_layout Title
+PDFsense Results
+\end_layout
+
+\begin_layout Author
+Bo Ting Wang
+\end_layout
+
+\begin_layout Affiliation
+Department of Physics, Southern Methodist University,
+\begin_inset Newline newline
+\end_inset
+
+ Dallas, TX 75275-0181, U.S.A.
+ 
+\end_layout
+
+\begin_layout Author
+Pavel
+\begin_inset space ~
+\end_inset
+
+M.
+ Nadolsky
+\end_layout
+
+\begin_layout Affiliation
+Department of Physics, Southern Methodist University,
+\begin_inset Newline newline
+\end_inset
+
+ Dallas, TX 75275-0181, U.S.A.
+ 
+\end_layout
+
+\begin_layout Abstract
+[* UPDATE THE ABSTRACT *] 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% We demonstrate a collection of tools and metrics for quantitatively
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% studying the sensitivity of hadronic measurements to the underlying
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Parton Distribution Functions (PDFs).
+ 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\color red
+Replace PACS with PhySH:
+\family typewriter
+https://www.aps.org/publications/apsnews/201602/classification.cfm
+\family default
+\color inherit
+ 
+\end_layout
+
+\begin_layout PACS
+
+\color red
+12.15.Ji, 12.38 Cy, 13.85.Qk
+\end_layout
+
+\begin_layout Keywords
+parton distribution functions; Large Hadron Collider; Higgs boson
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% - - - - - - SECTION I - - - - - - - - - - - - - - - - - - - - - - -
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Introduction"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+......
+\end_layout
+
+\begin_layout Section
+PDF preliminaries 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:PDF-preliminaries"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Data residuals in a global QCD analysis 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Data-residuals"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+While various theoretical methods exist to compute nucleon PDFs in terms
+ of models, their unambiguous evaluation in terms of QCD is not yet possible
+ due to the fact that the PDFs can in general receive substantial nonperturbativ
+e contributions at infrared momenta.
+ For this reason, precise PDF determination has proceeded mainly through
+ the technique of the QCD global analysis — a method enabled by QCD factorizatio
+n and PDF universality.
+\end_layout
+
+\begin_layout Standard
+In this approach, a highly flexible parametric form is ascribed for the
+ various flavors in a given analysis at a relatively low scale 
+\begin_inset Formula $Q_{0}^{2}$
+\end_inset
+
+.
+ For example, one might take the input PDF for a given quark flavor 
+\begin_inset Formula $f$
+\end_inset
+
+ to be an 
+\begin_inset Formula $n$
+\end_inset
+
+-parameter form 
+\begin_inset Formula 
+\begin{equation}
+f(x,\mu^{2}=Q_{0}^{2})=A_{f,0}\,x^{A_{f,1}}(1-x)^{A_{f,2}}\,F(x;\,A_{f,3},\dots)\ ,\label{eq:fitform}
+\end{equation}
+
+\end_inset
+
+in which 
+\begin_inset Formula $F(x;\:A_{f,3},\dots)$
+\end_inset
+
+ can be a suitable polynomial function, 
+\shape italic
+e.g.
+\shape default
+, a Chebyshev or Bernstein polynomial, or replaced with a feed-forward neural
+ network 
+\begin_inset Formula $\mathrm{NN}_{f}(x)$
+\end_inset
+
+ as in the NNPDF approach.
+ While the full statistical theory for PDF determination and error quantificatio
+n is beyond the intended range of this analysis, roughly speaking, a best
+ fit is found for a vector 
+\begin_inset Formula $\vec{A}$
+\end_inset
+
+ of 
+\begin_inset Formula $N$
+\end_inset
+
+ PDF parameters 
+\begin_inset Formula $A_{l}$
+\end_inset
+
+ by minimizing a goodness-of-fit function 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ describing agreement of the QCD data and physical observables computed
+ in terms of the PDFs.
+ Based on the behavior of 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ in the neighbourhood of the global minimum, it is then possible to construct
+ an ensemble of error PDFs to quantify uncertainties of PDFs at a predetermined
+ confidence level.
+ 
+\end_layout
+
+\begin_layout Standard
+There are in principle various ways to evaluate uncertainties on PDFs, 
+\emph on
+e.g.
+\emph default
+, the Hessian method 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pumplin:2001ct,Pumplin:2002vw"
+
+\end_inset
+
+, the Monte Carlo method 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Giele:1998gw,Giele:2001mr"
+
+\end_inset
+
+, and the Lagrange Multiplier approach 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Stump:2001gu"
+
+\end_inset
+
+.
+ In this analysis our default PDF input set is CT14HERA2, which uses the
+ Hessian method to estimate uncertainties and is therefore based on the
+ quadratic assumption for 
+\begin_inset Formula $\chi^{2}(\vec{a}$
+\end_inset
+
+) in the vicinity of the global minimum at 
+\begin_inset Formula $\vec{a}_{0}$
+\end_inset
+
+.
+ In the Hessian method, an orthonormal basis of PDF parameters 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ is derived from the input PDF parameters
+\begin_inset Formula $\vec{A}$
+\end_inset
+
+ by the diagonalization of a Hessian matrix 
+\begin_inset Formula $H$
+\end_inset
+
+, which encodes the second-order derivatives of 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ with respect to the physical PDF model parameters 
+\begin_inset Formula $A_{l}$
+\end_inset
+
+.
+ The eigenvector PDF combinations 
+\begin_inset Formula $\vec{a}_{l}^{\pm}$
+\end_inset
+
+are found for two extreme variations along the direction of the 
+\begin_inset Formula $l$
+\end_inset
+
+-th eigenvector of 
+\begin_inset Formula $H$
+\end_inset
+
+ allowed at a given probability level.
+ The uncertainty on a QCD observable 
+\begin_inset Formula $X$
+\end_inset
+
+ can then be estimated with one of available 
+\begin_inset Quotes eld
+\end_inset
+
+master formulas
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "ref to ABM formula with 1 eigenset per direction"
+key "Pumplin:2002vw,Nadolsky:2001yg"
+
+\end_inset
+
+, the simplest 
+\begin_inset Quotes eld
+\end_inset
+
+symmetric
+\begin_inset Quotes erd
+\end_inset
+
+ variety of which is 
+\begin_inset Formula 
+\begin{align}
+\Delta X & =\frac{1}{2}\sqrt{\sum_{l=1}^{N}(X_{l}^{+}-X_{l}^{-})^{2}}\ .\label{DelX}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the CTEQ-TEA global analysis, the 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ function accounts for multiple sources of experimental uncertainties, as
+ well as for some prior theoretical constraints on the 
+\begin_inset Formula $a_{l}$
+\end_inset
+
+ parameters.
+ Consequently, the global 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ function takes the form 
+\begin_inset Formula 
+\begin{equation}
+\text{\chi}_{global}^{2}=\sum_{E}\chi_{E}^{2}+\chi_{th}^{2},\label{chi2global}
+\end{equation}
+
+\end_inset
+
+where the sum runs over all experimental data sets 
+\begin_inset Formula $(E);$
+\end_inset
+
+ and 
+\begin_inset Formula $\chi_{th}^{2}$
+\end_inset
+
+ imposes theoretical constraints.
+ The complete formulas for 
+\begin_inset Formula $\chi_{E}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\chi_{th}^{2}$
+\end_inset
+
+ can be found in Ref.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Gao:2013xoa"
+
+\end_inset
+
+.
+ For the purposes of this paper, we express 
+\begin_inset Formula $\chi_{E}^{2}$
+\end_inset
+
+ for each experiment 
+\begin_inset Formula $E$
+\end_inset
+
+ in a compact form as a sum of squared
+\emph on
+ shifted residuals
+\emph default
+ 
+\begin_inset Formula $r_{i}^{2}(\vec{a})$
+\end_inset
+
+, which are summed over 
+\begin_inset Formula $N_{pts}$
+\end_inset
+
+ individual data points 
+\begin_inset Formula $i$
+\end_inset
+
+ in this experiment: 
+\begin_inset Formula 
+\begin{align}
+\chi_{E}^{2}(\vec{a}) & =\sum_{i=1}^{N_{pts}}\,r_{i}^{2}(\vec{a}).\label{eq:chi2}
+\end{align}
+
+\end_inset
+
+In turn, 
+\begin_inset Formula $r_{i}(\vec{a})$
+\end_inset
+
+ for the 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ data point is constructed from the theoretical prediction 
+\begin_inset Formula $T_{i}(\vec{a})$
+\end_inset
+
+ evaluated in terms of PDFs, total uncorrelated uncertainty 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+, and the shifted central data value 
+\begin_inset Formula $D_{i,sh}(\vec{a})$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align}
+r_{i}(\vec{a}) & =\frac{1}{s_{i}}\,\big(T_{i}(\vec{a})-D_{i,sh}(\vec{a})\big)\ .\label{eq:residual}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This representation arises because, due to the presence of correlated systematic
+ errors in many experimental data sets, 
+\begin_inset Formula $\chi_{E}^{2}$
+\end_inset
+
+ is dependent on 
+\begin_inset Formula $N_{\lambda}$
+\end_inset
+
+ nuisance parameters 
+\begin_inset Formula $\lambda_{\alpha}$
+\end_inset
+
+ associated with the correlated systematic factors, in addition to the PDF
+ parameters 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ and theoretical parameters such as 
+\begin_inset Formula $\alpha_{s}(M_{Z})$
+\end_inset
+
+ and particle masses.
+ The 
+\begin_inset Formula $\lambda_{\alpha}$
+\end_inset
+
+ parameters are optimized for each 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ according to the analytic solution derived in Appendix B of Ref.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pumplin:2002vw"
+
+\end_inset
+
+.
+ Optimization effectively shifts the central value 
+\begin_inset Formula $D_{i}$
+\end_inset
+
+ of the data point by an amount determined by the optimal nuisance parameters
+ 
+\begin_inset Formula $\overline{\lambda}_{\alpha}(\vec{a})$
+\end_inset
+
+ and the correlated systematic errors 
+\begin_inset Formula $\beta_{i\alpha}:$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+D_{i}\rightarrow D_{i,sh}(\vec{a})=D_{i}-\sum_{\alpha=1}^{N_{\lambda}}\beta_{i\alpha}\overline{\lambda}_{\alpha}(\vec{a}).
+\end{equation}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+We point out that some alternative representations for 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ include the correlated systematic errors via a covariance matrix 
+\begin_inset Formula $\left(\mbox{cov}\right)_{ij}$
+\end_inset
+
+, rather than the above mentioned CTEQ-preferred form that explicitly operates
+ with 
+\begin_inset Formula $\lambda_{\alpha}$
+\end_inset
+
+.
+ Various 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ definitions in use are reviewed in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ball:2012wy"
+
+\end_inset
+
+, as well as in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Alekhin:2014irh"
+
+\end_inset
+
+.
+ On the other hand, the representations based operating with 
+\begin_inset Formula $\lambda_{\alpha}$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(\mbox{cov}\right)_{ij}$
+\end_inset
+
+ are derivable from each other 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Gao:2013xoa"
+
+\end_inset
+
+.
+ From an extension of the derivation in Ref.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pumplin:2002vw"
+
+\end_inset
+
+, we may relate the shifted residual to the covariance matrix at each individual
+ point as 
+\begin_inset Formula 
+\begin{equation}
+r_{i}(\vec{a})\ =\ s_{i}\sum_{j=1}^{N_{\mathit{pts}}}(\mathrm{cov}^{-1})_{ij}\,\left(T_{j}(\vec{a})-D_{j}\right),\label{eq:res-cov}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\begin{equation}
+(\mathrm{cov}^{-1})_{ij}\ =\ \left[\frac{\delta_{ij}}{s_{i}^{2}}\,-\,\sum_{\alpha,\beta=1}^{N_{\lambda}}\frac{\beta_{i\alpha}}{s_{i}^{2}}A_{\alpha\beta}^{-1}\frac{\beta_{j\beta}}{s_{j}^{2}}\right]\ ,\label{eq:covmat}
+\end{equation}
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\begin{equation}
+A_{\alpha\beta}\ =\ \delta_{\alpha\beta}\,+\,\sum_{k=1}^{N_{\mathit{pts}}}\frac{\beta_{k\alpha}\beta_{k\beta}}{s_{k}^{2}}\ .
+\end{equation}
+
+\end_inset
+
+Thus, even if the PDF analyses operates with the covariance matrix, one
+ is still able to determine the shifted residuals 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ from 
+\begin_inset Formula $\left(\mbox{cov}^{-1}\right)_{ij}$
+\end_inset
+
+ using Eq.
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:res-cov"
+
+\end_inset
+
+).
+ In this article, we conveniently follow the CTEQ methodology and obtain
+ 
+\begin_inset Formula $r_{i}(\vec{a})$
+\end_inset
+
+ directly from the CTEQ-TEA fitting program, together with optimal nuisance
+ parameters 
+\begin_inset Formula $\overline{\lambda}_{\alpha}(\vec{a})$
+\end_inset
+
+ and shifted central data values 
+\begin_inset Formula $D_{i,sh}(\vec{a}).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Visualization of the global fit with the help of residuals
+\end_layout
+
+\begin_layout Standard
+......
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+clearpage
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Quantifying distributions of residuals
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:QuantifyingDistributionsOfResiduals"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We have demonstrated that the multi-dimensional distribution of the shifted
+ residuals 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ evaluated with Hessian eigenvector PDFs reflects PDF dependence of individual
+ data points.
+ In this section, we will focus on numerical metrics to assess the emerging
+ geometrical picture and to visualize the regions of partonic momentum fractions
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ and QCD factorization scales 
+\begin_inset Formula $\mu$
+\end_inset
+
+ where the experiments impose strong constraints on a given PDF-dependent
+ observable 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+Reciprocated distances 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Reciprocated-distances"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Correlations and sensitivities 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:CorrelationsSensitivities"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Next, we examine gradients of 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ in space of eigenvector PDF parameters 
+\begin_inset Formula $\vec{a},$
+\end_inset
+
+ where they are naturally related to to the PDF uncertainty in the Hessian
+ approach.
+ Recall that in the Hessian method the PDF uncertainty on 
+\begin_inset Formula $X(\vec{a})$
+\end_inset
+
+ is found as 
+\begin_inset Formula 
+\begin{equation}
+\Delta X(\vec{a})=X(\vec{a})-X(\vec{a}_{0})=\vec{\nabla}X|_{\vec{a}_{0}}\cdot\Delta\vec{a},
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\vec{a}_{0}$
+\end_inset
+
+ is the best-fit combination of PDF parameters, and 
+\begin_inset Formula $\Delta\vec{a}$
+\end_inset
+
+ is the maximal displacement along the gradient that is allowed within the
+ tolerance hypesphere of radius 
+\begin_inset Formula $T$
+\end_inset
+
+ centered on the best fit 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pumplin:2001ct,Pumplin:2002vw"
+
+\end_inset
+
+.
+ The standard master formula 
+\begin_inset Formula 
+\begin{equation}
+\Delta X=\left\vert \vec{\nabla}X\right\vert =\frac{1}{2}\sqrt{\sum_{l=1}^{N}\left(X_{l}^{+}-X_{i}^{-}\right)^{2}}\label{masterDX-1}
+\end{equation}
+
+\end_inset
+
+is obtained by representing the components of 
+\begin_inset Formula $\vec{\nabla}X$
+\end_inset
+
+ by a finite-difference formula 
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial X}{\partial a_{i}}=\frac{1}{2}(X_{i}^{+}-X_{i}^{-}),\label{dXdzi-1-1}
+\end{equation}
+
+\end_inset
+
+in terms of the values 
+\begin_inset Formula $X_{l}^{\pm}$
+\end_inset
+
+ for extreme displacements of 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ within the tolerance hypersphere along the 
+\begin_inset Formula $l$
+\end_inset
+
+-th direction.
+ 
+\end_layout
+
+\begin_layout Standard
+In this setup, a dot product between the gradients provides a convenient
+ measure of the degree of similarity between PDF dependence of two quantities
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Nadolsky:2008zw"
+
+\end_inset
+
+.
+ A dot product 
+\begin_inset Formula $\vec{\nabla}r_{i}\cdot\vec{\nabla f}$
+\end_inset
+
+ between the gradients of a shifted residual 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ and another QCD variable 
+\begin_inset Formula $f$
+\end_inset
+
+, such as the PDF at some 
+\begin_inset Formula $\{x,\mu\}$
+\end_inset
+
+ or a cross section, can be cast in a number of useful forms.
+\end_layout
+
+\begin_layout Subsubsection
+Correlation cosine.
+ 
+\end_layout
+
+\begin_layout Standard
+The correlation, which we define following Refs.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pumplin:2001ct,Nadolsky:2001yg,Nadolsky:2008zw,Gao:2017yyd"
+
+\end_inset
+
+ according to 
+\begin_inset Formula 
+\begin{equation}
+C_{f}\,\equiv\,\mbox{Corr}[f,r_{i}]=\frac{\vec{\nabla f}\cdot\vec{\nabla r}_{i}}{\Delta f\,\Delta r_{i}},\label{eq:corr}
+\end{equation}
+
+\end_inset
+
+encodes the quantitative relation between 
+\begin_inset Formula $f$
+\end_inset
+
+ and 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ and can determine whether there 
+\emph on
+can
+\emph default
+ exist a predictive relationship between 
+\begin_inset Formula $f$
+\end_inset
+
+ and goodness of fit to the 
+\begin_inset Formula $i$
+\end_inset
+
+-th data point.
+ The correlation function 
+\begin_inset Formula $\mathrm{\mbox{Corr}}[X,Y]$
+\end_inset
+
+ of the quantities 
+\begin_inset Formula $X,\,Y$
+\end_inset
+
+ in Eq.
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:corr"
+
+\end_inset
+
+) represents the Hessian formalism realization of the Pearson's correlation
+ coefficient, which we express as 
+\begin_inset Formula 
+\begin{align}
+\mathrm{\mbox{Corr}}[X,Y] & =\frac{1}{4\Delta X\Delta Y}\sum_{j=1}^{N}(X_{j}^{+}-X_{j}^{-})(Y_{j}^{+}-Y_{j}^{-})\ ,\label{eq:corr-def}
+\end{align}
+
+\end_inset
+
+the sum in these expressions being over the 
+\begin_inset Formula $j$
+\end_inset
+
+ parameters of the full PDF model space.
+ Geometrically, 
+\begin_inset Formula $\mbox{Corr}[X,Y]$
+\end_inset
+
+ represents the cosine of the angle that determines the eccentricity of
+ an ellipse satisfying 
+\begin_inset Formula $\chi^{2}(\vec{a})<\chi^{2}(\vec{a}_{0})+T^{2}$
+\end_inset
+
+ in the 
+\begin_inset Formula $\{X,Y\}$
+\end_inset
+
+ plane.
+ This latter point follows from the fact that the mapping of the tolerance
+ hypersphere onto the 
+\begin_inset Formula $\{X,Y\}$
+\end_inset
+
+ plane is an ellipse, its eccentricity depends on the correlation of 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y,$
+\end_inset
+
+ which in turn is given by Eq.
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:corr-def"
+
+\end_inset
+
+) above.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mbox{Corr}[r_{i},f]$
+\end_inset
+
+ does not indicate how constraining the residual is, but it may indicate
+ a predictive relation between 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $f$
+\end_inset
+
+ with a large enough magnitude of the (anti-)correlation.
+ From the past experience, we could say that the (anti-)correlation between
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ is significant roughly if 
+\begin_inset Formula $\left|\mbox{Corr}[X,Y]\right|\gtrsim0.7.$
+\end_inset
+
+ Smaller (anti-)correlation values are less robust or predictive.
+ Following this rule-of-thumb, correlations have been used successfully
+ to identify PDF combinations that dominate PDF uncertainties of complicated
+ observables, for instance to show that the gluon uncertainty dominates
+ the total uncertainty on LHC 
+\begin_inset Formula $W$
+\end_inset
+
+ and 
+\begin_inset Formula $Z$
+\end_inset
+
+ production, or that the uncertainty on the ratio 
+\begin_inset Formula $\sigma_{W}^{\pm}/\sigma_{Z}$
+\end_inset
+
+ of 
+\begin_inset Formula $W$
+\end_inset
+
+ and 
+\begin_inset Formula $Z$
+\end_inset
+
+ cross sections at the LHC is dominated by the strangeness PDF, rather than
+ 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $d$
+\end_inset
+
+ (anti-)quark PDFs 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Nadolsky:2008zw"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Sensitivity.
+\end_layout
+
+\begin_layout Standard
+While the correlation 
+\begin_inset Formula $C_{f}$
+\end_inset
+
+ can provide insight into the relationship between the PDF dependences of
+ a prediction for the 
+\begin_inset Formula $i$
+\end_inset
+
+-th data point and a QCD function 
+\begin_inset Formula $f$
+\end_inset
+
+, it alone does not fully quantify the extent to which an individual data
+ point constrains the fit uncertainty.
+ Similarly, it does not encode by itself the potential impact of separate
+ or new measurements on improving PDF determinations in terms of the uncertainty
+ reduction.
+ For this purpose, we employ 
+\begin_inset Formula $\vec{\nabla f}\cdot\vec{\nabla r}_{i}$
+\end_inset
+
+ again to define the 
+\shape italic
+sensitivity
+\shape default
+ of the 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ data point to 
+\begin_inset Formula $f$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{equation}
+S_{f}\equiv\frac{\vec{\nabla f}\cdot\vec{\nabla r}_{i}}{\Delta f\,\langle r_{0}\rangle_{E}}=\frac{\Delta r_{i}}{\langle r_{0}\rangle_{E}}\,C_{f}\ ,\label{eq:sens}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Delta r_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\langle r_{0}\rangle_{E}$
+\end_inset
+
+ are computed according to Eqs.
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "DelX"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "r0E"
+
+\end_inset
+
+), respectively.
+ In other words, 
+\begin_inset Formula $\Delta r_{i}$
+\end_inset
+
+ represents the variation of the residuals across the set of Hessian error
+ PDFs, which we normalize to the root-mean-squared residual for a given
+ experiment to reduce impact of random fluctuations of the experimental
+ data values 
+\begin_inset Formula $D_{i}$
+\end_inset
+
+.
+ This definition has the benefit of encoding not only the correlated relationshi
+p of 
+\begin_inset Formula $f$
+\end_inset
+
+ with the residual, but also the comparative size of the experimental uncertaint
+y with respect to state-of-the-art PDF uncertainties.
+ In consequence, for example, if a new experimental data have reported uncertain
+ties that are much tighter than the present PDF errors, these data would
+ register as high-sensitivity points by the definition in Eq.
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:sens"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+Geometrically, 
+\begin_inset Formula $S_{f}$
+\end_inset
+
+ represents a projection of the displaced residual vector 
+\begin_inset Formula $\vec{\delta_{i}}$
+\end_inset
+
+, defined in Sec.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:QuantifyingDistributionsOfResiduals"
+
+\end_inset
+
+ using the symmetrized formula for 
+\begin_inset Formula $\delta_{il}$
+\end_inset
+
+ from footnote 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fn:sym-deltail"
+
+\end_inset
+
+, onto the direction of the gradient 
+\begin_inset Formula $\vec{\nabla}f$
+\end_inset
+
+.
+ This interpretation suggests that the strength of constraints from the
+ global data set along the direction of 
+\begin_inset Formula $\vec{\nabla}f$
+\end_inset
+
+ can be quantified by summing projections 
+\begin_inset Formula $S_{f}$
+\end_inset
+
+ for individual 
+\begin_inset Formula $\vec{\delta}_{i}$
+\end_inset
+
+ of all contributing data points onto the direction of
+\begin_inset Formula $\vec{\nabla}f$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+As with correlations, only a sufficiently large absolute magnitude of 
+\begin_inset Formula $\left|S_{f}\right|$
+\end_inset
+
+ is indicative of a predictive constraint of the 
+\begin_inset Formula $i$
+\end_inset
+
+-th point on 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ Recall that 
+\begin_inset Formula $r_{i}^{2}$
+\end_inset
+
+ is the contribution of the 
+\begin_inset Formula $i$
+\end_inset
+
+-th point to 
+\begin_inset Formula $\chi^{2},$
+\end_inset
+
+ and that only residuals with a large enough 
+\begin_inset Formula $\Delta r_{i}$
+\end_inset
+
+, as compared to the r.m.s.
+ residual 
+\begin_inset Formula $\langle r_{0}\rangle_{E}$
+\end_inset
+
+, are sensitive to PDF variations.
+ The 
+\begin_inset Formula $S_{f}$
+\end_inset
+
+ magnitude is of order 
+\begin_inset Formula $\Delta r_{i}/\langle r_{0}\rangle_{E},$
+\end_inset
+
+ which suggests an estimate of a minimal value of 
+\begin_inset Formula $S_{f}$
+\end_inset
+
+ that would be deemed sensitive according to the respective 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ contribution.
+ For the numerical comparisons in this study, we assume that 
+\begin_inset Formula $\left|S_{f}\right|$
+\end_inset
+
+ must be no less than 0.25 to indicate a predictive constraint, as the PDF
+ uncertainty of the 
+\begin_inset Formula $i$
+\end_inset
+
+-th residual contributes no less than 0.0625 to the variation in the global
+ 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+.
+ The minimal value can be adjusted depending on accuracy.
+ 
+\end_layout
+
+\begin_layout Standard
+Yet another possible definition, which we list for completeness, is to normalize
+ the sensitivity as 
+\begin_inset Formula 
+\begin{equation}
+S_{f}^{\prime}\equiv\frac{\vec{\nabla f}\cdot\vec{\nabla r}_{i}}{f_{0}\,\langle r_{0}\rangle_{E}}=\frac{\Delta f}{f_{0}}\,S_{f}\ .\label{eq:sens-prime}
+\end{equation}
+
+\end_inset
+
+For instance, if 
+\begin_inset Formula $f$
+\end_inset
+
+ is the PDF 
+\begin_inset Formula $f(x_{i},\mu_{i})$
+\end_inset
+
+ at the same points 
+\begin_inset Formula $\{x_{i},\mu_{i}\}$
+\end_inset
+
+ as the data, the definition (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:sens-prime"
+
+\end_inset
+
+) de-emphasizes 
+\begin_inset Formula $S_{f}^{\prime}$
+\end_inset
+
+ at those data points where the PDF uncertainty
+\begin_inset Formula $\Delta f(x_{i},\mu_{i})$
+\end_inset
+
+ is small compared to the best-fit PDF value 
+\begin_inset Formula $f_{0}(x_{i},\mu_{i})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+clearpage
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case study: CTEQ-TEA global data 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:CaseCTEQ-TEA"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Maps of correlations and sensitivities
+\end_layout
+
+\begin_layout Standard
+......
+\end_layout
+
+\begin_layout Subsection
+Experiment rankings according to cumulative sensitivities 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Experiment-rankings-according"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+......
+\end_layout
+
+\begin_layout Section
+Case study: various Processes in CTEQ-TEA Data
+\end_layout
+
+\begin_layout Subsection
+All processes in CT14 HERA2 + LHC new data
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Enumerate
+showing all experiments at (x,Q) space of PDFs 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:all_expt_xQ_data"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+shows correlation, sensitivity, and respective histograms 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CorrSensH14"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Corrgluon"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Sensgluon"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+sensitivity to Higgs cross section at 14 TeV indicate the PDF sensitive
+ to the future LHC Higgs survey 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CorrSensH14"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+sensitivity to gluon PDF shows demonstrate that constraint of gluon at small
+ x region (10^-3~-5) is from HERA2 data and LHC jet data provides fluent
+ constaint to gluon at x>10^-3 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Corrgluon"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Sensgluon"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/processes/all_expt/Allexpt_xQbyexpt_xQ.pdf
+	width 100text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A graphical representation in 
+\begin_inset Formula $\{x,\mu\}$
+\end_inset
+
+ space of the full data set treated in the present analysis, designated
+ as 
+\begin_inset Quotes eld
+\end_inset
+
+CTEQ-TEA
+\begin_inset Quotes erd
+\end_inset
+
+.
+ It corresponds to an expansion of the CT14HERA2 data 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hou:2016nqm"
+
+\end_inset
+
+ fitted in the most recent CT14 framework 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Dulat:2015mca"
+
+\end_inset
+
+, including measurements from Run II of HERA 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abramowicz:2015mha"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:all_expt_xQ_data"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/processes/all_expt/Allexpt_corr_xQ+1_f8_samept.pdf
+	width 49text%
+
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/processes/all_expt/Allexpt_corrdr_xQ+1_f8_samept.pdf
+	width 48text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+For the full CTEQ-TEA dataset of Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:all_expt_xQ_data"
+
+\end_inset
+
+, we show the absolute correlation 
+\begin_inset Formula $|C_{f}|$
+\end_inset
+
+ and sensitivity 
+\begin_inset Formula $|S_{f}|$
+\end_inset
+
+ associated with the 14 TeV Higgs production cross section 
+\begin_inset Formula $\sigma_{H^{0}}(14\,\mathrm{TeV})$
+\end_inset
+
+.
+ Points with significant magnitudes of 
+\begin_inset Formula $|C_{f}|$
+\end_inset
+
+ and 
+\begin_inset Formula $|S_{f}|$
+\end_inset
+
+ are highlighted with color.
+ When only the 
+\begin_inset Formula $|C_{f}|$
+\end_inset
+
+ plot at left is considered, it is primarily a subpopulation of jet production
+ data (diagonal open and closed inverted triangles with 
+\begin_inset Formula $\mu\gtrsim100$
+\end_inset
+
+ GeV) that exhibits significant correlations, as well as some HERA DIS and
+ 
+\begin_inset Formula $t\bar{t}$
+\end_inset
+
+ production data points.
+ Our novel definition for the sensitivity in the right panel, on the other
+ hand, reveals many more points that have comparable potency for constraining
+ the Higgs cross section.
+ In this case, the great bulk of the jet production points, including many
+ of the highest scale measurements, is important, as well as a number of
+ other processes at smaller 
+\begin_inset Formula $\mu$
+\end_inset
+
+, such as DIS data from HERA (Exp.
+ ID 160), NMC (104) and CDHSW (108), Drell-Yan information from E866 (204),
+ 
+\begin_inset Formula $t\bar{t}$
+\end_inset
+
+ (565-568) and high-
+\begin_inset Formula $p_{T}$
+\end_inset
+
+ 
+\begin_inset Formula $Z$
+\end_inset
+
+ production, and even some points obtained from 
+\begin_inset Formula $Z$
+\end_inset
+
+ production at LHCb (246).
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CorrSensH14"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/processes/all_expt/corr_xQ+1_f0_samept_nohigh.pdf
+	width 49text%
+
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/processes/all_expt/Allexpt_corr_hist+1_f0_samept.pdf
+	width 48text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Two representations of the correlation 
+\begin_inset Formula $|C_{g}|(x_{i},\mu_{i})$
+\end_inset
+
+ of the gluon PDF 
+\begin_inset Formula $g(x,\mu)$
+\end_inset
+
+ with the point-wise residual 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ of the augmented CT14HERA2 analysis; in the left panel we plot a histogram
+ showing the distribution of correlations over 5227 
+\begin_inset Formula $\{x,\mu\}$
+\end_inset
+
+ points.
+ In the right panel we show the 
+\begin_inset Formula $\{x_{i},\mu_{i}\}$
+\end_inset
+
+ map of these correlations for the full dataset.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Corrgluon"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/processes/all_expt/corrdr_xQ+1_f0_samept_nohigh.pdf
+	width 49text%
+
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/processes/all_expt/Allexpt_corrdr_hist+1_f0_samept.pdf
+	width 48text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Like Fig.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Corrgluon"
+
+\end_inset
+
+, but for the gluon sensitivity 
+\begin_inset Formula $|S_{g}|(x_{i},\mu_{i})$
+\end_inset
+
+ as defined in Eq.~(
+\backslash
+ref{eq:sens}).
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Sensgluon"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+DIS NC processes
+\end_layout
+
+\begin_layout Subsection
+DIS CC processes
+\end_layout
+
+\begin_layout Subsection
+HERA Run 2 (ID = 160)
+\end_layout
+
+\begin_layout Subsection
+Jet, 
+\begin_inset Formula $t\overline{t}$
+\end_inset
+
+ and Zpt Processes
+\end_layout
+
+\begin_layout Standard
+......
+\end_layout
+
+\begin_layout Enumerate
+jet CMS and ATLAS data provide the most fluent sensitivity to gluon, b,
+ c, and Higgs processes 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:jet_ttbar_Zpt_new"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Although ttbar and Zpt are also averagely sensitive to these flavours, they
+ are not necessary when we incorporate LHC jet data sets 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:jet_ttbar_Zpt_new"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/processes/jet/new/corrdr_xQ+1_f0_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/processes/jet/new/corrdr_xQ+1_f8_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/processes/ttbar/corrdr_xQ+1_f8_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/processes/Zpt/corrdr_xQ+1_f8_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+left-up and right-up are jet (542, 544, 545).
+ left-down is ttbar (565~568).
+ right-down is Zpt (247, 253, 254, 255) events.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:jet_ttbar_Zpt_new"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $W$
+\end_inset
+
+ processes
+\end_layout
+
+\begin_layout Enumerate
+new data (249) impose d, dbar, d/u, dbar/ubar constraints 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:W_new"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/processes/W/new/corrdr_xQ+1_f2_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/processes/W/new/corrdr_xQ+1_f13_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+LHC W asymmetry data (249) 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:W_new"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $Z$
+\end_inset
+
+ processes
+\end_layout
+
+\begin_layout Section
+Case Study: LHeC 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Case-Study:-LHeC"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+......Here provide the prediction of the sensitivity analysis of LHeC DIS NC and
+ CC data sets 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:LHeC"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+LHeC DISNC data constrains small x gluon 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LHeC-sens"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LHeC-corr"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+LHeC DISCC and DISNC data constrain u and d large x and small x.
+ For the small x region, the high sensitivity results from the few constraint
+ before LHC data
+\end_layout
+
+\begin_layout Enumerate
+LHeC DISCC data is correlated to middle x region (10^-3~10^-2) s PDF, I
+ don't know why 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LHeC-corr"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+don't know why the 192 (CC), 194 (NC) are strongly correlated with the diagonal
+ part of ubar PDF 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LHeC-corr"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+large 
+\begin_inset Formula $\delta r$
+\end_inset
+
+ enhance the sensitivities of LHeC data to PDFs especially at small x region
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LHeC-dr"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/LHeC/corrdr_xQ+1_f0_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/LHeC/corrdr_xQ+1_f2_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/LHeC/corrdr_xQ+1_f3_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/LHeC/corrdr_xQ+1_f-1_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Select sensitivity plots for the LHeC pseudodata, in this case showing 
+\begin_inset Formula $|S_{g}|(x_{i},\mu_{i})$
+\end_inset
+
+ in the left-up panel, 
+\begin_inset Formula $|S_{d}|(x_{i},\mu_{i})$
+\end_inset
+
+ in the right-up, 
+\begin_inset Formula $|S_{s}|(x_{i},\mu_{i})$
+\end_inset
+
+ in the left-down, and 
+\begin_inset Formula $|S_{\overline{u}}|(x_{i},\mu_{i})$
+\end_inset
+
+ in the right-down.
+ The pseudodata are broken among four separate reaction channels — CC 
+\begin_inset Formula $e^{-}p$
+\end_inset
+
+ (circles) and 
+\begin_inset Formula $e^{+}p$
+\end_inset
+
+ (squares), as well as NC 
+\begin_inset Formula $e^{-}p$
+\end_inset
+
+ (diamonds) and 
+\begin_inset Formula $e^{+}p$
+\end_inset
+
+ (triangles).
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:LHeC-sens"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/LHeC/corr_xQ+1_f0_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/LHeC/corr_xQ+1_f2_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/LHeC/corr_xQ+1_f3_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/LHeC/corr_xQ+1_f-1_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Select correlation plots for the LHeC pseudodata, in this case showing 
+\begin_inset Formula $|C_{g}|(x_{i},\mu_{i})$
+\end_inset
+
+ in the left-up panel, 
+\begin_inset Formula $|C_{d}|(x_{i},\mu_{i})$
+\end_inset
+
+ in the right-up, 
+\begin_inset Formula $|C_{s}|(x_{i},\mu_{i})$
+\end_inset
+
+ in the left-down, and 
+\begin_inset Formula $|C_{\overline{u}}|(x_{i},\mu_{i})$
+\end_inset
+
+ in the right-down.
+ The pseudodata are broken among four separate reaction channels — CC 
+\begin_inset Formula $e^{-}p$
+\end_inset
+
+ (circles) and 
+\begin_inset Formula $e^{+}p$
+\end_inset
+
+ (squares), as well as NC 
+\begin_inset Formula $e^{-}p$
+\end_inset
+
+ (diamonds) and 
+\begin_inset Formula $e^{+}p$
+\end_inset
+
+ (triangles).
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:LHeC-corr"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/LHeC/dr_xQ+1_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/LHeC/dr_hist+1_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Select 
+\begin_inset Formula $\delta r$
+\end_inset
+
+ plots for the LHeC pseudodata, in this case showing 
+\begin_inset Formula $\delta r_{i}$
+\end_inset
+
+ in the left panel and 
+\begin_inset Formula $\delta r_{i}$
+\end_inset
+
+ histogram in the right.
+ The pseudodata are broken among four separate reaction channels — CC 
+\begin_inset Formula $e^{-}p$
+\end_inset
+
+ (circles) and 
+\begin_inset Formula $e^{+}p$
+\end_inset
+
+ (squares), as well as NC 
+\begin_inset Formula $e^{-}p$
+\end_inset
+
+ (diamonds) and 
+\begin_inset Formula $e^{+}p$
+\end_inset
+
+ (triangles).
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:LHeC-dr"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+......
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement ht
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+ID#
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+LHeC pseudodata set
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $N_{pts}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LHeC"
+
+\end_inset
+
+ symbol 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+191 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CC 
+\begin_inset Formula $e^{-}p$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+93 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+circle 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+192 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CC 
+\begin_inset Formula $e^{+}p$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+109 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+square 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+193 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NC 
+\begin_inset Formula $e^{-}p$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+128 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+diamond 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+194 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NC 
+\begin_inset Formula $e^{+}p$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+148 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+triangle 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Separate channels of the unpolarized lepton-proton deep-inleastic scattering
+ pseudodata for the LHeC from Ref.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LHeCdata"
+
+\end_inset
+
+.
+ For each channel, here we list the specific physical process, number of
+ associated pseudodata points, as well as the symbol indicating the channel
+ in the 
+\begin_inset Formula $|S_{f}|(x_{i},\mu_{i})$
+\end_inset
+
+ plots of Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LHeC"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:LHeC"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case Study: Mellin Moment 
+\end_layout
+
+\begin_layout Standard
+......Compare with lattice predictions and constrain parametrization function
+ by penalty
+\end_layout
+
+\begin_layout Enumerate
+B-C and gluon are sensitive to jet data 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Mellin_B-C"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(u^{-}-d^{-})x^{0}$
+\end_inset
+
+ should be 1 (constant) but it's total sensitivity is the same amount compared
+ with other Mellin moments 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Mellin_total_sens"
+
+\end_inset
+
+.
+ We can lower the order of precision to reduce the flutuation.
+ However, it also indicates even an physical quantity has no correlation/sensiti
+vity with data sets/PDFs, the numerical fluctuation still impose some sensitivit
+y.
+ Therefore, perhaps we don't want to consider too low sensitivity as the
+ real sensitivity.
+\end_layout
+
+\begin_layout Enumerate
+some Mellin moments are sensitive to data at a narrow x band 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Melling_x-1x0"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Mellin_x2x3"
+
+\end_inset
+
+.
+ This perhaps indicates that Mellin moments could be well-measured by just
+ constraining PDFs at specific regions.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color red
+note: the total sensitivity table uses the old formula, it should be modify
+ latter
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/MellinMoment/corrdr_xQ+1_f55_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/MellinMoment/corr_xQ+1_f55_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/MellinMoment/corrdr_xQ+1_f57_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/MellinMoment/corr_xQ+1_f57_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+data sets sensitivity to the 1st and 3rd order B-C of Melling moment
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Mellin_B-C"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement ht
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="10" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="right" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+ID#
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+|S|
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+|S| for the respective quantities
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+most 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+350~450
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+500~1000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(u^{-}-d^{-})x^{0}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+418.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+590.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B-C^2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+788.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+928.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B-C^3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+848.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+928.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T15^2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+501.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+843.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T15^3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+530.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+843.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T24^3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+536.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+826.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+g^2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+794.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+907.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+g^3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+851.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+907.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+high total sensitivity to mellin moments of quantities and the respective
+ non-mellin moment quantitives
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Mellin_total_sens"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/MellinMoment/x0x-1_corr/corr_xQ+1_f28_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/MellinMoment/x0x-1_corr/corr_xQ+1_f29_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/MellinMoment/x0x-1_corr/corr_xQ+1_f48_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/MellinMoment/x0x-1_corr/corr_xQ+1_f49_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+data sets sensitivity to x^-1, x^0 of Melling moment 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Melling_x-1x0"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/MellinMoment/x2x3_corr/corr_xQ+1_f18_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/MellinMoment/x2x3_corr/corr_xQ+1_f19_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/MellinMoment/x2x3_corr/corr_xQ+1_f21_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/MellinMoment/x2x3_corr/corr_xQ+1_f22_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+data sets sensitivity to x^2, x^3 of Melling moment
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Mellin_x2x3"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case Study: comparison of the fit with jets and with no jets
+\end_layout
+
+\begin_layout Standard
+...HERA2 and HERA2NoJet are fit with jet data sets (504, 514, 535, 538) and
+ without jet data sets.
+ Here we compare the difference of sensitivities to PDFs for HERA2 and HERA2NoJe
+t.
+\end_layout
+
+\begin_layout Enumerate
+this comparison shows the possible sensitivity impacts when incorporate
+ data sets in the fit of PDF sets 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:HERA2_HERA2NoJet_total_sens"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:HERA2_HERA2NoJet_r_dr"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:HERA2_HERA2NoJet_corr_sens"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+after fit with jet data, both total correlation and dr reduce, so the total
+ sensitivity is pulled down.
+\end_layout
+
+\begin_layout Enumerate
+changes are mainly in jet data (the total sensitivity difference are mostly
+ from jet old and new data), so the old jet data in the fit actually mostly
+ constrain the PDF space associated with jet processes
+\end_layout
+
+\begin_layout Enumerate
+ttbar and Zpt gluon are also constrained, because the constrained space
+ associated with jet processes is close to the space of ttbar/Zpt processes,
+ which is mainly associated with gluon PDF.
+\end_layout
+
+\begin_layout Enumerate
+reciprocate distance formula: 
+\begin_inset Formula $rd_{i}=(Npt-N_{sameID}/Npt)*1/(\sum_{i_{ID}\text{≠}j_{ID}}^{Npt}|\stackrel{\rightharpoonup}{v_{i}}-\stackrel{\rightharpoonup}{v_{j}}|)$
+\end_inset
+
+, where 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\stackrel{\rightharpoonup}{v_{i}}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ is the vector of PCA-reduced 10 dimensions of the normalized residual (
+\begin_inset Formula $\stackrel{\rightharpoonup}{\delta r}/r_{ID,rms}$
+\end_inset
+
+) in Hessian-replica space.
+ The comparison of reciprocate distances of normalized residuals of data
+ sets to HERA2 and HERA2NoJet shows that 234, 266, 203 are in average more
+ far away to other data in the replica space of normalized residuals 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:HERA2_HERA2NoJet_rd3"
+
+\end_inset
+
+.
+ The ranking of distances for two PDF sets are similar, indicating that
+ the fits with jet data sets (504, 514, 535, 538) does not constrain the
+ similar space of PDFs to other experiments.
+ In the LHC data sets, 245, 249, 250, 542, 545 perhaps discover more new
+ PDF space than others.
+ For the experiments with most points that are far away from other points
+ at space
+\end_layout
+
+\begin_layout Enumerate
+apply PCA and t-SNE algorithm to 
+\begin_inset Formula $\stackrel{\rightharpoonup}{\delta r}/r_{ID,rms}$
+\end_inset
+
+, we can efficiently separate it to different types, which means these algorithm
+ illustrates the difference of PDF-space constraint from data sets 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:PCA_t-SNE"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color red
+note: 1.
+ The title of HERA2NoJet figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:HERA2_HERA2NoJet_rd3"
+
+\end_inset
+
+ are not correct, which is still 
+\begin_inset Quotes eld
+\end_inset
+
+CT14HERA2 NNLO
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 2.
+ Because I use the plotted data with multiple points specified by .dta points,
+ the distances estimation of VBP, Jet, ttbar data are not correct.
+ I should use the normalized residuals of .dta data to calculate the reciprocate
+ distance.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement ht
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="14">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+ID#
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Npt
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+|r|yes
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+|r|no
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+|dr|yes
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+|dr|no
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+|Cg|yes
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+|Cg|no
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+|Sg|yes
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+|Sg|no
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+|Cs|yes
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+|Cs|no
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+|Ss|yes
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+|Ss|no
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+All
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5227
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4857.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5345.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3835.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4979.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1398.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1636.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+847.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1215.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+693.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+901.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+450.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+677.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+jet old 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+666
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+478.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+554.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+266.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+537.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+242.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+298.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+106.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+224.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+79.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+140.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+33.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+103.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+jet new
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+804
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+860.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1250.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+874.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1707.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+390.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+420.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+337.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+522.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+135.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+195.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+117.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+230.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ttbar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+35
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+26.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+43.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+18.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+34.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+18.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+14.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Zpt
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+53
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+79.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+82.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+26.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+32.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+25.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+32.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+18.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+16.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.7
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Total sensitivities comparison of HERA2 and HERA2NoJet.
+ jet old: 504, 514, 535, 538.
+ All: HERA2 data + new data (LHC jet, ttbar, Zpt, W/Z).
+ jet new: 42, 544, 545.
+ ttbar: 565, 566, 567, 568.
+ Zpt: 247, 253, 254, 255 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:HERA2_HERA2NoJet_total_sens"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/HERA2_HERA2NoJet/HERA2/residual_xQ+1_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/HERA2_HERA2NoJet/HERA2NoJet/residual_xQ+1_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/HERA2_HERA2NoJet/HERA2/dr_xQ+1_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/HERA2_HERA2NoJet/HERA2NoJet/dr_xQ+1_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+residual, deltaR of data sets to HERA2 and HERA2NoJet 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:HERA2_HERA2NoJet_r_dr"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/HERA2_HERA2NoJet/HERA2/corr_xQ+1_f0_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/HERA2_HERA2NoJet/HERA2NoJet/corr_xQ+1_f0_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/HERA2_HERA2NoJet/HERA2/corrdr_xQ+1_f0_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/HERA2_HERA2NoJet/HERA2NoJet/corrdr_xQ+1_f0_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+correlation and sensitivity of data sets to HERA2 and HERA2NoJet 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:HERA2_HERA2NoJet_corr_sens"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/HERA2_HERA2NoJet/rd3/CT14HERA2NNLOall_AbsSens_newSens_formula_cutbrokenpoints/residual_all_norm_Reciprocate_distance_rd3B.eps
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/HERA2_HERA2NoJet/rd3/HERA2_no_jet/residual_all_norm_Reciprocate_distance_rd3B.eps
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/HERA2_HERA2NoJet/rd3/CT14HERA2NNLOall_AbsSens_newSens_formula_cutbrokenpoints/residual_all_norm_Reciprocate_distance_ID_max_mean.eps
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/HERA2_HERA2NoJet/rd3/HERA2_no_jet/residual_all_norm_Reciprocate_distance_ID_max_mean.eps
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+reciprocate distance among residual/norm of points in data sets.
+ left-up: HERA2 reciprocate distance.
+ right-up: HERA2NoJet reciprocate distance.
+ left-down: mean and max of reciprocate distances by experiments, HERA2.
+ right-down: mean and max of reciprocate distances by experiments, HERA2.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:HERA2_HERA2NoJet_rd3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/HERA2_HERA2NoJet/tensorprojector/pca.pdf
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/HERA2_HERA2NoJet/tensorprojector/tsne.pdf
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Distributions of displaced residuals 
+\begin_inset Formula $\vec{\delta_{i}}$
+\end_inset
+
+ from the CTEQ-TEA analysis obtained by dimensionality reduction methods.
+ Left: a 3-dimensional projection of a 10-dimensional manifold constructed
+ by principal component analysis (PCA).
+ Right: a distribution from the 3-dimensional t-SNE clustering method.
+ Blue, orange, and red colors indicate data points from DIS, vector boson
+ production, and jet/
+\begin_inset Formula $t\bar{t}$
+\end_inset
+
+ production processes.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:PCA_t-SNE"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Other researches 
+\end_layout
+
+\begin_layout Subsection
+Quantifying the sensitivity to PDFs in a x-range 
+\end_layout
+
+\begin_layout Subsection
+construct theoretical predictions are the linear combination of different
+ flavour PDFs 
+\end_layout
+
+\begin_layout Section
+Conclusions 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Conclusions"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+......
+\end_layout
+
+\begin_layout Subsection*
+Acknowledgements
+\end_layout
+
+\begin_layout Standard
+......
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "PDFsense_material"
+options "apsrev"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+\start_of_appendix
+Approximate kinematical variables
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:supp"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+......
+\end_layout
+
+\begin_layout Section
+Tabulated results 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Tables"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+......
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+onecolumngrid
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="16" columns="4">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+ID#
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Experimental data set
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $N_{pts}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+101 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+BCDMS 
+\begin_inset Formula $F_{2}^{p}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Benvenuti:1989rh"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+337 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+102 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+BCDMS 
+\begin_inset Formula $F_{2}^{d}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Benvenuti:1989fm"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+250 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+104 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NMC 
+\begin_inset Formula $F_{2}^{d}/F_{2}^{p}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Arneodo:1996qe"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+123 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+108 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CDHSW 
+\begin_inset Formula $F_{2}^{p}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Berge:1989hr"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+85 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+109 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CDHSW 
+\begin_inset Formula $F_{3}^{p}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Berge:1989hr"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+96 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+110 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CCFR 
+\begin_inset Formula $F_{2}^{p}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Yang:2000ju"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+69 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+111 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CCFR 
+\begin_inset Formula $xF_{3}^{p}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Seligman:1997mc"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+86 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+124 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NuTeV 
+\begin_inset Formula $\nu\mu\mu$
+\end_inset
+
+ SIDIS 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Mason:2006qa"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+38 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+125 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NuTeV 
+\begin_inset Formula $\bar{\nu}\mu\mu$
+\end_inset
+
+ SIDIS 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Mason:2006qa"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+33 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+126 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CCFR 
+\begin_inset Formula $\nu\mu\mu$
+\end_inset
+
+ SIDIS 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Goncharov:2001qe"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+40 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+127 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CCFR 
+\begin_inset Formula $\bar{\nu}\mu\mu$
+\end_inset
+
+ SIDIS 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Goncharov:2001qe"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+38 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+145 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+H1 
+\begin_inset Formula $\sigma_{r}^{b}$
+\end_inset
+
+ (
+\begin_inset Formula $57.4\mbox{ pb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Aktas:2004az"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Aktas:2005iw"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+147 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Combined HERA charm production (
+\begin_inset Formula $1504\mbox{ pb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abramowicz:1900rp"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+47 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+160 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HERA1+2 Combined NC and CC DIS (
+\begin_inset Formula $1\mbox{ fb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abramowicz:2015mha"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1120 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+169 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+H1 
+\begin_inset Formula $F_{L}$
+\end_inset
+
+ (
+\begin_inset Formula $121.6\mbox{ pb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Collaboration:2010ry"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Experimental data sets considered as part of CT14HERA2 and included in this
+ analysis: deep-inelastic scattering.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:EXP_1"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="19" columns="4">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+ID#
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Experimental data set
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $N_{pts}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+201 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+E605 DY 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Moreno:1990sf"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+119 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+203 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+E866 DY, 
+\begin_inset Formula $\sigma_{pd}/(2\sigma_{pp})$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Towell:2001nh"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+204 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+E866 DY, 
+\begin_inset Formula $Q^{3}d^{2}\sigma_{pp}/(dQdx_{F})$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Webb:2003ps"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+184 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+225 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CDF Run-1 
+\begin_inset Formula $A_{e}(\eta^{e})$
+\end_inset
+
+ (
+\begin_inset Formula $110\mbox{ pb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abe:1996us"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+227 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CDF Run-2 
+\begin_inset Formula $A_{e}(\eta^{e})$
+\end_inset
+
+ (
+\begin_inset Formula $170\mbox{ pb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Acosta:2005ud"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+234 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D
+\begin_inset Formula $\emptyset$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ Run-2 
+\begin_inset Formula $A_{\mu}(\eta^{\mu})$
+\end_inset
+
+ (
+\begin_inset Formula $0.3\mbox{ fb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abazov:2007pm"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+240 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LHCb 7 TeV 
+\begin_inset Formula $W/Z$
+\end_inset
+
+ muon forward-
+\begin_inset Formula $\eta$
+\end_inset
+
+ Xsec (
+\begin_inset Formula $35\mbox{ pb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Aaij:2012vn"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+14 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+241 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LHCb 7 TeV 
+\begin_inset Formula $W$
+\end_inset
+
+ 
+\begin_inset Formula $A_{\mu}(\eta^{\mu})$
+\end_inset
+
+ (
+\begin_inset Formula $35\mbox{ pb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Aaij:2012vn"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+260 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D
+\begin_inset Formula $\emptyset$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ Run-2 
+\begin_inset Formula $Z$
+\end_inset
+
+ 
+\begin_inset Formula $d\sigma/dy_{Z}$
+\end_inset
+
+ (
+\begin_inset Formula $0.4\mbox{ fb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abazov:2006gs"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+28 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+261 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CDF Run-2 
+\begin_inset Formula $Z$
+\end_inset
+
+ 
+\begin_inset Formula $d\sigma/dy_{Z}$
+\end_inset
+
+ (
+\begin_inset Formula $2.1\mbox{ fb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Aaltonen:2010zza"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+29 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+266 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CMS 7 TeV 
+\begin_inset Formula $A_{\mu}(\eta)$
+\end_inset
+
+ (
+\begin_inset Formula $4.7\mbox{ fb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chatrchyan:2013mza"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+267 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CMS 7 TeV 
+\begin_inset Formula $A_{e}(\eta)$
+\end_inset
+
+ (
+\begin_inset Formula $840\mbox{ pb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chatrchyan:2012xt"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+268 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ATLAS 7 TeV 
+\begin_inset Formula $W/Z$
+\end_inset
+
+ Xsec, 
+\begin_inset Formula $A_{\mu}(\eta)$
+\end_inset
+
+ (
+\begin_inset Formula $35\mbox{ pb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Aad:2011dm"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+41 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+281 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D
+\begin_inset Formula $\emptyset$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ Run-2 
+\begin_inset Formula $A_{e}(\eta)$
+\end_inset
+
+ (
+\begin_inset Formula $9.7\mbox{ fb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "D0:2014kma"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+504 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CDF Run-2 incl.
+ jet (
+\begin_inset Formula $d\sigma/dp_{T}^{j}dy_{j}$
+\end_inset
+
+) (
+\begin_inset Formula $1.13\mbox{ fb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Aaltonen:2008eq"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+72 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+514 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D
+\begin_inset Formula $\emptyset$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ Run-2 incl.
+ jet (
+\begin_inset Formula $d\sigma/dp_{T}^{j}dy_{j}$
+\end_inset
+
+) (???) (
+\begin_inset Formula $0.7\mbox{ fb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abazov:2008ae"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+110 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+535 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ATLAS 7 TeV incl.
+ jet (
+\begin_inset Formula $d\sigma/dp_{T}^{j}dy_{j}$
+\end_inset
+
+) (
+\begin_inset Formula $35\mbox{ pb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Aad:2011fc"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+90 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+538 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CMS 7 TeV incl.
+ jet (
+\begin_inset Formula $d\sigma/dp_{T}^{j}dy_{j}$
+\end_inset
+
+) (
+\begin_inset Formula $5\mbox{ fb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chatrchyan:2012bja"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+133 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Same as Table
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:EXP_1"
+
+\end_inset
+
+, showing experimental data sets for production of vector bosons, single-inclusi
+ve jets, and 
+\begin_inset Formula $t\bar{t}$
+\end_inset
+
+ pairs.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:EXP_2"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="15" columns="4">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+ID#
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Experimental data set
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $N_{pts}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+245 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LHCb 7 TeV Z/W muon forward-
+\begin_inset Formula $\eta$
+\end_inset
+
+ Xsec (
+\begin_inset Formula $1.0\mbox{ fb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Aaij:2015gna"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+33 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+246 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LHCb 8 TeV Z electron forward-
+\begin_inset Formula $\eta$
+\end_inset
+
+ 
+\begin_inset Formula $d\sigma/dy_{Z}$
+\end_inset
+
+ (
+\begin_inset Formula $2.0\mbox{ fb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Aaij:2015vua"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+17 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+247 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ATLAS 7 TeV 
+\begin_inset Formula $d\sigma/dp_{T}^{Z}$
+\end_inset
+
+ (
+\begin_inset Formula $4.7\mbox{ fb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Aad:2014xaa"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+249 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CMS 8 TeV W muon, Xsec, 
+\begin_inset Formula $A_{\mu}(\eta^{\mu})$
+\end_inset
+
+ (
+\begin_inset Formula $18.8\mbox{ fb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Khachatryan:2016pev"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+33 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+250 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LHCb 8 TeV W/Z muon, Xsec, 
+\begin_inset Formula $A_{\mu}(\eta^{\mu})$
+\end_inset
+
+ (
+\begin_inset Formula $2.0\mbox{ fb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Aaij:2015zlq"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+42 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+252 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ATLAS 8 TeV Z (
+\begin_inset Formula $d^{2}\sigma/d|y|_{ll}dm_{ll}$
+\end_inset
+
+) (
+\begin_inset Formula $20.3\mbox{ fb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Aad:2016zzw"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+48 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+253 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ATLAS 8 TeV (
+\begin_inset Formula $d^{2}\sigma/dp_{T}^{Z}dm_{ll}$
+\end_inset
+
+) (
+\begin_inset Formula $20.3\mbox{ fb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Aad:2015auj"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+45 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+542 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CMS 7 TeV incl.
+ jet, R=0.7, (
+\begin_inset Formula $d\sigma/dp_{T}^{j}dy_{j}$
+\end_inset
+
+) (
+\begin_inset Formula $5\mbox{ fb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chatrchyan:2014gia"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+158 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+544 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ATLAS 7TeV incl.
+ jet, R=0.6, (
+\begin_inset Formula $d\sigma/dp_{T}^{j}dy_{j}$
+\end_inset
+
+) (
+\begin_inset Formula $4.5\mbox{ fb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Aad:2014vwa"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+140 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+545 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CMS 8TeV incl.
+ jet, R=0.7, (
+\begin_inset Formula $d\sigma/dp_{T}^{j}dy_{j}$
+\end_inset
+
+) (
+\begin_inset Formula $19.7\mbox{ fb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Khachatryan:2016mlc"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+185 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+565 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ATLAS 8 TeV 
+\begin_inset Formula $t\overline{t}\:d\sigma/dp_{T}^{t}$
+\end_inset
+
+ (
+\begin_inset Formula $20.3\mbox{ fb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Aad:2015mbv"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+566 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ATLAS 8 TeV 
+\begin_inset Formula $t\overline{t}\:d\sigma/dy_{<t/\overline{t}>}$
+\end_inset
+
+ (
+\begin_inset Formula $20.3\mbox{ fb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Aad:2015mbv"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+567 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ATLAS 8 TeV 
+\begin_inset Formula $t\overline{t}\:d\sigma/dm_{t\overline{t}}$
+\end_inset
+
+ (
+\begin_inset Formula $20.3\mbox{ fb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Aad:2015mbv"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+568 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ATLAS 8 TeV 
+\begin_inset Formula $t\overline{t}\:d\sigma/dy_{t\overline{t}}$
+\end_inset
+
+ (
+\begin_inset Formula $20.3\mbox{ fb}^{-1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Aad:2015mbv"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Same as Table
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:EXP_1"
+
+\end_inset
+
+, showing experimental data sets for production of vector bosons, single-inclusi
+ve jets, and 
+\begin_inset Formula $t\bar{t}$
+\end_inset
+
+ pairs that were not incorporated in the CT14HERA2 fit but included in the
+ augmented CTEQ-TEA set that informs our sensitivity figures in the present
+ analysis.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:EXP_3"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% .
+ .
+ .
+ .
+ .
+ TAB_4
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%-   -   -    -    -    -    -    -    -    -    -    -   -   -    -   
+ -    -    -    -    -    -    -    -    -   -   -    -    -    -    - 
+   -    -    -    -
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% .
+ .
+ .
+ .
+ .
+ TAB_5
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% .
+ .
+ .
+ .
+ .
+ TAB_5
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+-
+\end_layout
+
+\end_body
+\end_document
