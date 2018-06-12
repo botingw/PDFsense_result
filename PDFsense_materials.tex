@@ -3,7 +3,7 @@
 \documentclass[aps,prd,superscriptaddress,nofootinbib,showpacs,showkeys,floatfix]{revtex4}
 \usepackage[latin9]{inputenc}
 \setcounter{secnumdepth}{3}
-\usepackage{color}
+\usepackage{xcolor}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
@@ -79,7 +79,7 @@
 
 \preprint{SMU-HEP-?-?}
 
-\title{PDFsense Results}
+\title{PDFsense Tasks and Results}
 
 \author{Bo Ting Wang}
 
@@ -112,55 +112,6 @@
 \section{PDF preliminaries \label{sec:PDF-preliminaries}}
 
 \subsection{Data residuals in a global QCD analysis \label{sec:Data-residuals}}
-
-While various theoretical methods exist to compute nucleon PDFs in
-terms of models, their unambiguous evaluation in terms of QCD is not
-yet possible due to the fact that the PDFs can in general receive
-substantial nonperturbative contributions at infrared momenta. For
-this reason, precise PDF determination has proceeded mainly through
-the technique of the QCD global analysis \textemdash{} a method enabled
-by QCD factorization and PDF universality.
-
-In this approach, a highly flexible parametric form is ascribed for
-the various flavors in a given analysis at a relatively low scale
-$Q_{0}^{2}$. For example, one might take the input PDF for a given
-quark flavor $f$ to be an $n$-parameter form 
-\begin{equation}
-f(x,\mu^{2}=Q_{0}^{2})=A_{f,0}\,x^{A_{f,1}}(1-x)^{A_{f,2}}\,F(x;\,A_{f,3},\dots)\ ,\label{eq:fitform}
-\end{equation}
-in which $F(x;\:A_{f,3},\dots)$ can be a suitable polynomial function,
-\textit{e.g.}, a Chebyshev or Bernstein polynomial, or replaced with
-a feed-forward neural network $\mathrm{NN}_{f}(x)$ as in the NNPDF
-approach. While the full statistical theory for PDF determination
-and error quantification is beyond the intended range of this analysis,
-roughly speaking, a best fit is found for a vector $\vec{A}$ of $N$
-PDF parameters $A_{l}$ by minimizing a goodness-of-fit function $\chi^{2}$
-describing agreement of the QCD data and physical observables computed
-in terms of the PDFs. Based on the behavior of $\chi^{2}$ in the
-neighbourhood of the global minimum, it is then possible to construct
-an ensemble of error PDFs to quantify uncertainties of PDFs at a predetermined
-confidence level. 
-
-There are in principle various ways to evaluate uncertainties on PDFs,
-\emph{e.g.}, the Hessian method \cite{Pumplin:2001ct,Pumplin:2002vw},
-the Monte Carlo method \cite{Giele:1998gw,Giele:2001mr}, and the
-Lagrange Multiplier approach \cite{Stump:2001gu}. In this analysis
-our default PDF input set is CT14HERA2, which uses the Hessian method
-to estimate uncertainties and is therefore based on the quadratic
-assumption for $\chi^{2}(\vec{a}$) in the vicinity of the global
-minimum at $\vec{a}_{0}$. In the Hessian method, an orthonormal basis
-of PDF parameters $\vec{a}$ is derived from the input PDF parameters$\vec{A}$
-by the diagonalization of a Hessian matrix $H$, which encodes the
-second-order derivatives of $\chi^{2}$ with respect to the physical
-PDF model parameters $A_{l}$. The eigenvector PDF combinations $\vec{a}_{l}^{\pm}$are
-found for two extreme variations along the direction of the $l$-th
-eigenvector of $H$ allowed at a given probability level. The uncertainty
-on a QCD observable $X$ can then be estimated with one of available
-``master formulas'' \cite[ref to ABM formula with 1 eigenset per direction]{Pumplin:2002vw,Nadolsky:2001yg},
-the simplest ``symmetric'' variety of which is 
-\begin{align}
-\Delta X & =\frac{1}{2}\sqrt{\sum_{l=1}^{N}(X_{l}^{+}-X_{l}^{-})^{2}}\ .\label{DelX}
-\end{align}
 
 In the CTEQ-TEA global analysis, the $\chi^{2}$ function accounts
 for multiple sources of experimental uncertainties, as well as for
@@ -232,11 +183,6 @@ $r_{i}(\vec{a})$ directly from the CTEQ-TEA fitting program, together
 with optimal nuisance parameters $\overline{\lambda}_{\alpha}(\vec{a})$
 and shifted central data values $D_{i,sh}(\vec{a}).$
 
-\subsection{Visualization of the global fit with the help of residuals}
-
-......
-
-\clearpage\newpage
 
 \section{Quantifying distributions of residuals\label{sec:QuantifyingDistributionsOfResiduals}}
 
@@ -248,39 +194,7 @@ picture and to visualize the regions of partonic momentum fractions
 $x$ and QCD factorization scales $\mu$ where the experiments impose
 strong constraints on a given PDF-dependent observable $X$. 
 
-\subsection{Reciprocated distances \label{sec:Reciprocated-distances}}
-
 \subsection{Correlations and sensitivities \label{sec:CorrelationsSensitivities}}
-
-Next, we examine gradients of $r_{i}$ in space of eigenvector PDF
-parameters $\vec{a},$ where they are naturally related to to the
-PDF uncertainty in the Hessian approach. Recall that in the Hessian
-method the PDF uncertainty on $X(\vec{a})$ is found as 
-\begin{equation}
-\Delta X(\vec{a})=X(\vec{a})-X(\vec{a}_{0})=\vec{\nabla}X|_{\vec{a}_{0}}\cdot\Delta\vec{a},
-\end{equation}
-where $\vec{a}_{0}$ is the best-fit combination of PDF parameters,
-and $\Delta\vec{a}$ is the maximal displacement along the gradient
-that is allowed within the tolerance hypesphere of radius $T$ centered
-on the best fit \cite{Pumplin:2001ct,Pumplin:2002vw}. The standard
-master formula 
-\begin{equation}
-\Delta X=\left\vert \vec{\nabla}X\right\vert =\frac{1}{2}\sqrt{\sum_{l=1}^{N}\left(X_{l}^{+}-X_{i}^{-}\right)^{2}}\label{masterDX-1}
-\end{equation}
-is obtained by representing the components of $\vec{\nabla}X$ by
-a finite-difference formula 
-\begin{equation}
-\frac{\partial X}{\partial a_{i}}=\frac{1}{2}(X_{i}^{+}-X_{i}^{-}),\label{dXdzi-1-1}
-\end{equation}
-in terms of the values $X_{l}^{\pm}$ for extreme displacements of
-$\vec{a}$ within the tolerance hypersphere along the $l$-th direction. 
-
-In this setup, a dot product between the gradients provides a convenient
-measure of the degree of similarity between PDF dependence of two
-quantities \cite{Nadolsky:2008zw}. A dot product $\vec{\nabla}r_{i}\cdot\vec{\nabla f}$
-between the gradients of a shifted residual $r_{i}$ and another QCD
-variable $f$, such as the PDF at some $\{x,\mu\}$ or a cross section,
-can be cast in a number of useful forms.
 
 \subsubsection{Correlation cosine. }
 
@@ -299,39 +213,12 @@ of the Pearson's correlation coefficient, which we express as
 \mathrm{\mbox{Corr}}[X,Y] & =\frac{1}{4\Delta X\Delta Y}\sum_{j=1}^{N}(X_{j}^{+}-X_{j}^{-})(Y_{j}^{+}-Y_{j}^{-})\ ,\label{eq:corr-def}
 \end{align}
 the sum in these expressions being over the $j$ parameters of the
-full PDF model space. Geometrically, $\mbox{Corr}[X,Y]$ represents
-the cosine of the angle that determines the eccentricity of an ellipse
-satisfying $\chi^{2}(\vec{a})<\chi^{2}(\vec{a}_{0})+T^{2}$ in the
-$\{X,Y\}$ plane. This latter point follows from the fact that the
-mapping of the tolerance hypersphere onto the $\{X,Y\}$ plane is
-an ellipse, its eccentricity depends on the correlation of $X$ and
-$Y,$ which in turn is given by Eq.~(\ref{eq:corr-def}) above. 
-
-$\mbox{Corr}[r_{i},f]$ does not indicate how constraining the residual
-is, but it may indicate a predictive relation between $r_{i}$ and
-$f$ with a large enough magnitude of the (anti-)correlation. From
-the past experience, we could say that the (anti-)correlation between
-$X$ and $Y$ is significant roughly if $\left|\mbox{Corr}[X,Y]\right|\gtrsim0.7.$
-Smaller (anti-)correlation values are less robust or predictive. Following
-this rule-of-thumb, correlations have been used successfully to identify
-PDF combinations that dominate PDF uncertainties of complicated observables,
-for instance to show that the gluon uncertainty dominates the total
-uncertainty on LHC $W$ and $Z$ production, or that the uncertainty
-on the ratio $\sigma_{W}^{\pm}/\sigma_{Z}$ of $W$ and $Z$ cross
-sections at the LHC is dominated by the strangeness PDF, rather than
-$u$ and $d$ (anti-)quark PDFs \cite{Nadolsky:2008zw}. 
+full PDF model space. 
 
 \subsubsection{Sensitivity.}
 
-While the correlation $C_{f}$ can provide insight into the relationship
-between the PDF dependences of a prediction for the $i$-th data point
-and a QCD function $f$, it alone does not fully quantify the extent
-to which an individual data point constrains the fit uncertainty.
-Similarly, it does not encode by itself the potential impact of separate
-or new measurements on improving PDF determinations in terms of the
-uncertainty reduction. For this purpose, we employ $\vec{\nabla f}\cdot\vec{\nabla r}_{i}$
-again to define the \textit{sensitivity} of the $i^{th}$ data point
-to $f$, 
+We employ $\vec{\nabla f}\cdot\vec{\nabla r}_{i}$ again to define
+the \textit{sensitivity} of the $i^{th}$ data point to $f$, 
 \begin{equation}
 S_{f}\equiv\frac{\vec{\nabla f}\cdot\vec{\nabla r}_{i}}{\Delta f\,\langle r_{0}\rangle_{E}}=\frac{\Delta r_{i}}{\langle r_{0}\rangle_{E}}\,C_{f}\ ,\label{eq:sens}
 \end{equation}
@@ -340,37 +227,7 @@ according to Eqs.~(\ref{DelX}) and (\ref{r0E}), respectively. In
 other words, $\Delta r_{i}$ represents the variation of the residuals
 across the set of Hessian error PDFs, which we normalize to the root-mean-squared
 residual for a given experiment to reduce impact of random fluctuations
-of the experimental data values $D_{i}$. This definition has the
-benefit of encoding not only the correlated relationship of $f$ with
-the residual, but also the comparative size of the experimental uncertainty
-with respect to state-of-the-art PDF uncertainties. In consequence,
-for example, if a new experimental data have reported uncertainties
-that are much tighter than the present PDF errors, these data would
-register as high-sensitivity points by the definition in Eq.~(\ref{eq:sens}). 
-
-Geometrically, $S_{f}$ represents a projection of the displaced residual
-vector $\vec{\delta_{i}}$, defined in Sec.~\ref{sec:QuantifyingDistributionsOfResiduals}
-using the symmetrized formula for $\delta_{il}$ from footnote \ref{fn:sym-deltail},
-onto the direction of the gradient $\vec{\nabla}f$. This interpretation
-suggests that the strength of constraints from the global data set
-along the direction of $\vec{\nabla}f$ can be quantified by summing
-projections $S_{f}$ for individual $\vec{\delta}_{i}$ of all contributing
-data points onto the direction of$\vec{\nabla}f$. 
-
-As with correlations, only a sufficiently large absolute magnitude
-of $\left|S_{f}\right|$ is indicative of a predictive constraint
-of the $i$-th point on $f$. Recall that $r_{i}^{2}$ is the contribution
-of the $i$-th point to $\chi^{2},$ and that only residuals with
-a large enough $\Delta r_{i}$, as compared to the r.m.s. residual
-$\langle r_{0}\rangle_{E}$, are sensitive to PDF variations. The
-$S_{f}$ magnitude is of order $\Delta r_{i}/\langle r_{0}\rangle_{E},$
-which suggests an estimate of a minimal value of $S_{f}$ that would
-be deemed sensitive according to the respective $\chi^{2}$ contribution.
-For the numerical comparisons in this study, we assume that $\left|S_{f}\right|$
-must be no less than 0.25 to indicate a predictive constraint, as
-the PDF uncertainty of the $i$-th residual contributes no less than
-0.0625 to the variation in the global $\chi^{2}$. The minimal value
-can be adjusted depending on accuracy. 
+of the experimental data values $D_{i}$. 
 
 Yet another possible definition, which we list for completeness, is
 to normalize the sensitivity as 
@@ -383,33 +240,45 @@ de-emphasizes $S_{f}^{\prime}$ at those data points where the PDF
 uncertainty$\Delta f(x_{i},\mu_{i})$ is small compared to the best-fit
 PDF value $f_{0}(x_{i},\mu_{i})$. 
 
+
+\section{Ranking tables for experiments}
+
+We calculate the average and total sensitity for each experimental
+data and apply the tables to rank the impact to PDFs for experiments.
+We also classify experiments to various types to see impact to PDFs
+for these types. Tables are in Appendix \ref{sec:Tables}. 
+
 \clearpage\newpage
 
-\section{Case study: CTEQ-TEA global data \label{sec:CaseCTEQ-TEA}}
+\section{Case study: various Processes in CTEQ-TEA Data \label{sec:CaseCTEQ-TEA}}
 
-\subsection{Maps of correlations and sensitivities}
-
-......
-
-\subsection{Experiment rankings according to cumulative sensitivities \label{sec:Experiment-rankings-according}}
-
-......
-
-\section{Case study: various Processes in CTEQ-TEA Data}
+In the following sections, we show some interesting results of PDFsense
+and some issues we can study further. We use following symbols at
+the beginning of each issue and result to indicate the attributions
+of them: \textbf{\textcolor{blue}{Y}}/\textbf{\textcolor{blue}{N}}
+for completeness/non-completeness of issues and results. If issues
+are not completed yet (\textbf{\textcolor{blue}{N}}), we provide other
+attribution for them: \textbf{\textcolor{teal}{1}}/\textbf{\textcolor{teal}{2}}/\textbf{\textcolor{teal}{3}}
+means the time we expect to take for this issue is short/median/long.
+\textbf{\textcolor{red}{!}}/\textbf{\textcolor{red}{!!}}/\textbf{\textcolor{red}{!!!}}
+means the importance for this issue is low/median/high.
 
 \subsection{All processes in CT14 HERA2 + LHC new data}
 
 ...
 \begin{enumerate}
-\item showing all experiments at (x,Q) space of PDFs \ref{fig:all_expt_xQ_data}
-\item shows correlation, sensitivity, and respective histograms \ref{fig:CorrSensH14},
-\ref{fig:Corrgluon}, \ref{fig:Sensgluon}
-\item sensitivity to Higgs cross section at 14 TeV indicate the PDF sensitive
-to the future LHC Higgs survey \ref{fig:CorrSensH14} 
-\item sensitivity to gluon PDF shows demonstrate that constraint of gluon
-at small x region (10\textasciicircum{}-3\textasciitilde{}-5) is from
-HERA2 data and LHC jet data provides fluent constaint to gluon at
-x\textgreater{}10\textasciicircum{}-3 \ref{fig:Corrgluon}, \ref{fig:Sensgluon}
+\item {[}\textbf{\textcolor{blue}{Y}}{]} showing all experiments at (x,Q)
+space of PDFs \ref{fig:all_expt_xQ_data}
+\item {[}\textbf{\textcolor{blue}{Y}}{]} shows correlation, sensitivity,
+and respective histograms \ref{fig:CorrSensH14}, \ref{fig:Corrgluon},
+\ref{fig:Sensgluon}
+\item {[}\textbf{\textcolor{blue}{Y}}{]} sensitivity to Higgs cross section
+at 14 TeV indicate the PDF sensitive to the future LHC Higgs survey
+\ref{fig:CorrSensH14} 
+\item {[}\textbf{\textcolor{blue}{Y}}{]} sensitivity to gluon PDF shows
+demonstrate that the constraint of gluon at small x region ($10^{-3}-10^{-5}$)
+is from HERA2 data and LHC jet data provides a fluent constraint to
+gluon at $x>10^{-3}$ \ref{fig:Corrgluon}, \ref{fig:Sensgluon}
 \end{enumerate}
 \begin{figure*}
 \includegraphics[width=1\textwidth]{plots/processes/all_expt/Allexpt_xQbyexpt_xQ}
@@ -422,8 +291,8 @@ measurements from Run II of HERA \cite{Abramowicz:2015mha}. }
 \end{figure*}
 
 \begin{figure*}
-\includegraphics[width=0.49\textwidth]{plots/processes/all_expt/Allexpt_corr_xQ+1_f8_samept}\ \ \
-\includegraphics[width=0.48\textwidth]{plots/processes/all_expt/Allexpt_corrdr_xQ+1_f8_samept}
+\includegraphics[width=0.3\textwidth]{plots/processes/all_expt/Allexpt_corr_xQ+1_f8_samept}\ \ \
+\includegraphics[width=0.3\textwidth]{plots/processes/all_expt/Allexpt_corrdr_xQ+1_f8_samept}
 \caption{For the full CTEQ-TEA dataset of Fig.~\ref{fig:all_expt_xQ_data},
 we show the absolute correlation $|C_{f}|$ and sensitivity $|S_{f}|$
 associated with the 14 TeV Higgs production cross section $\sigma_{H^{0}}(14\,\mathrm{TeV})$.
@@ -445,8 +314,8 @@ and even some points obtained from $Z$ production at LHCb (246).
 \end{figure*}
 
 \begin{figure*}
-\includegraphics[width=0.49\textwidth]{plots/processes/all_expt/corr_xQ+1_f0_samept_nohigh}\ \ \
-\includegraphics[width=0.48\textwidth]{plots/processes/all_expt/Allexpt_corr_hist+1_f0_samept}
+\includegraphics[width=0.3\textwidth]{plots/processes/all_expt/corr_xQ+1_f0_samept_nohigh}\ \ \
+\includegraphics[width=0.27\textwidth]{plots/processes/all_expt/Allexpt_corr_hist+1_f0_samept}
 \caption{Two representations of the correlation $|C_{g}|(x_{i},\mu_{i})$ of
 the gluon PDF $g(x,\mu)$ with the point-wise residual $r_{i}$ of
 the augmented CT14HERA2 analysis; in the left panel we plot a histogram
@@ -456,137 +325,186 @@ for the full dataset. \label{fig:Corrgluon}}
 \end{figure*}
 
 \begin{figure*}
-\includegraphics[width=0.49\textwidth]{plots/processes/all_expt/corrdr_xQ+1_f0_samept_nohigh}\ \ \
-\includegraphics[width=0.48\textwidth]{plots/processes/all_expt/Allexpt_corrdr_hist+1_f0_samept}
+\includegraphics[width=0.3\textwidth]{plots/processes/all_expt/corrdr_xQ+1_f0_samept_nohigh}\ \ \
+\includegraphics[width=0.27\textwidth]{plots/processes/all_expt/Allexpt_corrdr_hist+1_f0_samept}
 \caption{Like Fig.\ref{fig:Corrgluon}, but for the gluon sensitivity $|S_{g}|(x_{i},\mu_{i})$
 as defined in Eq.\textasciitilde{}(\textbackslash{}ref\{eq:sens\}).
 \label{fig:Sensgluon}}
 \end{figure*}
 
 \subsection{DIS NC processes}
+\begin{enumerate}
+\item {[}\textbf{\textcolor{blue}{Y}}{]} flavours with the most sensitivity:
+dbar, u, d, uval, dbar/udar, d/u. By Table \ref{tab7}, \ref{tab8}
+\end{enumerate}
 
 \subsection{DIS CC processes}
+\begin{enumerate}
+\item {[}\textbf{\textcolor{blue}{Y}}{]} flavours with the most sensitivity:
+dbar, u, d, uval, dval. By Table \ref{tab7}, \ref{tab8}
+\end{enumerate}
 
 \subsection{HERA Run 2 (ID = 160)}
+\begin{enumerate}
+\item {[}\textbf{\textcolor{blue}{Y}}{]} flavours with the most sensitivity:
+ubar, g, u. By Table \ref{tab7}, \ref{tab8}
+\end{enumerate}
 
 \subsection{Jet, $t\overline{t}$ and Zpt Processes}
 
 ......
 \begin{enumerate}
-\item jet CMS and ATLAS data provide the most fluent sensitivity to gluon,
-b, c, and Higgs processes \ref{fig:jet_ttbar_Zpt_new}
-\item Although ttbar and Zpt are also averagely sensitive to these flavours,
-they are not necessary when we incorporate LHC jet data sets \ref{fig:jet_ttbar_Zpt_new}. 
+\item {[}\textbf{\textcolor{blue}{Y}}{]} flavours with the most sensitivity,
+jet datasets: g, H7, H8, H14. Zpt datasets: g, s, H14. ttbar datasets:
+g, H7, H8. By Table \ref{tab7}, \ref{tab8}
+\item {[}\textbf{\textcolor{blue}{Y}}{]} jet CMS and ATLAS data provide
+the most fluent sensitivity to gluon, b, c, and Higgs processes \ref{fig:jet_ttbar_Zpt_new}.
+\textcolor{red}{note: we will redo the uncertainties of CMS and ATLAS
+dataset, so we need to update this result with the new .dta data.} 
+\item {[}\textbf{\textcolor{blue}{Y}}{]} Although ttbar and Zpt are also
+averagely sensitive to these flavours, they are not necessary when
+we incorporate LHC jet data sets \ref{fig:jet_ttbar_Zpt_new}. 
 \end{enumerate}
 \begin{figure*}
-\includegraphics[clip,width=0.45\textwidth]{plots/processes/jet/new/corrdr_xQ+1_f0_samept}
-\ \ \
-\includegraphics[clip,width=0.45\textwidth]{plots/processes/jet/new/corrdr_xQ+1_f8_samept} 
+ \ \ \
+\includegraphics[clip,width=0.3\textwidth]{plots/processes/jet/new/corrdr_xQ+1_f8_samept} 
 
-\includegraphics[clip,width=0.45\textwidth]{plots/processes/ttbar/corrdr_xQ+1_f8_samept}
+\includegraphics[clip,width=0.3\textwidth]{plots/processes/ttbar/corrdr_xQ+1_f8_samept}
 \ \ \
-\includegraphics[clip,width=0.45\textwidth]{plots/processes/Zpt/corrdr_xQ+1_f8_samept} 
+\includegraphics[clip,width=0.3\textwidth]{plots/processes/Zpt/corrdr_xQ+1_f8_samept} 
 
-\caption{left-up and right-up are jet (542, 544, 545). left-down is ttbar (565\textasciitilde{}568).
+\caption{up is LHC jet (542, 544, 545). left-down is ttbar (565\textasciitilde{}568).
 right-down is Zpt (247, 253, 254, 255) events.}
 \label{fig:jet_ttbar_Zpt_new}
 \end{figure*}
 
 \subsection{$W$ processes}
 \begin{enumerate}
-\item new data (249) impose d, dbar, d/u, dbar/ubar constraints \ref{fig:W_new}
+\item {[}\textbf{\textcolor{blue}{Y}}{]} flavours with the most sensitivity:
+dbar, d, dval, dbar/ubar, d/u. By Table \ref{tab7}, \ref{tab8}
+\item {[}\textbf{\textcolor{blue}{Y}}{]} new data (249) impose d, dbar,
+d/u, dbar/ubar constraints \ref{fig:W_new}
 \end{enumerate}
 \begin{figure*}
-\includegraphics[clip,width=0.45\textwidth]{plots/processes/W/new/corrdr_xQ+1_f2_samept}
 \ \ \
-\includegraphics[clip,width=0.45\textwidth]{plots/processes/W/new/corrdr_xQ+1_f13_samept} 
+\includegraphics[clip,width=0.3\textwidth]{plots/processes/W/new/corrdr_xQ+1_f13_samept} 
 
 \caption{LHC W asymmetry data (249) }
 \label{fig:W_new}
 \end{figure*}
 
 \subsection{$Z$ processes}
+\begin{enumerate}
+\item {[}\textbf{\textcolor{blue}{Y}}{]} flavours with the most sensitivity,
+old Z datasets: dbar, ubar, u, dval, uval, dbar/ubar. new Z datasets:
+dbar, ubar, u, s, d/u. By Table \ref{tab7}, \ref{tab8}
+\end{enumerate}
 
-\section{Case Study: LHeC \label{sec:Case-Study:-LHeC}}
+\subsection{$W/Z$ processes}
+\begin{enumerate}
+\item {[}\textbf{\textcolor{blue}{Y}}{]} flavours with the most sensitivity,
+old W/Z datasets: dbar, ubar, u, d, s, uval, dbar/ubar, d/u. new W/Z
+datasets: dbar/ubar, d/u. By Table \ref{tab7}, \ref{tab8}
+\end{enumerate}
+
+\section{Case Study: LHeC and EIC \label{sec:Case-Study:-LHeC}}
 
 ......Here provide the prediction of the sensitivity analysis of LHeC
-DIS NC and CC data sets \ref{tab:LHeC} 
+DIS NC and CC datasets \ref{tab:LHeC}. \textcolor{red}{note: we will
+need to further analyze the sensitivity of LHeC and EIC, so we should
+update the result with new .dta files} 
 \begin{enumerate}
-\item LHeC DISNC data constrains small x gluon \ref{fig:LHeC-sens}, \ref{fig:LHeC-corr}
-\item LHeC DISCC and DISNC data constrain u and d large x and small x. For
-the small x region, the high sensitivity results from the few constraint
-before LHC data
-\item LHeC DISCC data is correlated to middle x region (10\textasciicircum{}-3\textasciitilde{}10\textasciicircum{}-2)
-s PDF, I don't know why \ref{fig:LHeC-corr}
-\item don't know why the 192 (CC), 194 (NC) are strongly correlated with
-the diagonal part of ubar PDF \ref{fig:LHeC-corr}
-\item large $\delta r$ enhance the sensitivities of LHeC data to PDFs especially
-at small x region \ref{fig:LHeC-dr}
+\item {[}\textbf{\textcolor{blue}{Y}}{]} LHeC DISNC datasets constrain the
+small x region of the gluon PDF \ref{fig:LHeC-sens}, \ref{fig:LHeC-corr}
+\item {[}\textbf{\textcolor{blue}{Y}}{]} LHeC DISCC and DISNC datasets constrain
+u and d at large x and small x regions. For the small x region, the
+high sensitivity results from the fact that few constraints in that
+region 
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{?}}\textbf{\textcolor{red}{!}}{]}
+LHeC DISCC data is correlated to middle x region (10\textasciicircum{}-3\textasciitilde{}10\textasciicircum{}-2)
+s PDF, I don't know why \ref{fig:LHeC-corr}. Perhaps the strong correlation
+is due to the large uncertainty of the strange PDF, which means this
+region some DISCC data could constrain strange at this region. 
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{?}}\textbf{\textcolor{red}{!}}{]}
+I don't know why the diagonal part of 192 (CC), 194 (NC) points in
+Fig. \ref{fig:LHeC-corr} are strongly correlated with the ubar PDF 
+\item {[}\textbf{\textcolor{blue}{Y}}{]} the large $\delta r$ enhance the
+sensitivities of LHeC data to PDFs especially at the small x region
+\ref{fig:LHeC-dr}
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{1}}\textbf{\textcolor{red}{!!!}}{]}
+we also want to draw the sensitivity plots for the EIC at various
+energies and luminosities, using the same setting as for the LHeCs.
+With the .dta files, we can generate them instantly. 
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{1}}\textbf{\textcolor{red}{!!!}}{]}
+Make the ranking tables for 1-year and 10-years runtime of LHeC and
+JLabEIC. (update: plots for 1y and 10y: Both LHeC and EIC NC datasets
+are sensitive to u \ref{fig:LHeCEIC_1y}. Ranking tables are not finished
+yet)
 \end{enumerate}
 \begin{figure*}
-\includegraphics[clip,width=0.45\textwidth]{plots/LHeC/corrdr_xQ+1_f0_samept}
+\includegraphics[clip,width=0.3\textwidth]{plots/LHeC/corrdr_xQ+1_f0_samept}
 \ \ \
-\includegraphics[clip,width=0.45\textwidth]{plots/LHeC/corrdr_xQ+1_f2_samept} 
-
-\includegraphics[clip,width=0.45\textwidth]{plots/LHeC/corrdr_xQ+1_f3_samept}
-\ \ \
-\includegraphics[clip,width=0.45\textwidth]{plots/LHeC/corrdr_xQ+1_f-1_samept} 
+\includegraphics[clip,width=0.3\textwidth]{plots/LHeC/corrdr_xQ+1_f2_samept} 
 
 \caption{Select sensitivity plots for the LHeC pseudodata, in this case showing
-$|S_{g}|(x_{i},\mu_{i})$ in the left-up panel, $|S_{d}|(x_{i},\mu_{i})$
-in the right-up, $|S_{s}|(x_{i},\mu_{i})$ in the left-down, and $|S_{\overline{u}}|(x_{i},\mu_{i})$
-in the right-down. The pseudodata are broken among four separate reaction
+$|S_{g}|(x_{i},\mu_{i})$ in the left panel, $|S_{d}|(x_{i},\mu_{i})$
+in the right. The pseudodata are broken among four separate reaction
 channels \textemdash{} CC $e^{-}p$ (circles) and $e^{+}p$ (squares),
 as well as NC $e^{-}p$ (diamonds) and $e^{+}p$ (triangles). }
 \label{fig:LHeC-sens} 
 \end{figure*}
 
 \begin{figure*}
-\includegraphics[clip,width=0.45\textwidth]{plots/LHeC/corr_xQ+1_f0_samept}
-\ \ \
-\includegraphics[clip,width=0.45\textwidth]{plots/LHeC/corr_xQ+1_f2_samept} 
 
-\includegraphics[clip,width=0.45\textwidth]{plots/LHeC/corr_xQ+1_f3_samept}
+\includegraphics[clip,width=0.3\textwidth]{plots/LHeC/corr_xQ+1_f3_samept}
 \ \ \
-\includegraphics[clip,width=0.45\textwidth]{plots/LHeC/corr_xQ+1_f-1_samept} 
+\includegraphics[clip,width=0.3\textwidth]{plots/LHeC/corr_xQ+1_f-1_samept} 
 
 \caption{Select correlation plots for the LHeC pseudodata, in this case showing
-$|C_{g}|(x_{i},\mu_{i})$ in the left-up panel, $|C_{d}|(x_{i},\mu_{i})$
-in the right-up, $|C_{s}|(x_{i},\mu_{i})$ in the left-down, and $|C_{\overline{u}}|(x_{i},\mu_{i})$
-in the right-down. The pseudodata are broken among four separate reaction
+$|C_{s}|(x_{i},\mu_{i})$ in the left, and $|C_{\overline{u}}|(x_{i},\mu_{i})$
+in the right. The pseudodata are broken among four separate reaction
 channels \textemdash{} CC $e^{-}p$ (circles) and $e^{+}p$ (squares),
 as well as NC $e^{-}p$ (diamonds) and $e^{+}p$ (triangles). }
 \label{fig:LHeC-corr} 
 \end{figure*}
 
 \begin{figure*}
-\includegraphics[clip,width=0.45\textwidth]{plots/LHeC/dr_xQ+1_samept}
-\ \ \
-\includegraphics[clip,width=0.45\textwidth]{plots/LHeC/dr_hist+1_samept} 
+\includegraphics[clip,width=0.3\textwidth]{plots/LHeC/dr_xQ+1_samept}
 
 \caption{Select $\delta r$ plots for the LHeC pseudodata, in this case showing
-$\delta r_{i}$ in the left panel and $\delta r_{i}$ histogram in
-the right. The pseudodata are broken among four separate reaction
-channels \textemdash{} CC $e^{-}p$ (circles) and $e^{+}p$ (squares),
-as well as NC $e^{-}p$ (diamonds) and $e^{+}p$ (triangles). }
+$\delta r_{i}$ in the left panel. The pseudodata are broken among
+four separate reaction channels \textemdash{} CC $e^{-}p$ (circles)
+and $e^{+}p$ (squares), as well as NC $e^{-}p$ (diamonds) and $e^{+}p$
+(triangles). }
 \label{fig:LHeC-dr} 
+\end{figure*}
+
+\begin{figure*}
+\includegraphics[clip,width=0.3\textwidth]{plots/EIC/corrdr_xQ+1_f1_samept_1y}
+
+\caption{The sensitivity plot for 1 year pseudodata of LHeC and EIC datasets.}
+\label{fig:LHeCEIC_1y} 
 \end{figure*}
 
 ......
 
 \begin{table}[ht]
-\begin{tabular}{|l|lr|c|c}
+\begin{tabular}{|l|lr|c|c|c}
 \hline 
-\textbf{ID\#}  & \textbf{LHeC pseudodata set}  &  & $N_{pts}$  & Fig.~\ref{fig:LHeC} symbol \tabularnewline
+\textbf{ID\#}  & \textbf{LHeC pseudodata set}  &  & $N_{pts}$  & Fig.~\ref{fig:LHeC} symbol  & lumi\tabularnewline
 \hline 
 \hline 
-191  & CC $e^{-}p$  &  & 93  & circle \tabularnewline
+191  & LHeC CC $e^{-}p$  &  & 93  & circle  & $10fb^{-1}/1y;100fb^{-1}/10y$\tabularnewline
 \hline 
-192  & CC $e^{+}p$  &  & 109  & square \tabularnewline
+192  & LHeC CC $e^{+}p$  &  & 109  & square  & $10fb^{-1}/1y;100fb^{-1}/10y$\tabularnewline
 \hline 
-193  & NC $e^{-}p$  &  & 128  & diamond \tabularnewline
+193  & LHeC NC $e^{-}p$  &  & 128  & diamond  & $10fb^{-1}/1y;100fb^{-1}/10y$\tabularnewline
 \hline 
-194  & NC $e^{+}p$  &  & 148  & triangle \tabularnewline
+194  & LHeC NC $e^{+}p$  &  & 148  & triangle  & $10fb^{-1}/1y;100fb^{-1}/10y$\tabularnewline
+\hline 
+195 & JLab EIC NC &  & 156 & down-triangle & $10fb^{-1}/1y;100fb^{-1}/10y$\tabularnewline
+\hline 
+196 & JLab EIC CC &  & 50 & empty-circle & $10fb^{-1}/1y;100fb^{-1}/10y$\tabularnewline
 \hline 
 \end{tabular}\caption{Separate channels of the unpolarized lepton-proton deep-inleastic
 scattering pseudodata for the LHeC from Ref.~\cite{LHeCdata}. For
@@ -596,34 +514,112 @@ channel in the $|S_{f}|(x_{i},\mu_{i})$ plots of Fig.~\ref{fig:LHeC}. }
 \label{tab:LHeC} 
 \end{table}
 
-\section{Case Study: Mellin Moment }
+\section{Case Study: Constraining Physical Qunatities}
 
-......Compare with lattice predictions and constrain parametrization
-function by penalty
+\subsection{Some interesting Quantities}
+
+If we can get the uncertainty replicas of following physical quantities,
+we can use user function to draw the sensitivity plots instantly
 \begin{enumerate}
-\item B-C and gluon are sensitive to jet data \ref{fig:Mellin_B-C}
-\item $(u^{-}-d^{-})x^{0}$ should be 1 (constant) but it's total sensitivity
-is the same amount compared with other Mellin moments \ref{tab:Mellin_total_sens}.
-We can lower the order of precision to reduce the flutuation. However,
-it also indicates even an physical quantity has no correlation/sensitivity
-with data sets/PDFs, the numerical fluctuation still impose some sensitivity.
-Therefore, perhaps we don't want to consider too low sensitivity as
-the real sensitivity.
-\item some Mellin moments are sensitive to data at a narrow x band \ref{fig:Melling_x-1x0},
-\ref{fig:Mellin_x2x3}. This perhaps indicates that Mellin moments
-could be well-measured by just constraining PDFs at specific regions. 
+\item {[}\textbf{\textcolor{blue}{Y}}{]} Higgs cross section at 7, 8, 14
+TeV
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{?}}{]} Sensitivities
+to the $W$ boson mass at ATLAS (Camarda)
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{?}}{]} weak
+mixing angle at CMS (Arie Bodek)
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{?}}{]} constraints
+on dim-6 operators (Alexey Petrov)
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{?}}{]} sensitivities
+of correlated systematic errors to various physical observables (Higgs
+cross sections, weak angle, etc.)
 \end{enumerate}
+\clearpage\newpage
+
+\subsection{Estimate the Potential Gain }
+
+{[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{3}}\textbf{\textcolor{red}{!!}}{]}
+We can define $S'=(\delta Q/Q)S$ to de-emphasize the sensitivities
+of physical quantities $Q$ with small uncertainty fractions. We assume
+it is more beneficial to constrain physical quantities $Q$ with large
+uncertainties.
+
+\subsection{Mellin Moments }
+
+......Compare with lattice predictions and constrain PDFs by applying
+penalties to the PDFs that disagree with the lattice predictions in
+the fit
+\begin{enumerate}
+\item {[}\textbf{\textcolor{blue}{Y}}{]} \ref{tab:Mellin_total_sens} provides
+the Mellin moment quantities that accept the most sensitivities from
+the HERA2 and LHC datasets, and the B-C and gluon PDFs are sensitive
+to jet data \ref{fig:Mellin_B-C}
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{?}}\textbf{\textcolor{red}{!}}{]}
+$(u^{-}-d^{-})x^{0}$ should be 1 (constant) but its total sensitivity
+is the same amount compared with most Mellin moments (see row 1 and
+2 in \ref{tab:Mellin_total_sens}). We can lower the order of precision
+to reduce the fluctuations on it. However, it also indicates that
+even physical quantities have no correlation/sensitivity with datasets/PDFs,
+the numerical fluctuations still contribute some sensitivities to
+PDFs. Therefore, to avoid considering the sensivities from fluctuations,
+perhaps we don't want to consider too low sensitivity as the real
+sensitivity. Perhaps we also want to figure out ways to remove the
+fluctuations or identify whether the sources of sensitivities are
+fluctuations.
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{1}}\textbf{\textcolor{red}{!!}}{]}
+some Mellin moments are sensitive to data at a narrow x band such
+as in Fig. \ref{fig:Melling_x-1x0}, \ref{fig:Mellin_x2x3}. This
+perhaps indicates that Mellin moments can be well-measured by just
+imposing strong constraints at specific regions of PDFs. One way to
+clarify it is to draw $x^{n}f(x,\mu)_{a}$ as the function of x for
+n = 1, 2, 3 and a = the flavour index. Assume that the peak of the
+PDFs have the most strong sensitivity, the x bands in Fig. \ref{fig:Melling_x-1x0},
+\ref{fig:Mellin_x2x3} should overlap with the peak of corresponding
+$x^{n}f(x,\mu)_{a}$ at x-axis.
+\item \textbf{({*} PN {*})} {[}\textbf{\textcolor{blue}{Y}}{]} The $\langle(1-x)^{N}\rangle_{F}$
+moments may be sensitive to the small-$x$ behavior for the PDF combinations
+that are integrable in the limit $x\rightarrow0$. A $\langle(1-x)^{N}\rangle_{F}$
+is a linear combination of $\langle x^{k}\rangle_{F}$ moments: 
+\begin{equation}
+\langle(1-x)^{N}\rangle_{F}=\sum_{k=0}^{N}C_{k}^{N}\ (-1)^{k}\ \langle x^{k}\rangle_{F},
+\end{equation}
+where 
+\begin{equation}
+C_{k}^{N}\equiv\frac{N!}{k!(N-k)!}.
+\end{equation}
+Thus, $\langle(1-x)^{N}\rangle_{F}$ can be in principle derived from
+the standard Mellin moments.
+
+The non-singlet combinations $T_{3}^{\pm}$, $T_{8}^{\pm}$, $T_{15}^{\pm}$,
+etc. are integrable at $x\rightarrow0$. For $T(x)=T_{3}^{+}(x)=u(x)+\overline{u}(x)-d(x)-\overline{d}(x)$,
+we write 
+\begin{eqnarray}
+ & \langle1-x\rangle_{T}=\int_{0}^{1}dx\ \left(1-x\right)T(x)=\langle1\rangle_{T}-\langle x\rangle_{T};\\
+ & \langle(1-x)^{2}\rangle_{T}=\langle1\rangle_{T}-2\langle x\rangle_{T}+\langle x^{2}\rangle_{T};\\
+ & \langle(1-x)^{3}\rangle_{T}=\langle1\rangle_{T}-3\langle x\rangle_{T}+3\langle x^{2}\rangle_{T}-\langle x^{3}\rangle_{T}.
+\end{eqnarray}
+We can similarly compute $\langle(1-x)^{N}\rangle_{T}$ for $T(x)=T_{q}^{-}(x)=q(x)-\overline{q}(x)$
+with $q=u,d,...$; as well as for $T(x)=T_{3}^{-}(x)=u(x)-\overline{u}(x)-d(x)+\overline{d}(x)$.
+\end{enumerate}
+Result: We make ranking tables and sensitivity plots for $x^{n}$,
+$(1-x)^{n}$ (in PDFsense\_Tasks\_and\_Results of SMU box). For $(1-x)^{n}$,
+the flavours that HERA2 points are sensitive to have the most total
+sensitivity because of the large amount of HERA2 points (e.g. T24)
+\ref{fig:Melling_1-xn}. Also, the sensitivities are not sensitive
+to order $n$ and the high sensitive $x$ regions are in $(10^{-2},1)$,
+which seems means that it is hard to measure the small $x$ PDFs through
+Melling moments $(1-x)^{n}q(x)$. Besides, we find that W/Z datasets
+and BCDMS, CDHSW, CCFR, NuTeV, HERA2 datasets contribute the most
+total sensitivity to the flavours we investigate, indicating that
+DIS and VBP events are main sources of the sensitivities to the Melling
+moments. 
+
 \textcolor{red}{note: the total sensitivity table uses the old formula,
 it should be modify latter}
 
 \begin{figure*}
-\includegraphics[clip,width=0.45\textwidth]{plots/MellinMoment/corrdr_xQ+1_f55_samept}
-\ \ \
-\includegraphics[clip,width=0.45\textwidth]{plots/MellinMoment/corr_xQ+1_f55_samept} 
+\includegraphics[clip,width=0.3\textwidth]{plots/MellinMoment/corrdr_xQ+1_f55_samept}
 
-\includegraphics[clip,width=0.45\textwidth]{plots/MellinMoment/corrdr_xQ+1_f57_samept}
-\ \ \
-\includegraphics[clip,width=0.45\textwidth]{plots/MellinMoment/corr_xQ+1_f57_samept} 
+\includegraphics[clip,width=0.3\textwidth]{plots/MellinMoment/corrdr_xQ+1_f57_samept}
 
 \caption{data sets sensitivity to the 1st and 3rd order B-C of Melling moment}
 \label{fig:Mellin_B-C} 
@@ -653,73 +649,97 @@ g\textasciicircum{}2 & 794. & 907.\tabularnewline
 \hline 
 g\textasciicircum{}3 & 851. & 907.\tabularnewline
 \hline 
-\end{tabular}\caption{high total sensitivity to mellin moments of quantities and the respective
-non-mellin moment quantitives}
+\end{tabular}\caption{The sensitivity of mellin moments quantities and the respective non-mellin
+moment quantities imposed by HERA2 + LHC datasets}
 \label{tab:Mellin_total_sens} 
 \end{table}
 
 \begin{figure*}
-\includegraphics[clip,width=0.45\textwidth]{plots/MellinMoment/x0x-1_corr/corr_xQ+1_f28_samept}
-\ \ \
-\includegraphics[clip,width=0.45\textwidth]{plots/MellinMoment/x0x-1_corr/corr_xQ+1_f29_samept} 
+\includegraphics[clip,width=0.3\textwidth]{plots/MellinMoment/x0x-1_corr/corr_xQ+1_f28_samept}
 
-\includegraphics[clip,width=0.45\textwidth]{plots/MellinMoment/x0x-1_corr/corr_xQ+1_f48_samept}
-\ \ \
-\includegraphics[clip,width=0.45\textwidth]{plots/MellinMoment/x0x-1_corr/corr_xQ+1_f49_samept} 
-
-\caption{data sets sensitivity to x\textasciicircum{}-1, x\textasciicircum{}0
-of Melling moment }
+\caption{datasets correlation to $x^{-1}$ of Melling moment }
 \label{fig:Melling_x-1x0} 
 \end{figure*}
 
 \begin{figure*}
-\includegraphics[clip,width=0.45\textwidth]{plots/MellinMoment/x2x3_corr/corr_xQ+1_f18_samept}
-\ \ \
-\includegraphics[clip,width=0.45\textwidth]{plots/MellinMoment/x2x3_corr/corr_xQ+1_f19_samept} 
+\includegraphics[clip,width=0.3\textwidth]{plots/MellinMoment/x2x3_corr/corr_xQ+1_f18_samept}
 
-\includegraphics[clip,width=0.45\textwidth]{plots/MellinMoment/x2x3_corr/corr_xQ+1_f21_samept}
 \ \ \
-\includegraphics[clip,width=0.45\textwidth]{plots/MellinMoment/x2x3_corr/corr_xQ+1_f22_samept} 
+\includegraphics[clip,width=0.3\textwidth]{plots/MellinMoment/x2x3_corr/corr_xQ+1_f22_samept} 
 
-\caption{data sets sensitivity to x\textasciicircum{}2, x\textasciicircum{}3
-of Melling moment}
+\caption{data sets sensitivity to $x^{2}$, $x^{3}$ of Melling moment}
 \label{fig:Mellin_x2x3} 
+\end{figure*}
+\begin{figure*}
+\includegraphics[clip,width=0.3\textwidth]{plots/MellinMoment/1-x/corrdr_xQ+1_f34_samept}
+
+\caption{datasets correlation to $x^{-1}$ of Melling moment }
+\label{fig:Melling_1-xn} 
 \end{figure*}
 
 \section{Case Study: comparison of the fit with jets and with no jets}
 
-...HERA2 and HERA2NoJet are fit with jet data sets (504, 514, 535,
-538) and without jet data sets. Here we compare the difference of
-sensitivities to PDFs for HERA2 and HERA2NoJet.
+...the HERA2 and HERA2NoJet are PDFsets with old jet datasets (504,
+514, 535, 538) and without jet datasets in the fits. Here we compare
+the sensitivities to HERA2 and HERA2NoJet PDFs imposed by the HERA2
++LHC datasets.
 \begin{enumerate}
-\item this comparison shows the possible sensitivity impacts when incorporate
-data sets in the fit of PDF sets \ref{tab:HERA2_HERA2NoJet_total_sens},
-\ref{fig:HERA2_HERA2NoJet_r_dr}, \ref{fig:HERA2_HERA2NoJet_corr_sens}
-\item after fit with jet data, both total correlation and dr reduce, so
-the total sensitivity is pulled down.
-\item changes are mainly in jet data (the total sensitivity difference are
-mostly from jet old and new data), so the old jet data in the fit
-actually mostly constrain the PDF space associated with jet processes
-\item ttbar and Zpt gluon are also constrained, because the constrained
-space associated with jet processes is close to the space of ttbar/Zpt
-processes, which is mainly associated with gluon PDF.
-\item reciprocate distance formula: $rd_{i}=(Npt-N_{sameID}/Npt)*1/(\sum_{i_{ID}\text{\ensuremath{\neq}}j_{ID}}^{Npt}|\stackrel{\rightharpoonup}{v_{i}}-\stackrel{\rightharpoonup}{v_{j}}|)$,
+\item {[}\textbf{\textcolor{blue}{Y}}{]} this comparison shows the possible
+sensitivity impacts when incorporating data sets in the fit of PDFsets
+\ref{tab:HERA2_HERA2NoJet_total_sens}, \ref{fig:HERA2_HERA2NoJet_r_dr},
+\ref{fig:HERA2_HERA2NoJet_corr_sens}
+\item {[}\textbf{\textcolor{blue}{Y}}{]} after incorporating jet datasets
+into the fit, both the total correlation and $\delta r$ values decrease,
+so the total sensitivity is weakened.
+\item {[}\textbf{\textcolor{blue}{Y}}{]} the total sensitivity difference
+for the HERA2 and HERA2NoJet are mostly from old and new jet data
+(see row 1, 2, and 3 in \ref{tab:HERA2_HERA2NoJet_total_sens}), so
+the old jet data in the fit actually mostly constrain the PDF space
+associated with jet processes
+\item {[}\textbf{\textcolor{blue}{Y}}{]} because the PDF space associated
+with jet processes is close to the space of ttbar/Zpt processes, which
+is mainly associated with the gluon PDF, ttbar and Zpt gluon are expected
+to be constrained by old jet data. From tab. \ref{tab:HERA2_HERA2NoJet_total_sens},
+we find that the $\delta r$ and sensitivity of HERA2 are smaller
+than which of HERA2NoJet, verifying that the old jet datasets impose
+a remarkable constraint to ttbar/Zpt processes.
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{2}}\textbf{\textcolor{red}{!!}}{]}
+Via comparing the change of the sensitivities, correlations, and $\delta r$
+in 504, 514, 535, 538, we can observe how well the sensitivity factor
+predicts the impact of incorporating datasets into the global fit
+to the constraint on PDFs. e.g. We can examine the relations between
+$S(r_{i},f_{a}(x_{i},\mu_{i}))$ and $\delta r_{i,HERA2}/\delta r_{i,HERA2NoJet}$
+or $\delta f_{a,HERA2}(x_{i},\mu_{i})/\delta f_{a,HERA2NoJet}(x_{i},\mu_{i})$
+for points $i$ to see whether the sensitivities indicate the degree
+of the gained constraint on PDFs .
+\item {[}\textbf{\textcolor{blue}{Y}}{]} reciprocate distance formula: $rd_{i}=(Npt-N_{sameID}/Npt)*1/(\sum_{i_{ID}\text{\ensuremath{\neq}}j_{ID}}^{Npt}|\stackrel{\rightharpoonup}{v_{i}}-\stackrel{\rightharpoonup}{v_{j}}|)$,
 where $\stackrel{\rightharpoonup}{v_{i}}$ is the vector of PCA-reduced
-10 dimensions of the normalized residual ($\stackrel{\rightharpoonup}{\delta r}/r_{ID,rms}$)
-in Hessian-replica space. The comparison of reciprocate distances
-of normalized residuals of data sets to HERA2 and HERA2NoJet shows
-that 234, 266, 203 are in average more far away to other data in the
-replica space of normalized residuals \ref{fig:HERA2_HERA2NoJet_rd3}.
-The ranking of distances for two PDF sets are similar, indicating
-that the fits with jet data sets (504, 514, 535, 538) does not constrain
-the similar space of PDFs to other experiments. In the LHC data sets,
-245, 249, 250, 542, 545 perhaps discover more new PDF space than others.
-For the experiments with most points that are far away from other
-points at space
-\item apply PCA and t-SNE algorithm to $\stackrel{\rightharpoonup}{\delta r}/r_{ID,rms}$,
-we can efficiently separate it to different types, which means these
-algorithm illustrates the difference of PDF-space constraint from
-data sets \ref{fig:PCA_t-SNE}. 
+10 dimensions of the normalized residuals ($\stackrel{\rightharpoonup}{\delta r}/r_{ID,rms}$)
+in the space spanned by the Hessian-uncertainties replicas. The comparison
+of reciprocate distances for normalized residuals of datasets to HERA2
+and HERA2NoJet PDFsets shows that 234, 266, 203 are in average more
+far away to other data in the replica space of normalized residuals
+\ref{fig:HERA2_HERA2NoJet_rd3}. In the LHC datasets, 245, 249, 250,
+542, 545 perhaps discover more new PDF space than others. Besides,
+the ordering of the average reciprocate distances in the bar chart
+for two PDFsets are similar. So first, the structure of normalized
+residuals for most experiments are not affected by old jet datasets.
+Second, most points in HERA2NoJet datasets are not neighboring to
+points in old and new (LHC) jet datasets in the PCA-reduced space.
+Hence, the fits with old jet datasets do not constrain the similar
+space of PDFs to most experiments in the fit of HERA2NoJet. 
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{1}}\textbf{\textcolor{red}{!!}}{]}
+For the experiments with the most points that are far away from other
+points at space, we find that 234, 203, 266, 160, 124, 542, 249 have
+the comparable larger maximum distances. We find that many experiments
+in this list have just little data points, so it indicates that the
+number of points in datasets is not the only factor affecting the
+number of points providing the unique PDF constraint. The reciprocate
+distance distributions in various experiments are very different.
+For answering the question about which experiments have more faraway
+points, perhaps we need to also do some statistics for the points
+larger than a cut (e.g. $rd_{i}>\mu_{rd}+\sigma_{rd}$ for $i$ represents
+the index of data points in all experiments) 
 \end{enumerate}
 \textcolor{red}{note: 1. The title of HERA2NoJet figures \ref{fig:HERA2_HERA2NoJet_rd3}
 are not correct, which is still ``CT14HERA2 NNLO''. 2. Because I
@@ -752,52 +772,74 @@ jet new: 42, 544, 545. ttbar: 565, 566, 567, 568. Zpt: 247, 253, 254,
 \end{table}
 
 \begin{figure*}
-\includegraphics[clip,width=0.45\textwidth]{plots/HERA2_HERA2NoJet/HERA2/residual_xQ+1_samept}
+\includegraphics[clip,width=0.3\textwidth]{plots/HERA2_HERA2NoJet/HERA2/residual_xQ+1_samept_thumb}
 \ \ \
-\includegraphics[clip,width=0.45\textwidth]{plots/HERA2_HERA2NoJet/HERA2NoJet/residual_xQ+1_samept} 
+\includegraphics[clip,width=0.3\textwidth]{plots/HERA2_HERA2NoJet/HERA2NoJet/residual_xQ+1_samept_thumb} 
 
-\includegraphics[clip,width=0.45\textwidth]{plots/HERA2_HERA2NoJet/HERA2/dr_xQ+1_samept}
+\includegraphics[clip,width=0.3\textwidth]{plots/HERA2_HERA2NoJet/HERA2/dr_xQ+1_samept_thumb}
 \ \ \
-\includegraphics[clip,width=0.45\textwidth]{plots/HERA2_HERA2NoJet/HERA2NoJet/dr_xQ+1_samept} 
+\includegraphics[clip,width=0.3\textwidth]{plots/HERA2_HERA2NoJet/HERA2NoJet/dr_xQ+1_samept_thumb} 
 
-\caption{residual, deltaR of data sets to HERA2 and HERA2NoJet }
+\caption{the $r$, $\delta r$ of HERA2 and HERA2NoJet datasets}
 \label{fig:HERA2_HERA2NoJet_r_dr} 
 \end{figure*}
 
 \begin{figure*}
-\includegraphics[clip,width=0.45\textwidth]{plots/HERA2_HERA2NoJet/HERA2/corr_xQ+1_f0_samept}
+\includegraphics[clip,width=0.3\textwidth]{plots/HERA2_HERA2NoJet/HERA2/corr_xQ+1_f0_samept_thumb}
 \ \ \
-\includegraphics[clip,width=0.45\textwidth]{plots/HERA2_HERA2NoJet/HERA2NoJet/corr_xQ+1_f0_samept} 
+\includegraphics[clip,width=0.3\textwidth]{plots/HERA2_HERA2NoJet/HERA2NoJet/corr_xQ+1_f0_samept_thumb} 
 
-\includegraphics[clip,width=0.45\textwidth]{plots/HERA2_HERA2NoJet/HERA2/corrdr_xQ+1_f0_samept}
+\includegraphics[clip,width=0.3\textwidth]{plots/HERA2_HERA2NoJet/HERA2/corrdr_xQ+1_f0_samept_thumb}
 \ \ \
-\includegraphics[clip,width=0.45\textwidth]{plots/HERA2_HERA2NoJet/HERA2NoJet/corrdr_xQ+1_f0_samept} 
+\includegraphics[clip,width=0.3\textwidth]{plots/HERA2_HERA2NoJet/HERA2NoJet/corrdr_xQ+1_f0_samept_thumb} 
 
-\caption{correlation and sensitivity of data sets to HERA2 and HERA2NoJet }
+\caption{the correlation and sensitivity of datasets to HERA2 and HERA2NoJet }
 \label{fig:HERA2_HERA2NoJet_corr_sens} 
 \end{figure*}
 
 \begin{figure*}
-\includegraphics[clip,width=0.45\textwidth]{plots/HERA2_HERA2NoJet/rd3/CT14HERA2NNLOall_AbsSens_newSens_formula_cutbrokenpoints/residual_all_norm_Reciprocate_distance_rd3B}
+\includegraphics[clip,width=0.3\textwidth]{plots/HERA2_HERA2NoJet/rd3/CT14HERA2NNLOall_AbsSens_newSens_formula_cutbrokenpoints/residual_all_norm_Reciprocate_distance_rd3B}
 \ \ \
-\includegraphics[clip,width=0.45\textwidth]{plots/HERA2_HERA2NoJet/rd3/HERA2_no_jet/residual_all_norm_Reciprocate_distance_rd3B} 
+\includegraphics[clip,width=0.3\textwidth]{plots/HERA2_HERA2NoJet/rd3/HERA2_no_jet/residual_all_norm_Reciprocate_distance_rd3B} 
 
 \includegraphics[clip,width=0.45\textwidth]{plots/HERA2_HERA2NoJet/rd3/CT14HERA2NNLOall_AbsSens_newSens_formula_cutbrokenpoints/residual_all_norm_Reciprocate_distance_ID_max_mean}
 \ \ \
 \includegraphics[clip,width=0.45\textwidth]{plots/HERA2_HERA2NoJet/rd3/HERA2_no_jet/residual_all_norm_Reciprocate_distance_ID_max_mean} 
 
-\caption{reciprocate distance among residual/norm of points in data sets. left-up:
-HERA2 reciprocate distance. right-up: HERA2NoJet reciprocate distance.
-left-down: mean and max of reciprocate distances by experiments, HERA2.
-right-down: mean and max of reciprocate distances by experiments,
-HERA2.}
+\caption{the reciprocate distances among normalized residuals of points in
+datasets. left-up: the HERA2 reciprocate distances. right-up: the
+HERA2NoJet reciprocate distance. left-down: the mean and maximum of
+the HERA2 reciprocate distances by experiments. right-down: the mean
+and maximum of the HERA2NoJet reciprocate distances by experiments.}
 \label{fig:HERA2_HERA2NoJet_rd3}
 \end{figure*}
 
+\section{Classifying Datasets}
+
+This section we discuss methods of classifying datasets by the uncertainty
+replicas of them. Via these methods, we could specify whether datasets
+are correlated to the similar PDF region.
+\begin{enumerate}
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{2}}\textbf{\textcolor{red}{!}}{]}
+applying PCA and t-SNE algorithm to $\stackrel{\rightharpoonup}{\delta r}/r_{ID,rms}$,
+we can efficiently separate it to different types, which means these
+algorithms specify the diversity of the constraint imposed by datasets
+\ref{fig:PCA_t-SNE}. We can compare the groups separated by t-SNE
+to see what kind of datasets are relative to the similar PDFs, so
+we can know a. whether incorporating a new dataset provides the constraint
+we never have. b. the correlation relation between two processes (perhaps
+even any nonlinear correlation relation could be explored).
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{3}}\textbf{\textcolor{red}{!!}}{]}
+use the reciprocate distance to specify the uniqueness of datasets
+perhaps is not the best way. We can use other quantities such as the
+angles among points to define the similarity among points or use some
+clustering algorithm to define jets in the replica space (or the space
+of the PCA of the replicas).
+\end{enumerate}
 \begin{figure*}
-\includegraphics[clip,width=0.45\textwidth]{plots/HERA2_HERA2NoJet/tensorprojector/pca}
+\includegraphics[clip,width=0.3\textwidth]{plots/HERA2_HERA2NoJet/tensorprojector/pca}
 \ \ \
-\includegraphics[clip,width=0.45\textwidth]{plots/HERA2_HERA2NoJet/tensorprojector/tsne}
+\includegraphics[clip,width=0.3\textwidth]{plots/HERA2_HERA2NoJet/tensorprojector/tsne}
 
 \caption{Distributions of displaced residuals $\vec{\delta_{i}}$ from the
 CTEQ-TEA analysis obtained by dimensionality reduction methods. Left:
@@ -813,8 +855,256 @@ production processes.}
 
 \subsection{Quantifying the sensitivity to PDFs in a x-range }
 
+{[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{2}}\textbf{\textcolor{red}{!!!}}{]}
+We try to quantify and visualize the constraint on a $x$ and $\mu$
+range of PDFs imposed by experimental measurements. For the selected
+data points or datasets, we can easily know the expected regions of
+PDFs impacted by them. The total sensitivities to PDFs versus x at
+$Q_{0}=1.3$ GeV is the most important result we want to see for this
+idea. We can also use this tool to advanced study a. the total sensitivities
+for each experimental ID and type of process. b. the comparison of
+the constraint on PDFs for HERA2 and HERA2Nojet. 
+
+The idea of quantifying the sensitivity to the whole x range of PDFs
+imposed by experimental measurements is to draw the function $S(r_{i},f_{a}(x,\mu))$
+in the x interval $[10^{-5},1]$ for each data point $i$ and flavour
+$a$. We can know the sensitivity to the PDF of any flavour and any
+(x,mu) range for the selected datasets by superposing the functions
+$S(r_{i},f_{a}(x,\mu))$ of all points $i$. 
+
+The finished part: a. The total sensitivities for the selected IDs,
+showing all flavours in one plot (The left plot in Fig. \ref{fig:HERA2_sens_xrange}).
+b. The total sensitivities for the selected IDs, showing the total
+sensitivities of IDs separately (The right plot in Fig. \ref{fig:HERA2_sens_xrange}).
+The left and middle plots in Fig. \ref{fig:HERA2_sens_xrange} implies
+that HERA2 + LHC new datasets allocate the sensitivities evenly to
+$10^{-5}<x<1$ and the total sensitivity to PDFs is not sensitive
+to the factorization scale $\mu$. The right plot ranks the sensitivities
+imposed by various datasets and demonstrates that 542 and 545 impose
+the most sensitivities to the gluon PDF at large $x$ region. c. plot
+the sensitivities at different $Q$: the left and middle plots show
+that the total sensitivity to PDFs is not sensitive to the factorization
+scale $Q$. d. generate the plot for each ID separately (in ./PDFsense\_Tasks\_and\_Results
+of SMU box). \textcolor{red}{note: the 542 and 545 datasets need to
+be replaced by the new version later (the right figure in \ref{fig:HERA2_sens_xrange}).}
+
+{[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{2}}\textbf{\textcolor{red}{!!}}{]}
+The functions we could add: a. The mean sensitivities. c. show the
+total sensitivities for all IDs and the total sensitivities for each
+ID in the same plot. 
+
+\begin{figure*}
+\includegraphics[clip,width=0.3\textwidth]{plots/sens_xrange/Sens_xrange_HERA2plusLHC_CT14HERA2NNLO_Q1_3}
+\ \ \
+\includegraphics[width=0.3\textwidth]{plots/sens_xrange/Sens_xrange_HERA2plusLHC_CT14HERA2NNLO_Q125}\ \ \
+\includegraphics[clip,width=0.3\textwidth]{plots/sens_xrange/HERA2_LHC_JP_TTbar_Zpt_singlesens_g} 
+
+\caption{Left: The total sensitivities to HERA2 PDFs in $10^{-5}<x<1$ at $Q=1.3$
+GeV imposed by datasets in the HERA2 fit+LHC new datasets. Middle:
+the same as the left figure yet $Q=125$ GeV. Right: The gluon sensitivities
+for the LHC jet, ttbar, and ZpT datasets at $Q=1.3$ GeV.}
+\label{fig:HERA2_sens_xrange} 
+\end{figure*}
+
 \subsection{construct theoretical predictions are the linear combination of different
 flavour PDFs }
+
+We want to know how the data constrain the PDF space rather than just
+know the sensitivity to each flavour. Advantage: We don't need to
+guess and test which combination of flavour has the strongest constraint
+by the user function again and again.
+
+Other advantages: if we know the relation between the theoretical
+values and PDFs, whether we can directly estimate the scale of PDF
+uncertainties imposed by experimental measurements or at least get
+more insight understanding of how measurements constrain PDFs? 
+
+We can approximate a linear relation among theoretical prediction
+and PDFs at the specified $(x,\mu)$. Here we temporary ignore the
+nonlinear terms, the correlation of replicas among various flavours,
+and the contribution from PDFs that are not at $(x,\mu)$ and we absorb
+the unknown factors into a variable $X$. Then with
+
+\[
+\delta T_{i,R}=(T_{i,r+}-T_{i,r-})/2,\delta f_{i,R}=(f_{i,r+}-f_{i,r-})/2
+\]
+
+\[
+|\delta T_{i}|^{2}=\underset{R}{\sum}\delta T_{i,R}^{2},|\delta f_{i}|^{2}=\underset{R}{\sum}\delta f_{i,R}^{2}
+\]
+
+We have the following rules:
+
+\[
+T_{i,r}=\underset{a}{\sum}c_{i,a}f(x_{i},\mu_{i})_{a,r}+X_{i,r}
+\]
+
+\[
+\delta T_{i,R}=\underset{a}{\sum}c_{i,a}(f_{i,a,r+}-f_{i,a,r-})/2+(X_{i,r+}-X_{i,r-})/2\equiv\underset{a}{\sum}c_{i,a}\delta f_{i,a,R}+\delta X_{i,R}
+\]
+
+Because the total PDF uncertainties of physical quantities follow
+the Hessian uncertainty rule: $\delta Q=\sqrt{\underset{R}{\sum}\delta Q_{R}^{2}}$
+and the squre of the addition of two vectors is $(\stackrel{\rightharpoonup}{Q}_{1}+\stackrel{\rightharpoonup}{Q}_{2})^{2}=Q_{1}^{2}+Q_{2}^{2}+2|Q_{1}||Q_{2}|\rho$
+for the correlation $\rho$, the total theoretical uncertainty for
+each point $i$ is:
+
+\[
+|\delta T_{i}|^{2}=\underset{R}{\sum}(\underset{a}{\sum}c_{i,a}\delta f_{i,a,R}+\delta X_{i,R})^{2}\equiv(\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a})^{2}+(\delta(\delta X_{i}))^{2}+2|\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a}||\delta(\delta X_{i})|\rho\simeq(\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a})^{2}+(\delta(\delta X_{i}))^{2}
+\]
+
+Where we assume the unknown quantity $X$ and the known PDF combination
+is uncorrelated, which means that the vectors $\stackrel{\rightharpoonup}{\delta X_{i}}$,
+$\stackrel{\rightharpoonup}{\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a}}$
+and $\stackrel{\rightharpoonup}{\delta T_{i}}$ form a right triangle.
+Therefore, the Hessian uncertainty correlation between $T_{i}$and
+$\underset{a}{\sum}c_{i,a}f_{i,a}$ is $C(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\simeq\frac{|\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a}|}{|\delta T_{i}|}$.
+If even the various PDFs of flavours are uncorrelated with each other,
+we have $C(T_{i},f_{i,a})\simeq\frac{\delta(c_{i,a}|\delta f_{i,a}|)}{|\delta T_{i}|}$.
+The physical explanation for the formulas is that the theoretical
+uncertainty is the error propagation of linear independent uncertainties
+of quantities $f_{\bar{d}}$, $f_{\bar{u}}$, $f_{g}$, $f_{u}$,
+$f_{d}$, $f_{s}$, and unknown $X$. Therefore, $c_{\bar{d}}(x,\mu),c_{\bar{u}}(x,\mu),c_{g}(x,\mu),c_{u}(x,\mu),c_{d}(x,\mu),c_{s}(x,\mu)$
+specify the relation between uncertainties on PDFs of flavours and
+experimental measurements. $C(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})$
+is the goodness of the specification. 
+
+\subsubsection{Setup}
+
+for each dataset, using the linear fit $T_{i,r}=\underset{a}{\sum}c_{i,a}f(x_{i},\mu_{i})_{a,r}+const$
+to fit the 56 replicas for each point $i$
+
+\subsubsection{Verification of the linear independent approximation}
+
+To know whether the linear approximation works well, here are some
+ideas.
+\begin{enumerate}
+\item {[}\textbf{\textcolor{blue}{Y}}{]} by checking the relation $C(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\simeq\frac{|\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a}|}{|\delta T_{i}|}$
+in the left of Fig. \ref{fig:linearfitByPDFs_verify}, we verify the
+formula. e.g. ID = 247 satisfies the relation and the goodness of
+the specification (correlations) of points are very high.
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{2}}\textbf{\textcolor{red}{!}}{]}
+by checking the p-values of coefficients $c_{i,a}$; there should
+be at least one $a$ satisfying $p_{i,a}<0.05$ for each point $i$.
+(X)
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{2}}\textbf{\textcolor{red}{!}}{]}
+check the correlations of the linear fits are large enough for most
+points (X)
+\end{enumerate}
+
+\subsubsection{physical problems and applications}
+
+With $c_{\bar{d}}(x,\mu),c_{\bar{u}}(x,\mu),c_{g}(x,\mu),c_{u}(x,\mu),c_{d}(x,\mu),c_{s}(x,\mu)$,
+we are able to study how measurements constrain PDFs. Here are some
+problems we presently want to do: 
+\begin{enumerate}
+\item {[}\textbf{\textcolor{blue}{Y}}{]} make the statistical quantities
+to represent the generic coefficients $c_{n}$ for each dataset (e.g.
+the mean $<c_{n}>$ for flavours $n$): Because the points in each
+datasets (even in the similar $x$ ranges) have very different coefficient
+values or even ratios, taking the mean $<c_{n}>$is often not representative
+for datasets. For example, the $c_{n}$ in datasets have large variance
+and many outliers. Displaying the $c_{n}$ versus $(x,\mu)$ is perhaps
+better. 
+\item {[}\textbf{\textcolor{blue}{Y}}{]} visualization of the coefficients
+of points for each experimental measurement on $(x,\mu)$ plane: We
+make the coefficient fractions to the dominate coefficient. The way
+to determine the dominant coefficient for each Expt ID is by ordering
+the number of points of each flavour with the maximum $c_{n}$. The
+flavour with the most number of points with maximum coefficients among
+various flavours is used to normalize the coefficients for the corresponding
+Expt ID. In the right Fig. \ref{fig:linearfitByPDFs_verify}, we find
+that the $c_{\bar{d}}(x,\mu)-c_{\bar{u}}(x,\mu)$ is the largest coefficient
+in ID = 203 and it becomes less dominant when $x>0.3$.
+\item {[}\textbf{\textcolor{blue}{Y}}{]} quantify the strength of constraint
+on the PDF space imposed by measurements and compare it with the components
+from PDF uncertainties of flavours (which flavours contribute the
+most to the theoretical uncertainties of measurements):Defining the
+sensitivity $S(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\equiv\frac{\delta r_{i}}{r_{ID,rms}}C(\delta r_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\simeq\frac{|\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a}|}{\sigma_{uncor,i}r_{ID,rms}}\simeq\frac{|\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a}|}{\sigma_{uncor,i}}$,
+we can investigate the $\underset{a}{\sum}c_{i,a}f_{i,a}$ sensitivities
+on $(x,\mu)$ plane. To estimate the how much $f_{i,a}(x,\mu)$ contribute
+to the $\underset{a}{\sum}c_{i,a}f_{i,a}$ sensitivities, we assume
+the uncertainties of $c_{n}\delta f_{n}$ are independent, so $S(r_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\simeq\frac{\sqrt{\underset{a}{\sum}(c_{i,a}|\delta f_{i,a}|/\sigma_{uncor,i})^{2}}}{r_{ID,rms}}$
+indicates that the components of the best fit sensitivity $S(r_{i},\underset{a}{\sum}c_{i,a}f_{i,a})$
+depends on sizes of of $c_{n}\delta f_{n}$. Here we provide an example
+of ID = 203 sensitivity analysis for the best fit $\underset{a}{\sum}c_{i,a}f_{i,a}$,
+where we hide the information of $\mu$ for the convinience and plot
+$S(r_{i},\underset{a}{\sum}c_{i,a}f_{i,a})$ versus $x$ for each
+Expt ID. From the middle of Fig. \ref{fig:linearfitByPDFs_verify}
+we find that ID = 203 measures the $f_{d_{+}}-f_{u_{+}}$ and $S(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})$
+decreases by $x$, which perhaps results from the decreasing of the
+dominant coefficients $c_{\bar{d}}\delta f_{\bar{d}}$, $c_{\bar{u}}\delta f_{\bar{u}}$.
+Even at the same $x$ value, $c_{n}\delta f_{n}$ could still be unstable,
+which means that sometimes the coefficients $c_{n}$ somehow have
+large uncertainties. In some measurements, the $c_{n}$ uncertainties
+are very large (e.g. ID = 160). We also find that the approximation
+$S(r_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\simeq\frac{\sqrt{\underset{a}{\sum}(c_{i,a}|\delta f_{i,a}|/\sigma_{uncor,i})^{2}}}{r_{ID,rms}}$
+is not always correct. For instance, part of the line of $c_{\bar{d}}\delta f_{\bar{d}}/\sigma_{uncor}$
+is higher than $S(r_{i},\underset{a}{\sum}c_{i,a}f_{i,a})$ and $r_{ID,rms}\simeq1$,
+contradicting to $S(r_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\simeq\frac{\sqrt{\underset{a}{\sum}(c_{i,a}|\delta f_{i,a}|/\sigma_{uncor,i})^{2}}}{r_{ID,rms}}$. 
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{3}}\textbf{\textcolor{red}{?}}{]}
+whether the sizes of components are representive for the sensitivities
+of PDFs in the definition $S(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\equiv\frac{\delta r_{i}}{r_{ID,rms}}C(\delta r_{i},\underset{a}{\sum}c_{i,a}f_{i,a})$.
+In other words, in which conditions $\frac{|\delta(\delta f_{i,a})|}{\sigma_{uncor}}=\delta r_{i}C(r_{i},f_{i,a})$
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{?}}\textbf{\textcolor{red}{?}}{]}
+can the knowledge of coefficients help us to rank the constraint on
+PDFs imposed by measurements better?
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{3}}\textbf{\textcolor{red}{!!}}{]}
+backward: how good the combination of measurements measure (reconstruct)
+PDFs $f_{a}(x,\mu)$: $f_{a,R}(x,\mu)=\underset{R}{\sum}\delta T_{i,R}$
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{?}}\textbf{\textcolor{red}{?}}{]}
+can the knowledge of coefficients help us to quantify the sensitivities
+to physical quantities (e.g. $\sigma_{H}$)?
+\end{enumerate}
+
+\subsubsection{a temporary conclusion}
+\begin{enumerate}
+\item the statistical quantities (average, median, etc) is not a good way
+to reveal the properties of coefficient $c_{n}$ for various flavours
+$n$
+\item $T_{i}=\underset{a}{\sum}c_{i,a}f_{i,a}+const$ does not satisfy $C(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})=\underset{a}{\sum}c_{i,a}f_{i,a}/T_{i}$.
+I can not tell whether $T_{i}=\underset{a}{\sum}c_{i,a}f_{i,a}+const$
+is a reasonable approximation. Instead, we can verify the approximation
+$C(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\simeq\frac{|\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a}|}{|\delta T_{i}|}$
+is acceptable and provides some useful information about the PDF sensitivity
+imposed by datasets. 
+\item we display the $c_{n}$ versus $x$ to demonstrate the measured PDF
+space depend on $x$ (assuming that the PDFs at different factorization
+scale $\mu$ are strongly correlated and $f(x,\mu)\simeq f(x)$) 
+\item $S(r_{i},\underset{a}{\sum}c_{i,a}f_{i,a})$ and $c_{i,n}\delta f_{i,n}/\sigma_{uncor,i}$
+versus $x$ indicates the sensitivity depending on $x$ and the proportion
+of the sensitivity components from various flavours $n$. However,
+the correlations among different $\delta f_{i,n}$ are also important
+and our analysis does not include the sensitivity contribution from
+$C(f_{n1}(x,\mu),f_{n2}(x,\mu))$.
+\item the $c_{n}$ in many datasets are numerical unstable or have large
+uncertainties. I don't know whether the instability will disappear
+when considering the $\mu$ dependency.
+\item large $c_{n}$ does not mean the $f_{n}$ is the main source of the
+corresponding theoretical uncertainty or $f_{n}$ is the most sensitive
+flavour. For instance, the $c_{\bar{u}}(x,\mu)$ of jet datasets are
+mostly the largest among flavour coefficients but the $c_{g}\delta f_{g}$
+is the largest among $c_{n}\delta f_{n}$. Perhaps it is the considerable
+$\delta f_{g}$ that enhances the gluon sensitivities for jet and
+ttbar datasets.
+\item It seems that when the dominant $c_{n}\delta f_{n}$ are not far larger
+than other $c_{n}\delta f_{n}$ , the correlations and sensitivities
+would become lower.
+\end{enumerate}
+\begin{figure*}
+\includegraphics[clip,width=0.3\textwidth]{plots/LinearFitPDFs/Corr_dfxQoverdTPearsonC_247}
+\ \ \
+\includegraphics[clip,width=0.3\textwidth]{plots/LinearFitPDFs/BestFit_coefsdfNorm_vs_x_203}
+\ \ \
+\includegraphics[clip,width=0.3\textwidth]{plots/LinearFitPDFs/BestFit_coefsRatio_vs_x_203}
+
+\caption{left: The $C(T_{i},\protect\underset{a}{\sum}c_{i,a}f_{i,a})$ versus
+$\frac{|\protect\underset{a}{\delta\sum}(c_{i,a}\delta f_{i,a})|}{|\delta T_{i}|}$
+for ID = 247. middle: sensitivities of ID = 203 data depend on x.
+right: coefficient fractions to the dominate coefficient depend on
+x. }
+\label{fig:linearfitByPDFs_verify} 
+\end{figure*}
 
 \section{Conclusions \label{sec:Conclusions}}
 
@@ -822,9 +1112,14 @@ flavour PDFs }
 
 \subsection*{Acknowledgements}
 
-......\bibliographystyle{apsrev}
+......
+
+\clearpage \newpage{}
+
+\bibliographystyle{apsrev}
 \bibliography{PDFsense_material}
- 
+
+\clearpage \newpage{}
 
 \appendix
 
@@ -834,7 +1129,12 @@ flavour PDFs }
 
 \section{Tabulated results \label{sec:Tables}}
 
-......
+......This Appendix we show the information in experiments applied
+to our analysis in Table \ref{tab:EXP_1}, \ref{tab:EXP_2}, \ref{tab:EXP_3}.
+We calculate the average and total sensitity for each experimental
+data and apply the tables to rank the impact to PDFs for experiments.
+We also classify experiments to various types to see impact to PDFs
+for these types. 
 
 \onecolumngrid
 \begin{table}
@@ -965,11 +1265,68 @@ in the augmented CTEQ-TEA set that informs our sensitivity figures
 in the present analysis. \label{tab:EXP_3} }
 \end{table}
 
-% . . . . . TAB_4
+\begin{table}
+\begin{tabular}{|c|c|}
+\hline 
+Process  & IDs\tabularnewline
+\hline 
+\hline 
+\text{DIS Old}  & 101, 102, 104, 108, 109, 110, 111, 124, 125, 126, 127, 145, 147, 160,
+169 \tabularnewline
+\hline 
+\text{DISCC Old}  & 108, 109, 110, 111, 124, 125, 126, 127 \tabularnewline
+\hline 
+\text{JP New}  & \textbf{542, 544, 545} \tabularnewline
+\hline 
+\text{DISNCCC}  & 160 \tabularnewline
+\hline 
+\text{VBPZ Old}  & 201, 203, 204, 260, 261 \tabularnewline
+\hline 
+\text{DISNC Old}  & 101, 102, 104, 145, 147, 169 \tabularnewline
+\hline 
+\text{JP Old}  & 504, 514, 535, 538 \tabularnewline
+\hline 
+\text{VBPW Old}  & 225, 227, 234, 241, 266, 267, 281 \tabularnewline
+\hline 
+\text{VBPWZ New}  & \textbf{245, 250} \tabularnewline
+\hline 
+\text{VBPZ New}  & \textbf{246, 252}\tabularnewline
+\hline 
+\text{VBPWZ Old}  & 240, 268 \tabularnewline
+\hline 
+\text{VBPW New}  & \textbf{249} \tabularnewline
+\hline 
+\text{VBPZpT}  & \textbf{247, 253} \tabularnewline
+\hline 
+\text{TTbar}  & \textbf{565, 566, 567, 568} \tabularnewline
+\hline 
+\end{tabular}\caption{The IDs of data sets in various types of processes. \label{tab:IDsOfProcessesType}}
+\end{table}
 
-%-   -   -    -    -    -    -    -    -    -    -    -   -   -    -    -    -    -    -    -    -    -    -    -   -   -    -    -    -    -    -    -    -    -
+\begin{table} 
+\begin{tabular}{c|c|c|cc|cc|cc|cc|cc|cc|cc} \hline   &  &  & \multicolumn{14}{c}{Rankings}\tabularnewline  
+No.  & Exp.~ID  & $N_d$  & $\sum_{f}|S^E_{f}|$  & $\langle\sum_{f}|S^E_{f}|\rangle$  & $|S^E_{\bar{d}}|$  & $\langle|S^E_{\bar{d}}|\rangle$  & $|S^E_{\bar{u}}|$  & $\langle|S^E_{\bar{u}}|\rangle$  & $|S^E_{g}|$  & $\langle|S^E_{g}|\rangle$  & $|S^E_{u}|$  & $\langle|S^E_{u}|\rangle$  & $|S^E_{d}|$  & $\langle|S^E_{d}|\rangle$  & $|S^E_{s}|$  & $\langle|S^E_{s}|\rangle$ \tabularnewline \hline   &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline 1 & 160  & 1120.  & 620.  & 0.0922  & \text{B}  &  &  \textbf{A}  & 3  &  \textbf{A}  & 3  &  \textbf{A}  & 3  & \text{B}  &  & \text{C}  & \tabularnewline 2 & \textbf{545}  & 185  & 232.  & 0.209  & \text{C}  & 3  & \text{C}  & 3  & \text{B}  & 2  &  &  &  &  & \text{C}  & 3 \tabularnewline 3 & 111  & 86  & 218.  & 0.423  & \text{C}  & \textbf{1}  & \text{C}  & \textbf{1}  &  & 3  & \text{B}  & \textbf{1}  & \text{C}  & 2  &  & \tabularnewline 4 & \textbf{542}  & 158  & 194.  & 0.204  & \text{C}  & 3  & \text{C}  & 3  & \text{B}  & 2  &  &  &  &  & \text{C}  & 3 \tabularnewline 5 & 101  & 337  & 184.  & 0.0909  &  &  & \text{C}  &  & \text{C}  &  & \text{B}  & 3  & \text{C}  &  &  & \tabularnewline 6 & 104  & 123  & 169.  & 0.229  & \text{C}  & 2  &  &  &  &  & \text{C}  & 2  & \text{B}  & 2  &  & \tabularnewline 7 & 102  & 250  & 141.  & 0.0938  & \text{C}  &  &  &  & \text{C}  & 3  & \text{C}  & 3  & \text{C}  & 3  &  & \tabularnewline 8 & 109  & 96  & 115.  & 0.199  & \text{C}  & 2  & \text{C}  & 2  &  & 3  & \text{C}  & 2  & \text{C}  & 3  &  & \tabularnewline 9 & 201  & 119  & 113.  & 0.158  & \text{C}  & 2  & \text{C}  & 2  &  &  &  & 3  &  &  &  & \tabularnewline 10 & 204  & 184  & 103.  & 0.0935  &  & 3  & \text{C}  & 3  &  &  & \text{C}  & 3  &  &  &  & \tabularnewline 11  & 110  & 69  & 89.3  & 0.216  &  & 3  &  & 3  & \text{C}  & 2  &  & 3  &  & 2  &  & 3 \tabularnewline 12  & 108  & 85  & 82.4  & 0.161  &  & 3  &  & 3  &  & 3  &  & 3  & \text{C}  & 3  &  & \tabularnewline 13  & 538  & 133  & 66.2  & 0.0829  &  &  &  &  & \text{C}  & 3  &  &  &  &  &  & \tabularnewline 14  & 124  & 38  & 58.9  & 0.258  &  & 3  &  & 3  &  &  &  & 3  &  & 3  & \text{C}  & \textbf{1} \tabularnewline 15  & 127  & 38  & 49.4  & 0.217  &  & 3  &  & 3  &  &  &  & 3  &  & 3  & \text{C}  & \textbf{1} \tabularnewline 16  & \textbf{544}  & 140  & 48.7  & 0.058  &  &  &  &  &  & 3  &  &  &  &  &  & \tabularnewline 17  & 126  & 40  & 48.  & 0.2  &  & 3  &  & 3  &  &  &  & 3  &  & 3  & \text{C}  & \textbf{1} \tabularnewline 18  & \textbf{250}  & 42  & 41.5  & 0.165  &  & 3  &  & 3  &  & 3  &  & 3  &  & 2  &  & \tabularnewline 19  & 268  & 41  & 39.6  & 0.161  &  & 3  &  & 3  &  &  &  & 3  &  & 3  &  & 3 \tabularnewline 20  & \textbf{249}  & 33  & 39.2  & 0.198  &  & 2  &  & 3  &  &  &  & 3  &  & 2  &  & 3 \tabularnewline 21  & 514  & 110  & 36.8  & 0.0557  &  &  &  &  &  & 3  &  &  &  &  &  & \tabularnewline 22  & 125  & 33  & 36.7  & 0.185  &  & 3  &  & 3  &  &  &  & 3  &  & 3  &  & 2 \tabularnewline 23  & \textbf{252}  & 48  & 34.5  & 0.12  &  & 3  &  & 3  &  &  &  & 3  &  &  &  & 3 \tabularnewline 24  & 203  & 15  & 33.3  & 0.37  &  & \textbf{1}  &  & \textbf{1}  &  &  &  & 3  &  & 2  &  & \tabularnewline 25  & 535  & 90  & 30.2  & 0.056  &  &  &  &  &  & 3  &  &  &  &  &  & \tabularnewline 26  & \textbf{245}  & 33  & 30.2  & 0.152  &  & 3  &  & 3  &  & 3  &  & 3  &  & 3  &  & \tabularnewline 27  & 266  & 11  & 29.4  & 0.445  &  & \textbf{1}  &  & 2  &  & 2  &  & 2  &  & \textbf{1}  &  & 3 \tabularnewline 28  & 504  & 72  & 21.3  & 0.0493  &  &  &  &  &  & 3  &  &  &  &  &  & \tabularnewline 29  & \textbf{253}  & 45  & 17.2  & 0.0638  &  &  &  &  &  & 3  &  &  &  &  &  & 3 \tabularnewline 30  & 147  & 47  & 15.1  & 0.0537  &  &  &  &  &  & 3  &  &  &  &  &  & \tabularnewline 31  & 234  & 9  & 15.  & 0.278  &  & 3  &  & 3  &  &  &  & 2  &  & 2  &  & 2 \tabularnewline 32  & 267  & 11  & 14.3  & 0.216  &  & 2  &  & 3  &  & 3  &  & 3  &  & 2  &  & \tabularnewline 33  & 281  & 13  & 14.  & 0.179  &  & 3  &  & 3  &  &  &  & 3  &  & 2  &  & \tabularnewline 34  & 260  & 28  & 11.6  & 0.0691  &  &  &  &  &  &  &  & 3  &  & 3  &  & \tabularnewline 35  & 261  & 29  & 11.2  & 0.0646  &  &  &  &  &  &  &  & 3  &  &  &  & \tabularnewline 36  & 225  & 11  & 8.83  & 0.134  &  & 3  &  & 3  &  &  &  & 3  &  & 2  &  & \tabularnewline 37  & 240  & 14  & 7.28  & 0.0867  &  & 3  &  &  &  &  &  &  &  & 3  &  & \tabularnewline 38  & \textbf{246}  & 17  & 7.1  & 0.0696  &  &  &  &  &  &  &  & 3  &  &  &  & \tabularnewline 39  & \textbf{565}  & 8  & 6.15  & 0.128  &  & 3  &  & 3  &  & 2  &  &  &  &  &  & \tabularnewline 40  & 241  & 5  & 6.11  & 0.204  &  & 2  &  & 3  &  &  &  & 3  &  & 2  &  & 3 \tabularnewline 41  & \textbf{247}  & 8  & 5.84  & 0.122  &  & 3  &  & 3  &  & 3  &  & 3  &  & 3  &  & \tabularnewline 42  & 169  & 9  & 3.99  & 0.0739  &  &  &  &  &  & 2  &  &  &  &  &  & \tabularnewline 43  & \textbf{567}  & 7  & 3.9  & 0.0928  &  &  &  &  &  & 2  &  &  &  &  &  & \tabularnewline 44  & 227  & 11  & 3.7  & 0.056  &  &  &  &  &  &  &  &  &  & 3  &  & \tabularnewline 45  & \textbf{568}  & 5  & 3.4  & 0.113  &  &  &  &  &  & 2  &  &  &  &  &  & \tabularnewline 46 & \textbf{566}  & 5  & 3.19  & 0.106  &  &  &  &  &  & 2  &  &  &  &  &  & \tabularnewline 47  & 145  & 10  & 1.14  & 0.0191  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline \hline  
+\end{tabular} 
+\caption{For each experiment $E$ we have defined its flavor-specific sensitivity $|S^E_{f}|$ and its point-averaged counterpart $\langle|S^E_{f}|\rangle$ in Sec.~\ref{sec:Experiment-rankings-according}. Using these quantities, we tabulate the total overall (\textit{i.e.}, flavor-summed) sensitivity and a flavor-dependent sensitivity for the various experiments in our dataset, ordering the table in descending magnitude for the overall sensitivity. Thus, row $1$ for the combined HERA Run I $+$ Run 2 dataset has the greatest overall sensitivity, while row $47$ for the H1 $\sigma_{r}^{b}$ reduced cross section has the least overall sensitivity according to that metric. For each flavor, we award particularly sensitive experiments a rank $\mathrm{{\bf A},B,C}$ or ${\bf 1*},{\bf 1},2,3$ based on their total and point-averaged sensitivities, respectively. These ranks are decided using the criteria: $C\protect\iff|S^E_{f}|\in[20,50]$, $B\protect\iff|S^E_{f}|\in[50,100]$, and ${\bf A}\protect\iff|S^E_{f}|>100$ according to the total sensitivities for each flavor; and, analogously, $3\protect\iff\langle|S^E_{f}|\rangle\in[0.1,0.25]$, $2\protect\iff\langle|S^E_{f}|\rangle\in[0.25,0.5]$, ${\bf 1}\protect\iff\langle|S^E_{f}|\rangle\in[0.5,1]$, and ${\bf 1*}\protect\iff\langle|S^E_{f}|\rangle>1$ according to the point-averaged sensitivities. Experiments with sensitivities falling below the lowest ranks (that is, with $|S^E_{f}|<20$ or $\langle|S^E_{f}|\rangle<0.1$) are not awarded a rank for that category/flavor. Note that we sum over the light quark $+$ gluon flavors to compute $\langle\sum_{f}|S^E_{f}|\rangle$ within this and subsequent tables. Also, new experimental datasets not originally included in CT14HERA2 are indicated by \textbf{bold} Exp. IDs in the second column.} \label{tab5}  
+\end{table}
 
-% . . . . . TAB_5
+\begin{table} \begin{tabular}{c|c|cc|cc|cc|cc|cc|cc|cc} \hline   &  & \multicolumn{14}{c}{Rankings}\tabularnewline  No.  & Exp.~ID  & $|S^E_{u_{v}}|$  & $\langle|S^E_{u_{v}}|\rangle$  & $|S^E_{d_{v}}|$  & $\langle|S^E_{d_{v}}|\rangle$  & $|S^E_{\bar{d}/\bar{u}}|$  & $\langle|S^E_{\bar{d}/\bar{u}}|\rangle$  & $|S^E_{d/u}|$  & $\langle|S^E_{d/u}|\rangle$  & $|S^E_{H7}|$  & $\langle|S^E_{H7}|\rangle$  & $|S^E_{H8}|$  & $\langle|S^E_{H8}|\rangle$  & $|S^E_{H14}|$  & $\langle|S^E_{H14}|\rangle$ \tabularnewline \hline   &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline 1  & 160  & \text{B}  &  & \text{C}  &  & \text{C}  &  & \text{B}  &  & \text{B}  &  & \text{B}  &  & \text{B}  & \tabularnewline 2  & \textbf{545}  & \text{C}  & 3  &  &  &  &  &  &  & \text{B}  & 2  & \text{B}  & 2  & \text{B}  & \textbf{1} \tabularnewline 3  & 111  & \text{B}  & \textbf{1}  & \text{B}  & \textbf{1}  &  &  & \text{C}  & 2  &  & 3  &  & 3  &  & 3 \tabularnewline 4  & \textbf{542}  & \text{C}  & 3  &  &  &  &  &  &  & \text{B}  & 2  & \text{B}  & 2  & \text{B}  & \textbf{1} \tabularnewline 5  & 101  & \text{B}  & 3  & \text{C}  &  & \text{C}  &  & \text{C}  & 3  & \text{C}  &  &  &  &  & \tabularnewline 6  & 104  & \text{C}  & 2  & \text{C}  & 3  & \text{C}  & 2  & \text{B}  & \textbf{1}  &  &  &  &  &  & \tabularnewline 7  & 102  & \text{C}  &  & \text{C}  & 3  &  &  & \text{C}  &  & \text{C}  &  & \text{C}  &  &  & \tabularnewline 8  & 109  & \text{C}  & 2  & \text{C}  & 2  &  &  &  & 3  &  &  &  &  &  & \tabularnewline 9  & 201  & \text{C}  & 3  & \text{C}  & 3  &  &  &  &  &  &  &  &  &  & \tabularnewline 10  & 204  & \text{C}  & 3  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline 11  & 110  &  & 3  &  & 3  &  & 3  &  & 3  &  & 3  &  & 3  &  & 3 \tabularnewline 12  & 108  &  & 3  &  & 3  &  &  &  & 3  &  & 3  &  & 3  &  & \tabularnewline 13  & 538  &  &  &  &  &  &  &  &  &  & 3  &  & 3  &  & 3 \tabularnewline 14  & 124  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline 15  & 127  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline 16  & \textbf{544}  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline 17  & 126  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline 18  & \textbf{250}  &  & 3  &  & 3  &  & 2  &  & 2  &  & 3  &  & 3  &  & \tabularnewline 19  & 268  &  & 3  &  &  &  & 3  &  & 3  &  &  &  &  &  & \tabularnewline 20  & \textbf{249}  &  & 3  &  & 3  &  & 2  &  & 2  &  &  &  &  &  & \tabularnewline 21  & 514  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline 22  & 125  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline 23  & \textbf{252}  &  & 3  &  &  &  & 3  &  & 3  &  &  &  &  &  & \tabularnewline 24  & 203  &  & 2  &  & 2  & \text{C}  & \textbf{1{*}}  &  & 2  &  & 3  &  & 3  &  & \tabularnewline 25  & 535  &  &  &  &  &  &  &  &  &  & 3  &  & 3  &  & 3 \tabularnewline 26  & \textbf{245}  &  & 3  &  & 3  &  & 2  &  & 2  &  & 3  &  & 3  &  & \tabularnewline 27  & 266  &  & 2  &  & 2  &  & \textbf{1}  &  & \textbf{1}  &  & 3  &  & 3  &  & 3 \tabularnewline 28  & 504  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline 29  & \textbf{253}  &  &  &  &  &  &  &  &  &  &  &  &  &  & 3 \tabularnewline 30  & 147  &  &  &  &  &  &  &  &  &  & 3  &  & 3  &  & 3 \tabularnewline 31  & 234  &  & 2  &  & 2  &  & 2  &  & 2  &  &  &  &  &  & 3 \tabularnewline 32  & 267  &  & 3  &  & 3  &  & 2  &  & 2  &  &  &  &  &  & \tabularnewline 33  & 281  &  & 3  &  & 2  &  & 3  &  & 2  &  &  &  &  &  & \tabularnewline 34  & 260  &  & 3  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline 35  & 261  &  & 3  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline 36  & 225  &  & 3  &  & 2  &  & 3  &  & 2  &  &  &  &  &  & \tabularnewline 37  & 240  &  &  &  &  &  & 3  &  & 3  &  &  &  &  &  & \tabularnewline 38  & \textbf{246}  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline 39  & \textbf{565}  &  & 3  &  &  &  &  &  &  &  & 2  &  & 2  &  & 2 \tabularnewline 40  & 241  &  & 3  &  & 3  &  & 2  &  & 2  &  & 3  &  & 3  &  & 3 \tabularnewline 41  & \textbf{247}  &  &  &  &  &  &  &  & 3  &  & 3  &  & 3  &  & 3 \tabularnewline 42  & 169  &  &  &  &  &  &  &  &  &  & 3  &  & 3  &  & \tabularnewline 43  & \textbf{567}  &  &  &  &  &  &  &  &  &  & 3  &  & 3  &  & 3 \tabularnewline 44  & 227  &  &  &  & 3  &  &  &  & 3  &  &  &  &  &  & \tabularnewline 45  & \textbf{568}  &  &  &  &  &  &  &  &  &  & 2  &  & 2  &  & 3 \tabularnewline 46 & \textbf{566}  &  &  &  &  &  &  &  &  &  & 2  &  & 2  &  & 3 \tabularnewline 47  & 145  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline \hline  
+\end{tabular}
+\caption{ A horizontal continuation of the information in Table~\ref{tab5}, specifically, containing the flavor-dependent total and mean sensitivities of a number of derived quantities, as opposed to the individual flavors given in Table~\ref{tab5}. Specifically, going across, the total and mean sensitivities are tabulated for valence distributions of the $u$ and $d$ quarks, the partonic flavor ratios $\bar{d}/\bar{u}$ and $d/u$, and the Higgs production cross section $\sigma_{pp\to H^{0}X}$ at $7$, $8$, and $14$ TeV, respectively. The ranking criteria, ordering, and other conventions are again as described in Table~\ref{tab5}. } \label{tab6}  
+\end{table}
+
+\begin{table} 
+\begin{tabular}{c|c|c|cc|cc|cc|cc|cc|cc|cc} \hline   &  &  & \multicolumn{14}{c}{Rankings}\tabularnewline 
+No.  & \text{ID}  & $N_{d}$  & $\sum_{f}|S^E_{f}|$  & $\langle\sum_{f}|S^E_{f}|\rangle$  & $|S^E_{\bar{d}}|$  & $\langle|S^E_{\bar{d}}|\rangle$  & $|S^E_{\bar{u}}|$  & $\langle|S^E_{\bar{u}}|\rangle$  & $|S^E_{g}|$  & $\langle|S^E_{g}|\rangle$  & $|S^E_{u}|$  & $\langle|S^E_{u}|\rangle$  & $|S^E_{d}|$  & $\langle|S^E_{d}|\rangle$  & $|S^E_{s}|$  & $\langle|S^E_{s}|\rangle$ \tabularnewline \hline   &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline 1  & \text{DIS Old}  & 2381.  & \text{1.83E3}  & 0.128  &  \textbf{A}  & 3  &  \textbf{A}  & 3  &  \textbf{A}  & 3  &  \textbf{A}  & 3  &  \textbf{A}  & 3  &  \textbf{A}  & \tabularnewline 2  & \text{DISCC Old}  & 485  & 698.  & 0.24  &  \textbf{A}  & 2  &  \textbf{A}  & 3  & \text{B}  & 3  &  \textbf{A}  & 2  &  \textbf{A}  & 2  &  \textbf{A}  & 3 \tabularnewline 3  & \text{DISNCCC}  & 1120.  & 620.  & 0.0922  & \text{B}  &  &  \textbf{A}  & 3  &  \textbf{A}  & 3  &  \textbf{A}  & 3  & \text{B}  &  & \text{C}  & \tabularnewline 4  & \text{DISNC Old}  & 776  & 514.  & 0.11  & \text{B}  & 3  & \text{B}  &  & \text{B}  &  &  \textbf{A}  & 3  &  \textbf{A}  & 3  & \text{C}  & \tabularnewline 5  & \text{JP New}  & 483  & 475.  & 0.164  & \text{B}  & 3  & \text{B}  & 3  &  \textbf{A}  & 2  & \text{C}  &  & \text{C}  &  & \text{B}  & 3 \tabularnewline 6  & \text{VBPZ Old}  & 375  & 272.  & 0.121  & \text{B}  & 3  & \text{B}  & 3  & \text{C}  &  & \text{C}  & 3  & \text{C}  &  &  & \tabularnewline 7  & \text{JP Old}  & 405  & 155.  & 0.0636  & \text{C}  &  & \text{C}  &  & \text{B}  & 3  &  &  &  &  & \text{C}  & \tabularnewline 8  & \text{VBPW Old}  & 71  & 91.3  & 0.214  & \text{C}  & 2  &  & 3  &  &  &  & 3  & \text{C}  & 2  &  & 3 \tabularnewline 9  & \text{VBPWZ New}  & 75  & 71.7  & 0.159  &  & 3  &  & 3  &  & 3  &  & 3  &  & 3  &  & \tabularnewline 10  & \text{VBPWZ Old}  & 55  & 46.9  & 0.142  &  & 3  &  & 3  &  &  &  & 3  &  & 3  &  & 3 \tabularnewline 11  & \text{VBPZ New}  & 65  & 41.6  & 0.107  &  & 3  &  & 3  &  &  &  & 3  &  &  &  & 3 \tabularnewline 12  & \text{VBPW New}  & 33  & 39.2  & 0.198  &  & 2  &  & 3  &  &  &  & 3  &  & 2  &  & 3 \tabularnewline 13  & \text{VBPZpT}  & 53  & 23.1  & 0.0725  &  &  &  &  &  & 3  &  &  &  &  &  & 3 \tabularnewline 14  & $t\overline{t}$  & 25  & 16.6  & 0.111  &  &  &  & 3  &  & 2  &  &  &  &  &  & \tabularnewline \end{tabular}
+\caption{Similar to Table \ref{tab5}, yet we tabulate the various types of processes rather than the separate experiments in our global CTEQ-TEA dataset. The process labels are explained in the caption of Table~\ref{tab:IDsOfProcessesType}, which summarized the constituent experiments contributing to each process type. \label{tab7} } 
+\end{table}
+
+\begin{table} 
+\begin{tabular}{c|c|cc|cc|cc|cc|cc|cc|cc} \hline   &  & \multicolumn{14}{c}{Rankings}\tabularnewline  
+No.  & \text{ID}  & $|S^E_{u_{v}}|$  & $\langle|S^E_{u_{v}}|\rangle$  & $|S^E_{d_{v}}|$  & $\langle|S^E_{d_{v}}|\rangle$  & $|S^E_{\bar{d}/\bar{u}}|$  & $\langle|S^E_{\bar{d}/\bar{u}}|\rangle$  & $|S^E_{d/u}|$  & $\langle|S^E_{d/u}|\rangle$  & $|S^E_{H7}|$  & $\langle|S^E_{H7}|\rangle$  & $|S^E_{H8}|$  & $\langle|S^E_{H8}|\rangle$  & $|S^E_{H14}|$  & $\langle|S^E_{H14}|\rangle$ \tabularnewline \hline   &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline 1  & \text{DIS Old}  &  \textbf{A}  & 3  &  \textbf{A}  & 3  &  \textbf{A}  &  &  \textbf{A}  & 3  &  \textbf{A}  &  &  \textbf{A}  &  &  \textbf{A}  & \tabularnewline 2  & \text{DISCC Old}  &  \textbf{A}  & 2  &  \textbf{A}  & 2  & \text{C}  &  & \text{B}  & 3  & \text{B}  & 3  & \text{B}  & 3  & \text{C}  & \tabularnewline 3  & \text{DISNCCC}  & \text{B}  &  & \text{C}  &  & \text{C}  &  & \text{B}  &  & \text{B}  &  & \text{B}  &  & \text{B}  & \tabularnewline 4  & \text{DISNC Old}  &  \textbf{A}  & 3  & \text{B}  &  & \text{B}  & 3  &  \textbf{A}  & 3  & \text{B}  &  & \text{B}  &  & \text{C}  & \tabularnewline 5  & \text{JP New}  & \text{C}  & 3  & \text{C}  &  & \text{C}  &  & \text{C}  &  &  \textbf{A}  & 2  &  \textbf{A}  & 2  &  \textbf{A}  & 2 \tabularnewline 6  & \text{VBPZ Old}  & \text{B}  & 3  & \text{B}  & 3  & \text{B}  & 3  & \text{C}  &  &  &  &  &  &  & \tabularnewline 7  & \text{JP Old}  &  &  &  &  &  &  &  &  & \text{C}  & 3  & \text{C}  & 3  & \text{C}  & 3 \tabularnewline 8  & \text{VBPW Old}  &  & 3  &  & 2  & \text{C}  & 2  & \text{C}  & 2  &  &  &  &  &  & \tabularnewline 9  & \text{VBPWZ New}  &  & 3  &  & 3  & \text{C}  & 2  & \text{C}  & 2  &  & 3  &  & 3  &  & \tabularnewline 10  & \text{VBPWZ Old}  &  & 3  &  &  &  & 3  &  & 3  &  &  &  &  &  & \tabularnewline 11  & \text{VBPZ New}  &  &  &  &  &  &  &  & 3  &  &  &  &  &  & \tabularnewline 12  & \text{VBPW New}  &  & 3  &  & 3  &  & 2  &  & 2  &  &  &  &  &  & \tabularnewline 13  & \text{VBPZpT}  &  &  &  &  &  &  &  &  &  &  &  &  &  & 3 \tabularnewline 14  & $t\overline{t}$  &  &  &  &  &  &  &  &  &  & 2  &  & 2  &  & 3 \tabularnewline 
+\end{tabular}
+\caption{Similar to Table \ref{tab6}, yet we tabulate the various types of processes rather than the various experiments in our datasets. The process types are the same as in Table \ref{tab7}. The experiments that contribute to each of the types are given in the Table \ref{tab:IDsOfProcessesType}. \label{tab8}} 
+\end{table}
 
 % . . . . . TAB_5
 -
