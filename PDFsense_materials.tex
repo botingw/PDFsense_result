@@ -532,6 +532,32 @@ on dim-6 operators (Alexey Petrov)
 \item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{?}}{]} sensitivities
 of correlated systematic errors to various physical observables (Higgs
 cross sections, weak angle, etc.)
+
+I calculate the PDF sensitivities $S_{f}(\sigma_{corr,i},f_{a}(x,\mu))$
+and sensitivities of physical quantities $S_{f}(\sigma_{corr},Q_{i})$
+imposed by the experimental correlated errors $i$. For the PDF sensitivities,
+I explore the sensitivities in x interval $[10^{-5},0.9]$ and flavours
+$a$ at $\mu=5GeV$ and find the maximum sensitivity $|S_{f}(\sigma_{corr,i},f_{a}(x_{max},\mu=5GeV))|$
+in the x range. I draw contour plots (Fig. \ref{fig:Sens_corr_error})
+to indicate the sensitivities of $\beta_{ID,j}\equiv\sigma_{corr,i}$
+with x, y axes representing $(ID,j)$. Where ID indicates the experimental
+ID and j indicates the j-th correlated error of the corresponding
+ID in .dta files (labels are like \char`\"{}r(k) = $R^{2}$ b1 b2
+b3......\char`\"{}, I exclude $R^{2}$ here).
+
+I also make the $\beta_{ID,j}$ list with high sensitivities to PDFs
+and quantities (in MaxSenscorrerror\_info.txt). I select only $|S_{f}(\sigma_{corr,i},f_{a}(x_{max},\mu=5GeV))|>1$
+for the flavour $a$ and $\beta_{ID,j}$. I find that most $\beta_{ID,j}$
+with large sensitivities are in ID = 247, 249, 542, 544, 545, 566,
+568. Especially, $\beta_{ID,j}$ of 249 are the most sensitive among
+all correlated errors; Almost all $|S|>3$ $\beta_{ID,j}$ are in
+249.
+\begin{figure*}
+\includegraphics[clip,width=0.3\textwidth]{plots/constrain_quantities/sens_correrror_+1_f8}
+
+\caption{The sensitivity plot for }
+\label{fig:Sens_corr_error} 
+\end{figure*}
 \end{enumerate}
 \clearpage\newpage
 

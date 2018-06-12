@@ -3422,6 +3422,190 @@ N
  (Higgs cross sections, weak angle, etc.)
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+I calculate the PDF sensitivities 
+\begin_inset Formula $S_{f}(\sigma_{corr,i},f_{a}(x,\mu))$
+\end_inset
+
+ and sensitivities of physical quantities 
+\begin_inset Formula $S_{f}(\sigma_{corr},Q_{i})$
+\end_inset
+
+ imposed by the experimental correlated errors 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ For the PDF sensitivities, I explore the sensitivities in x interval 
+\begin_inset Formula $[10^{-5},0.9]$
+\end_inset
+
+ and flavours 
+\begin_inset Formula $a$
+\end_inset
+
+ at 
+\begin_inset Formula $\mu=5GeV$
+\end_inset
+
+ and find the maximum sensitivity 
+\begin_inset Formula $|S_{f}(\sigma_{corr,i},f_{a}(x_{max},\mu=5GeV))|$
+\end_inset
+
+ in the x range.
+ I draw contour plots (Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Sens_corr_error"
+
+\end_inset
+
+) to indicate the sensitivities of 
+\begin_inset Formula $\beta_{ID,j}\equiv\sigma_{corr,i}$
+\end_inset
+
+ with x, y axes representing 
+\begin_inset Formula $(ID,j)$
+\end_inset
+
+.
+ Where ID indicates the experimental ID and j indicates the j-th correlated
+ error of the corresponding ID in .dta files (labels are like "r(k) = 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ b1 b2 b3......", I exclude 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ here).
+\end_layout
+
+\begin_layout Standard
+I also make the 
+\begin_inset Formula $\beta_{ID,j}$
+\end_inset
+
+ list with high sensitivities to PDFs and quantities (in MaxSenscorrerror_info.tx
+t).
+ I select only 
+\begin_inset Formula $|S_{f}(\sigma_{corr,i},f_{a}(x_{max},\mu=5GeV))|>1$
+\end_inset
+
+ for the flavour 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{ID,j}$
+\end_inset
+
+.
+ I find that most 
+\begin_inset Formula $\beta_{ID,j}$
+\end_inset
+
+ with large sensitivities are in ID = 247, 249, 542, 544, 545, 566, 568.
+ Especially, 
+\begin_inset Formula $\beta_{ID,j}$
+\end_inset
+
+ of 249 are the most sensitive among all correlated errors; Almost all 
+\begin_inset Formula $|S|>3$
+\end_inset
+
+ 
+\begin_inset Formula $\beta_{ID,j}$
+\end_inset
+
+ are in 249.
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/constrain_quantities/sens_correrror_+1_f8.pdf
+	lyxscale 50
+	width 30text%
+	clip
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/LHeC/dr_hist+1_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The sensitivity plot for 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Sens_corr_error"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open
