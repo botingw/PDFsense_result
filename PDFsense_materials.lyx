@@ -3413,9 +3413,7 @@ N
 [
 \series bold
 \color blue
-N
-\color teal
-?
+Y
 \series default
 \color inherit
 ] sensitivities of correlated systematic errors to various physical observables
@@ -3528,7 +3526,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename plots/constrain_quantities/sens_correrror_+1_f8.pdf
+	filename plots/constrain_quantities/sens_correrror_+1_f8_thumbnail.png
 	lyxscale 50
 	width 30text%
 	clip
@@ -3585,7 +3583,23 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-The sensitivity plot for 
+The 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $|S_{f}(\beta_{ID,j},\sigma_{H,8TeV})|$
+\end_inset
+
+ for LHC datasets.
 \end_layout
 
 \end_inset
