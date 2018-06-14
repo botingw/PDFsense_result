@@ -7776,6 +7776,43 @@ N
 )?
 \end_layout
 
+\begin_layout Enumerate
+[
+\series bold
+\color blue
+N
+\color teal
+3
+\color red
+!!!
+\series default
+\color inherit
+] use this technique with HERA2/HERA2_No_Jet PDFsets to quantify the potential
+ 
+\begin_inset Formula $c_{i,n}\delta f_{i,n}/\sigma_{uncor,i}$
+\end_inset
+
+ constraint on ID = 504/514/535/538
+\end_layout
+
+\begin_layout Enumerate
+[
+\series bold
+\color blue
+N
+\color teal
+1
+\color red
+!!
+\series default
+\color inherit
+] investigate the Q dependency of 
+\begin_inset Formula $S(r_{i},\underset{a}{\sum}c_{i,a}f_{i,a})$
+\end_inset
+
+ 
+\end_layout
+
 \begin_layout Subsubsection
 a temporary conclusion
 \end_layout
