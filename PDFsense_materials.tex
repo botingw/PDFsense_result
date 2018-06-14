@@ -409,81 +409,96 @@ datasets: dbar/ubar, d/u. By Table \ref{tab7}, \ref{tab8}
 
 \section{Case Study: LHeC and EIC \label{sec:Case-Study:-LHeC}}
 
-......Here provide the prediction of the sensitivity analysis of LHeC
-DIS NC and CC datasets \ref{tab:LHeC}. \textcolor{red}{note: we will
-need to further analyze the sensitivity of LHeC and EIC, so we should
-update the result with new .dta files} 
+......Here provide the prediction of the sensitivity analysis of LHeC\&JlabEIC
+DIS NC and CC datasets \ref{tab:LHeC}. \textcolor{red}{} We analyze
+the sensitivity with pseudodata provided by them and normalize the
+sensitivity contribution to 1 year runtime and 10 years runtime to
+indicate the future impact. The way we normalize is as follows: the
+statistical uncertainties $\sigma_{uncor}\propto1/\sqrt{luminosity}\propto1/\sqrt{runtime}\propto1/r\propto1/\delta r$,
+so the sensitivity is roughly proportional to $\sqrt{runtime}$. For
+the given $n_{1}$ years pseudodata, we can always estimate the sensitivity
+of $n_{2}$ years $S_{n2}$ is equal to $\sqrt{n_{2}/n_{1}}S_{n1}$.
+Here we only consider the sensitivity from statistical errors so the
+real impact on PDFs could be further reduced by the systematic error.
+Here I show the sensitivity based on the 1-year runtime analysis. 
+
+The whole sensitivity of colliders estimated as 10-year runtime is
+$\sqrt{10}=3.16$ times more than the 1-year runtime sensitivity.
+However, with the various ways to combine rawdata into bins, we can
+get different number of bins and PDF sensitivities on bins. We perhaps
+need to weigh the impact on PDFs of various experimental runtime/\#bins. 
 \begin{enumerate}
-\item {[}\textbf{\textcolor{blue}{Y}}{]} LHeC DISNC datasets constrain the
-small x region of the gluon PDF \ref{fig:LHeC-sens}, \ref{fig:LHeC-corr}
-\item {[}\textbf{\textcolor{blue}{Y}}{]} LHeC DISCC and DISNC datasets constrain
-u and d at large x and small x regions. For the small x region, the
-high sensitivity results from the fact that few constraints in that
-region 
-\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{?}}\textbf{\textcolor{red}{!}}{]}
-LHeC DISCC data is correlated to middle x region (10\textasciicircum{}-3\textasciitilde{}10\textasciicircum{}-2)
-s PDF, I don't know why \ref{fig:LHeC-corr}. Perhaps the strong correlation
-is due to the large uncertainty of the strange PDF, which means this
-region some DISCC data could constrain strange at this region. 
-\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{?}}\textbf{\textcolor{red}{!}}{]}
-I don't know why the diagonal part of 192 (CC), 194 (NC) points in
-Fig. \ref{fig:LHeC-corr} are strongly correlated with the ubar PDF 
+\item {[}\textbf{\textcolor{blue}{Y}}{]} According to the 1-year ranking
+table, LHeC CC $e^{-}p$ and EIC CC measurements (191\&196) contribute
+much less sensitivities than other channels (\textasciitilde{}30\%
+and \textasciitilde{}4\%).
 \item {[}\textbf{\textcolor{blue}{Y}}{]} the large $\delta r$ enhance the
-sensitivities of LHeC data to PDFs especially at the small x region
-\ref{fig:LHeC-dr}
-\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{1}}\textbf{\textcolor{red}{!!!}}{]}
-we also want to draw the sensitivity plots for the EIC at various
-energies and luminosities, using the same setting as for the LHeCs.
-With the .dta files, we can generate them instantly. 
-\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{1}}\textbf{\textcolor{red}{!!!}}{]}
+sensitivities of LHeC\&EIC data to PDFs especially at the large and
+small x regions ($x>0.5\&x<10^{-3}$) \ref{fig:LHeCEIC1y-dr}
+\item {[}\textbf{\textcolor{blue}{Y}}{]} LHeC DISNC datasets constrain the
+small x ($x<10^{-3}$) region of the gluon PDF \ref{fig:LHeCEIC1y-sens},
+\ref{fig:LHeCEIC1y-corr}
+\item {[}\textbf{\textcolor{blue}{Y}}{]} LHeC\&EIC DISCC and DISNC datasets
+constrain u and d at large x and small x regions ($x>0.5\&x<10^{-3}$).
+For the small x region, the high sensitivity perhaps results from
+few present constraints on PDFs in that region 
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{?}}\textbf{\textcolor{red}{!}}{]}
+LHeC DISCC data is correlated to middle x region ($10^{-3}\sim10^{-2}$)
+strange PDF, I don't know why \ref{fig:LHeCEIC1y-corr}. Perhaps the
+strong correlation is due to the large uncertainty of the strange
+PDF, which means some DISCC data could constrain strange at this region. 
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{?}}\textbf{\textcolor{red}{!}}{]}
+I don't know why the diagonal part of 192, 194 (LHeC $e^{+}p$ NC
+\& CC) points in Fig. \ref{fig:LHeCEIC1y-corr} are strongly correlated
+with the ubar and dbar PDFs 
+\item {[}\textbf{\textcolor{blue}{Y}}{]} we also want to draw the sensitivity
+plots for the EIC at various energies and luminosities, using the
+same setting as for the LHeCs. With the .dta files, we can generate
+them instantly. 
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{3}}\textbf{\textcolor{red}{?}}{]}
 Make the ranking tables for 1-year and 10-years runtime of LHeC and
-JLabEIC. (update: plots for 1y and 10y: Both LHeC and EIC NC datasets
-are sensitive to u \ref{fig:LHeCEIC_1y}. Ranking tables are not finished
-yet)
+JLabEIC. (update: I already made ranking tables, yet we need different
+ways to present the contribution based on various runtime/\#bins)
 \end{enumerate}
 \begin{figure*}
-\includegraphics[clip,width=0.3\textwidth]{plots/LHeC/corrdr_xQ+1_f0_samept}
+\includegraphics[clip,width=0.3\textwidth]{plots/Pseudo_Data/LHeCEIC_1y/corrdr_xQ+1_f0_samept}
 \ \ \
-\includegraphics[clip,width=0.3\textwidth]{plots/LHeC/corrdr_xQ+1_f2_samept} 
+\includegraphics[clip,width=0.3\textwidth]{plots/Pseudo_Data/LHeCEIC_1y/corrdr_xQ+1_f2_samept} 
 
-\caption{Select sensitivity plots for the LHeC pseudodata, in this case showing
-$|S_{g}|(x_{i},\mu_{i})$ in the left panel, $|S_{d}|(x_{i},\mu_{i})$
+\caption{Select sensitivity plots for the LHeC\&EIC pseudodata, in this case
+showing $|S_{g}|(x_{i},\mu_{i})$ in the left panel, $|S_{d}|(x_{i},\mu_{i})$
 in the right. The pseudodata are broken among four separate reaction
-channels \textemdash{} CC $e^{-}p$ (circles) and $e^{+}p$ (squares),
-as well as NC $e^{-}p$ (diamonds) and $e^{+}p$ (triangles). }
-\label{fig:LHeC-sens} 
+channels for LHeC \textemdash{} CC $e^{-}p$ (circles) and $e^{+}p$
+(squares), as well as NC $e^{-}p$ (diamonds) and $e^{+}p$ (triangles).
+And two channels for EIC \textemdash{} NC (down-triangle) and CC (empty-circle).}
+\label{fig:LHeCEIC1y-sens} 
 \end{figure*}
 
 \begin{figure*}
 
-\includegraphics[clip,width=0.3\textwidth]{plots/LHeC/corr_xQ+1_f3_samept}
+\includegraphics[clip,width=0.3\textwidth]{plots/Pseudo_Data/LHeCEIC_1y/corr_xQ+1_f3_samept}
 \ \ \
-\includegraphics[clip,width=0.3\textwidth]{plots/LHeC/corr_xQ+1_f-1_samept} 
+\includegraphics[clip,width=0.3\textwidth]{plots/Pseudo_Data/LHeCEIC_1y/corr_xQ+1_f-1_samept} 
 
-\caption{Select correlation plots for the LHeC pseudodata, in this case showing
-$|C_{s}|(x_{i},\mu_{i})$ in the left, and $|C_{\overline{u}}|(x_{i},\mu_{i})$
+\caption{Select correlation plots for the LHeC\&EIC pseudodata, in this case
+showing $|C_{s}|(x_{i},\mu_{i})$ in the left, and $|C_{\overline{u}}|(x_{i},\mu_{i})$
 in the right. The pseudodata are broken among four separate reaction
-channels \textemdash{} CC $e^{-}p$ (circles) and $e^{+}p$ (squares),
-as well as NC $e^{-}p$ (diamonds) and $e^{+}p$ (triangles). }
-\label{fig:LHeC-corr} 
+channels for LHeC \textemdash{} CC $e^{-}p$ (circles) and $e^{+}p$
+(squares), as well as NC $e^{-}p$ (diamonds) and $e^{+}p$ (triangles).
+And two channels for EIC \textemdash{} NC (down-triangle) and CC (empty-circle).}
+\label{fig:LHeCEIC1y-corr} 
 \end{figure*}
 
 \begin{figure*}
-\includegraphics[clip,width=0.3\textwidth]{plots/LHeC/dr_xQ+1_samept}
+\includegraphics[clip,width=0.3\textwidth]{plots/Pseudo_Data/LHeCEIC_1y/dr_xQ+1_samept}
 
-\caption{Select $\delta r$ plots for the LHeC pseudodata, in this case showing
-$\delta r_{i}$ in the left panel. The pseudodata are broken among
-four separate reaction channels \textemdash{} CC $e^{-}p$ (circles)
-and $e^{+}p$ (squares), as well as NC $e^{-}p$ (diamonds) and $e^{+}p$
-(triangles). }
-\label{fig:LHeC-dr} 
-\end{figure*}
-
-\begin{figure*}
-\includegraphics[clip,width=0.3\textwidth]{plots/EIC/corrdr_xQ+1_f1_samept_1y}
-
-\caption{The sensitivity plot for 1 year pseudodata of LHeC and EIC datasets.}
-\label{fig:LHeCEIC_1y} 
+\caption{Select $\delta r$ plots for the LHeC\&EIC pseudodata, in this case
+showing $\delta r_{i}$ in the left panel. The pseudodata are broken
+among four separate reaction channels for LHeC \textemdash{} CC $e^{-}p$
+(circles) and $e^{+}p$ (squares), as well as NC $e^{-}p$ (diamonds)
+and $e^{+}p$ (triangles). And two channels for EIC \textemdash{}
+NC (down-triangle) and CC (empty-circle).}
+\label{fig:LHeCEIC1y-dr} 
 \end{figure*}
 
 ......
@@ -536,17 +551,19 @@ angle, etc.)
 I calculate the PDF sensitivities $S_{f}(\sigma_{corr,i},f_{a}(x,\mu))$
 and sensitivities of physical quantities $S_{f}(\sigma_{corr},Q_{i})$
 imposed by the experimental correlated errors $i$. For the PDF sensitivities,
-I explore the sensitivities in x interval $[10^{-5},0.9]$ and flavours
-$a$ at $\mu=5GeV$ and find the maximum sensitivity $|S_{f}(\sigma_{corr,i},f_{a}(x_{max},\mu=5GeV))|$
-in the x range. I draw contour plots (Fig. \ref{fig:Sens_corr_error})
-to indicate the sensitivities of $\beta_{ID,j}\equiv\sigma_{corr,i}$
-with x, y axes representing $(ID,j)$. Where ID indicates the experimental
-ID and j indicates the j-th correlated error of the corresponding
-ID in .dta files (labels are like \char`\"{}r(k) = $R^{2}$ b1 b2
-b3......\char`\"{}, I exclude $R^{2}$ here).
+I explore the sensitivities to PDFs in x interval $[10^{-5},0.9]$
+at $\mu=5GeV$ forand flavours $a$ and use the maximum sensitivity
+$|S_{f}(\sigma_{corr,i},f_{a}(x_{max},\mu=5GeV))|$ in the $x$ range
+to stand for the sensitive strength and $x$. I draw contour plots
+(Fig. \ref{fig:Sens_corr_error}) to indicate the sensitivities of
+$\beta_{ID,j}\equiv\sigma_{corr,i}$ with x, y axes representing $(ID,j)$.
+Where ID indicates the experimental ID and j indicates the j-th correlated
+error of the corresponding ID in .dta files (labels are like \char`\"{}r(k)
+= $R^{2}$ b1 b2 b3......\char`\"{}, I exclude $R^{2}$ here).
 
 I also make the $\beta_{ID,j}$ list with high sensitivities to PDFs
-and quantities (in MaxSenscorrerror\_info.txt). I select only $|S_{f}(\sigma_{corr,i},f_{a}(x_{max},\mu=5GeV))|>1$
+and quantities (in ./Temporary\_Results/Constrain\_Physical\_Quantities\_tmp/Sens\_correlated\_error/MaxSenscorrerror\_info.txt).
+I select only $|S_{f}(\sigma_{corr,i},f_{a}(x_{max},\mu=5GeV))|>1$
 for the flavour $a$ and $\beta_{ID,j}$. I find that most $\beta_{ID,j}$
 with large sensitivities are in ID = 247, 249, 542, 544, 545, 566,
 568. Especially, $\beta_{ID,j}$ of 249 are the most sensitive among

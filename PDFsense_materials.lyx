@@ -2053,8 +2053,8 @@ name "sec:Case-Study:-LHeC"
 \end_layout
 
 \begin_layout Standard
-......Here provide the prediction of the sensitivity analysis of LHeC DIS NC and
- CC datasets 
+......Here provide the prediction of the sensitivity analysis of LHeC&JlabEIC
+ DIS NC and CC datasets 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:LHeC"
@@ -2064,72 +2064,66 @@ reference "tab:LHeC"
 .
  
 \color red
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\color red
 note: we will need to further analyze the sensitivity of LHeC and EIC, so
  we should update the result with new .dta files
-\color inherit
- 
 \end_layout
-
-\begin_layout Enumerate
-[
-\series bold
-\color blue
-Y
-\series default
-\color inherit
-] LHeC DISNC datasets constrain the small x region of the gluon PDF 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:LHeC-sens"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:LHeC-corr"
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Enumerate
-[
-\series bold
-\color blue
-Y
-\series default
 \color inherit
-] LHeC DISCC and DISNC datasets constrain u and d at large x and small x
- regions.
- For the small x region, the high sensitivity results from the fact that
- few constraints in that region 
-\end_layout
+ We analyze the sensitivity with pseudodata provided by them and normalize
+ the sensitivity contribution to 1 year runtime and 10 years runtime to
+ indicate the future impact.
+ The way we normalize is as follows: the statistical uncertainties 
+\begin_inset Formula $\sigma_{uncor}\propto1/\sqrt{luminosity}\propto1/\sqrt{runtime}\propto1/r\propto1/\delta r$
+\end_inset
 
-\begin_layout Enumerate
-[
-\series bold
-\color blue
-N
-\color teal
-?
-\color red
-!
-\series default
-\color inherit
-] LHeC DISCC data is correlated to middle x region (10^-3~10^-2) s PDF,
- I don't know why 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:LHeC-corr"
-
+, so the sensitivity is roughly proportional to 
+\begin_inset Formula $\sqrt{runtime}$
 \end_inset
 
 .
- Perhaps the strong correlation is due to the large uncertainty of the strange
- PDF, which means this region some DISCC data could constrain strange at
- this region.
+ For the given 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+ years pseudodata, we can always estimate the sensitivity of 
+\begin_inset Formula $n_{2}$
+\end_inset
+
+ years 
+\begin_inset Formula $S_{n2}$
+\end_inset
+
+ is equal to 
+\begin_inset Formula $\sqrt{n_{2}/n_{1}}S_{n1}$
+\end_inset
+
+.
+ Here we only consider the sensitivity from statistical errors so the real
+ impact on PDFs could be further reduced by the systematic error.
+ Here I show the sensitivity based on the 1-year runtime analysis.
+ 
+\end_layout
+
+\begin_layout Standard
+The whole sensitivity of colliders estimated as 10-year runtime is 
+\begin_inset Formula $\sqrt{10}=3.16$
+\end_inset
+
+ times more than the 1-year runtime sensitivity.
+ However, with the various ways to combine rawdata into bins, we can get
+ different number of bins and PDF sensitivities on bins.
+ We perhaps need to weigh the impact on PDFs of various experimental runtime/#bi
+ns.
  
 \end_layout
 
@@ -2137,22 +2131,15 @@ reference "fig:LHeC-corr"
 [
 \series bold
 \color blue
-N
-\color teal
-?
-\color red
-!
+Y
 \series default
 \color inherit
-] I don't know why the diagonal part of 192 (CC), 194 (NC) points in Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:LHeC-corr"
-
+] According to the 1-year ranking table, LHeC CC 
+\begin_inset Formula $e^{-}p$
 \end_inset
 
- are strongly correlated with the ubar PDF 
+ and EIC CC measurements (191&196) contribute much less sensitivities than
+ other channels (~30% and ~4%).
 \end_layout
 
 \begin_layout Enumerate
@@ -2166,11 +2153,15 @@ Y
 \begin_inset Formula $\delta r$
 \end_inset
 
- enhance the sensitivities of LHeC data to PDFs especially at the small
- x region 
+ enhance the sensitivities of LHeC&EIC data to PDFs especially at the large
+ and small x regions (
+\begin_inset Formula $x>0.5\&x<10^{-3}$
+\end_inset
+
+) 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:LHeC-dr"
+reference "fig:LHeCEIC1y-dr"
 
 \end_inset
 
@@ -2181,11 +2172,106 @@ reference "fig:LHeC-dr"
 [
 \series bold
 \color blue
+Y
+\series default
+\color inherit
+] LHeC DISNC datasets constrain the small x (
+\begin_inset Formula $x<10^{-3}$
+\end_inset
+
+) region of the gluon PDF 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LHeCEIC1y-sens"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LHeCEIC1y-corr"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+[
+\series bold
+\color blue
+Y
+\series default
+\color inherit
+] LHeC&EIC DISCC and DISNC datasets constrain u and d at large x and small
+ x regions (
+\begin_inset Formula $x>0.5\&x<10^{-3}$
+\end_inset
+
+).
+ For the small x region, the high sensitivity perhaps results from few present
+ constraints on PDFs in that region 
+\end_layout
+
+\begin_layout Enumerate
+[
+\series bold
+\color blue
 N
 \color teal
-1
+?
 \color red
-!!!
+!
+\series default
+\color inherit
+] LHeC DISCC data is correlated to middle x region (
+\begin_inset Formula $10^{-3}\sim10^{-2}$
+\end_inset
+
+) strange PDF, I don't know why 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LHeCEIC1y-corr"
+
+\end_inset
+
+.
+ Perhaps the strong correlation is due to the large uncertainty of the strange
+ PDF, which means some DISCC data could constrain strange at this region.
+ 
+\end_layout
+
+\begin_layout Enumerate
+[
+\series bold
+\color blue
+N
+\color teal
+?
+\color red
+!
+\series default
+\color inherit
+] I don't know why the diagonal part of 192, 194 (LHeC 
+\begin_inset Formula $e^{+}p$
+\end_inset
+
+ NC & CC) points in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LHeCEIC1y-corr"
+
+\end_inset
+
+ are strongly correlated with the ubar and dbar PDFs 
+\end_layout
+
+\begin_layout Enumerate
+[
+\series bold
+\color blue
+Y
 \series default
 \color inherit
 ] we also want to draw the sensitivity plots for the EIC at various energies
@@ -2200,22 +2286,14 @@ N
 \color blue
 N
 \color teal
-1
+3
 \color red
-!!!
+?
 \series default
 \color inherit
 ] Make the ranking tables for 1-year and 10-years runtime of LHeC and JLabEIC.
- (update: plots for 1y and 10y: Both LHeC and EIC NC datasets are sensitive
- to u 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:LHeCEIC_1y"
-
-\end_inset
-
-.
- Ranking tables are not finished yet)
+ (update: I already made ranking tables, yet we need different ways to present
+ the contribution based on various runtime/#bins)
 \end_layout
 
 \begin_layout Standard
@@ -2226,7 +2304,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename plots/LHeC/corrdr_xQ+1_f0_samept.png
+	filename plots/Pseudo_Data/LHeCEIC_1y/corrdr_xQ+1_f0_samept.png
 	lyxscale 50
 	width 30text%
 	clip
@@ -2260,7 +2338,7 @@ status collapsed
 
 
 \begin_inset Graphics
-	filename plots/LHeC/corrdr_xQ+1_f2_samept.png
+	filename plots/Pseudo_Data/LHeCEIC_1y/corrdr_xQ+1_f2_samept.png
 	lyxscale 50
 	width 30text%
 	clip
@@ -2329,7 +2407,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Select sensitivity plots for the LHeC pseudodata, in this case showing 
+Select sensitivity plots for the LHeC&EIC pseudodata, in this case showing
+ 
 \begin_inset Formula $|S_{g}|(x_{i},\mu_{i})$
 \end_inset
 
@@ -2376,7 +2455,8 @@ status open
 \end_inset
 
 .
- The pseudodata are broken among four separate reaction channels — CC 
+ The pseudodata are broken among four separate reaction channels for LHeC
+ — CC 
 \begin_inset Formula $e^{-}p$
 \end_inset
 
@@ -2393,7 +2473,7 @@ status open
 \end_inset
 
  (triangles).
- 
+ And two channels for EIC — NC (down-triangle) and CC (empty-circle).
 \end_layout
 
 \end_inset
@@ -2401,7 +2481,7 @@ status open
 
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:LHeC-sens"
+name "fig:LHeCEIC1y-sens"
 
 \end_inset
 
@@ -2476,7 +2556,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename plots/LHeC/corr_xQ+1_f3_samept.png
+	filename plots/Pseudo_Data/LHeCEIC_1y/corr_xQ+1_f3_samept.png
 	lyxscale 50
 	width 30text%
 	clip
@@ -2510,7 +2590,7 @@ status collapsed
 
 
 \begin_inset Graphics
-	filename plots/LHeC/corr_xQ+1_f-1_samept.png
+	filename plots/Pseudo_Data/LHeCEIC_1y/corr_xQ+1_f-1_samept.png
 	lyxscale 50
 	width 30text%
 	clip
@@ -2524,7 +2604,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Select correlation plots for the LHeC pseudodata, in this case showing
+Select correlation plots for the LHeC&EIC pseudodata, in this case showing
 \begin_inset Note Note
 status open
 
@@ -2571,7 +2651,8 @@ status open
 \end_inset
 
 .
- The pseudodata are broken among four separate reaction channels — CC 
+ The pseudodata are broken among four separate reaction channels for LHeC
+ — CC 
 \begin_inset Formula $e^{-}p$
 \end_inset
 
@@ -2588,7 +2669,7 @@ status open
 \end_inset
 
  (triangles).
- 
+ And two channels for EIC — NC (down-triangle) and CC (empty-circle).
 \end_layout
 
 \end_inset
@@ -2596,7 +2677,7 @@ status open
 
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:LHeC-corr"
+name "fig:LHeCEIC1y-corr"
 
 \end_inset
 
@@ -2616,7 +2697,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename plots/LHeC/dr_xQ+1_samept.png
+	filename plots/Pseudo_Data/LHeCEIC_1y/dr_xQ+1_samept.png
 	lyxscale 50
 	width 30text%
 	clip
@@ -2677,7 +2758,7 @@ Select
 \begin_inset Formula $\delta r$
 \end_inset
 
- plots for the LHeC pseudodata, in this case showing 
+ plots for the LHeC&EIC pseudodata, in this case showing 
 \begin_inset Formula $\delta r_{i}$
 \end_inset
 
@@ -2696,7 +2777,8 @@ status open
 \end_inset
 
 .
- The pseudodata are broken among four separate reaction channels — CC 
+ The pseudodata are broken among four separate reaction channels for LHeC
+ — CC 
 \begin_inset Formula $e^{-}p$
 \end_inset
 
@@ -2713,7 +2795,7 @@ status open
 \end_inset
 
  (triangles).
- 
+ And two channels for EIC — NC (down-triangle) and CC (empty-circle).
 \end_layout
 
 \end_inset
@@ -2721,7 +2803,7 @@ status open
 
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:LHeC-dr"
+name "fig:LHeCEIC1y-dr"
 
 \end_inset
 
@@ -2734,10 +2816,14 @@ name "fig:LHeC-dr"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide true
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2811,6 +2897,11 @@ name "fig:LHeCEIC_1y"
 \end_inset
 
  
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -3435,23 +3526,32 @@ I calculate the PDF sensitivities
 \end_inset
 
 .
- For the PDF sensitivities, I explore the sensitivities in x interval 
+ For the PDF sensitivities, I explore the sensitivities to PDFs in x interval
+ 
 \begin_inset Formula $[10^{-5},0.9]$
-\end_inset
-
- and flavours 
-\begin_inset Formula $a$
 \end_inset
 
  at 
 \begin_inset Formula $\mu=5GeV$
 \end_inset
 
- and find the maximum sensitivity 
+ forand flavours 
+\begin_inset Formula $a$
+\end_inset
+
+ and use the maximum sensitivity 
 \begin_inset Formula $|S_{f}(\sigma_{corr,i},f_{a}(x_{max},\mu=5GeV))|$
 \end_inset
 
- in the x range.
+ in the 
+\begin_inset Formula $x$
+\end_inset
+
+ range to stand for the sensitive strength and 
+\begin_inset Formula $x$
+\end_inset
+
+.
  I draw contour plots (Fig.
  
 \begin_inset CommandInset ref
@@ -3486,8 +3586,8 @@ I also make the
 \begin_inset Formula $\beta_{ID,j}$
 \end_inset
 
- list with high sensitivities to PDFs and quantities (in MaxSenscorrerror_info.tx
-t).
+ list with high sensitivities to PDFs and quantities (in ./Temporary_Results/Cons
+train_Physical_Quantities_tmp/Sens_correlated_error/MaxSenscorrerror_info.txt).
  I select only 
 \begin_inset Formula $|S_{f}(\sigma_{corr,i},f_{a}(x_{max},\mu=5GeV))|>1$
 \end_inset
