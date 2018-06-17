@@ -3513,46 +3513,200 @@ Y
 
 \begin_deeper
 \begin_layout Standard
-I calculate the PDF sensitivities 
-\begin_inset Formula $S_{f}(\sigma_{corr,i},f_{a}(x,\mu))$
+In addition to uncorrelated errors, I also explore the sensitivities to
+ PDFs and physical quantities 
+\begin_inset Formula $Q$
 \end_inset
 
- and sensitivities of physical quantities 
-\begin_inset Formula $S_{f}(\sigma_{corr},Q_{i})$
+ imposed by correlated errors of LHC measurements.
+ For the i-th correlated error in the measurement ID 
+\begin_inset Formula $\beta_{ID,i}$
 \end_inset
 
- imposed by the experimental correlated errors 
-\begin_inset Formula $i$
+, we define it's sensitivities to PDFs and 
+\begin_inset Formula $Q$
+\end_inset
+
+ as 
+\begin_inset Formula $S(\beta_{ID,i},f_{a}(x,\mu))=\delta\beta_{ID,i}C(\beta_{ID,i},f_{a}(x,\mu))$
+\end_inset
+
+ and 
+\begin_inset Formula $S(\beta_{ID,i},Q)=\delta\beta_{ID,i}C(\beta_{ID,i},Q)$
 \end_inset
 
 .
- For the PDF sensitivities, I explore the sensitivities to PDFs in x interval
+ Where i denote the ordering of 
+\begin_inset Formula $\beta_{ID,i}$
+\end_inset
+
+ in .dta files (labels 
+\begin_inset Quotes eld
+\end_inset
+
+r(k) = 
+\begin_inset Formula $R^{2}$
+\end_inset
+
  
-\begin_inset Formula $[10^{-5},0.9]$
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\beta_{ID,1}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\beta_{ID,2}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\beta_{ID,3}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+......
+\begin_inset Quotes erd
+\end_inset
+
+ in .dta files)
+\end_layout
+
+\begin_layout Standard
+I identify the 
+\begin_inset Formula $\beta_{ID,i}$
+\end_inset
+
+ with strong enough sensitivities to various PDFs and 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $S(\beta_{ID,i},f_{a}(x,\mu))$
+\end_inset
+
+ depend on 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu$
+\end_inset
+
+, I calculate the 
+\begin_inset Formula $S(\beta_{ID,i},f_{a}(x,\mu))$
 \end_inset
 
  at 
 \begin_inset Formula $\mu=5GeV$
 \end_inset
 
- forand flavours 
+ and 
+\begin_inset Formula $x=10^{-5},10^{-4},10^{-3},10^{-2},10^{-1},0.3,0.8$
+\end_inset
+
+ and use the maximum 
+\begin_inset Formula $|S(\beta_{ID,i},f_{a}(x,\mu))|$
+\end_inset
+
+ among 
+\begin_inset Formula $x$
+\end_inset
+
+ values to stand for the sensitivity to the PDF of flavour 
 \begin_inset Formula $a$
 \end_inset
 
- and use the maximum sensitivity 
-\begin_inset Formula $|S_{f}(\sigma_{corr,i},f_{a}(x_{max},\mu=5GeV))|$
-\end_inset
-
- in the 
-\begin_inset Formula $x$
-\end_inset
-
- range to stand for the sensitive strength and 
-\begin_inset Formula $x$
-\end_inset
-
 .
- I draw contour plots (Fig.
+ Afterwards, I list all 
+\begin_inset Formula $\beta_{ID,i}$
+\end_inset
+
+ with 
+\begin_inset Formula $|S_{max}(\beta_{ID,i},f_{a}(x,\mu=5GeV))|>1$
+\end_inset
+
+ and 
+\begin_inset Formula $|S(\beta_{ID,i},Q)|>1$
+\end_inset
+
+ in (./Temporary_Results/Constrain_Physical_Quantities_tmp/Sens_correlated_error/
+MaxSenscorrerror_info.txt of https://smu.box.com/s/sdd9qbw6wvee6n7u6441j2f2jil7s2t7
+).
+ Besides, I illustrate the sensitivities with the green to red spectrum
+ on the 
+\begin_inset Formula $(\beta_{ID,i},ID)$
+\end_inset
+
+ grid (Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3560,47 +3714,7 @@ reference "fig:Sens_corr_error"
 
 \end_inset
 
-) to indicate the sensitivities of 
-\begin_inset Formula $\beta_{ID,j}\equiv\sigma_{corr,i}$
-\end_inset
-
- with x, y axes representing 
-\begin_inset Formula $(ID,j)$
-\end_inset
-
-.
- Where ID indicates the experimental ID and j indicates the j-th correlated
- error of the corresponding ID in .dta files (labels are like "r(k) = 
-\begin_inset Formula $R^{2}$
-\end_inset
-
- b1 b2 b3......", I exclude 
-\begin_inset Formula $R^{2}$
-\end_inset
-
- here).
-\end_layout
-
-\begin_layout Standard
-I also make the 
-\begin_inset Formula $\beta_{ID,j}$
-\end_inset
-
- list with high sensitivities to PDFs and quantities (in ./Temporary_Results/Cons
-train_Physical_Quantities_tmp/Sens_correlated_error/MaxSenscorrerror_info.txt).
- I select only 
-\begin_inset Formula $|S_{f}(\sigma_{corr,i},f_{a}(x_{max},\mu=5GeV))|>1$
-\end_inset
-
- for the flavour 
-\begin_inset Formula $a$
-\end_inset
-
- and 
-\begin_inset Formula $\beta_{ID,j}$
-\end_inset
-
-.
+).
  I find that most 
 \begin_inset Formula $\beta_{ID,j}$
 \end_inset
@@ -3618,7 +3732,11 @@ train_Physical_Quantities_tmp/Sens_correlated_error/MaxSenscorrerror_info.txt).
 \begin_inset Formula $\beta_{ID,j}$
 \end_inset
 
- are in 249.
+ are in 249 and the maximum is 
+\begin_inset Formula $|S_{max}(\beta_{249,7},f_{d}(10^{-4},5GeV))|=9.45$
+\end_inset
+
+.
 \begin_inset Float figure
 wide true
 sideways false
@@ -3720,6 +3838,137 @@ name "fig:Sens_corr_error"
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Enumerate
+[
+\series bold
+\color blue
+Y
+\series default
+\color inherit
+] sensitivities of correlated systematic errors to various physical observables
+ (Higgs cross sections, weak angle, etc.)
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+I calculate the PDF sensitivities 
+\begin_inset Formula $S_{f}(\sigma_{corr,i},f_{a}(x,\mu))$
+\end_inset
+
+ and sensitivities of physical quantities 
+\begin_inset Formula $S_{f}(\sigma_{corr},Q_{i})$
+\end_inset
+
+ imposed by the experimental correlated errors 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ For the PDF sensitivities, I explore the sensitivities to PDFs in x interval
+ 
+\begin_inset Formula $[10^{-5},0.9]$
+\end_inset
+
+ at 
+\begin_inset Formula $\mu=5GeV$
+\end_inset
+
+ forand flavours 
+\begin_inset Formula $a$
+\end_inset
+
+ and use the maximum sensitivity 
+\begin_inset Formula $|S_{f}(\sigma_{corr,i},f_{a}(x_{max},\mu=5GeV))|$
+\end_inset
+
+ in the 
+\begin_inset Formula $x$
+\end_inset
+
+ range to stand for the sensitive strength and 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ I draw contour plots (Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Sens_corr_error"
+
+\end_inset
+
+) to indicate the sensitivities of 
+\begin_inset Formula $\beta_{ID,j}\equiv\sigma_{corr,i}$
+\end_inset
+
+ with x, y axes representing 
+\begin_inset Formula $(ID,j)$
+\end_inset
+
+.
+ Where ID indicates the experimental ID and j indicates the j-th correlated
+ error of the corresponding ID in .dta files (labels are like "r(k) = 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ b1 b2 b3......", I exclude 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ here).
+\end_layout
+
+\begin_layout Plain Layout
+I also make the 
+\begin_inset Formula $\beta_{ID,j}$
+\end_inset
+
+ list with high sensitivities to PDFs and quantities (in ./Temporary_Results/Cons
+train_Physical_Quantities_tmp/Sens_correlated_error/MaxSenscorrerror_info.txt).
+ I select only 
+\begin_inset Formula $|S_{f}(\sigma_{corr,i},f_{a}(x_{max},\mu=5GeV))|>1$
+\end_inset
+
+ for the flavour 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{ID,j}$
+\end_inset
+
+.
+ I find that most 
+\begin_inset Formula $\beta_{ID,j}$
+\end_inset
+
+ with large sensitivities are in ID = 247, 249, 542, 544, 545, 566, 568.
+ Especially, 
+\begin_inset Formula $\beta_{ID,j}$
+\end_inset
+
+ of 249 are the most sensitive among all correlated errors; Almost all 
+\begin_inset Formula $|S|>3$
+\end_inset
+
+ 
+\begin_inset Formula $\beta_{ID,j}$
+\end_inset
+
+ are in 249.
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open

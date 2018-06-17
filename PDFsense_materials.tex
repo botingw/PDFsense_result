@@ -548,33 +548,38 @@ on dim-6 operators (Alexey Petrov)
 errors to various physical observables (Higgs cross sections, weak
 angle, etc.)
 
-I calculate the PDF sensitivities $S_{f}(\sigma_{corr,i},f_{a}(x,\mu))$
-and sensitivities of physical quantities $S_{f}(\sigma_{corr},Q_{i})$
-imposed by the experimental correlated errors $i$. For the PDF sensitivities,
-I explore the sensitivities to PDFs in x interval $[10^{-5},0.9]$
-at $\mu=5GeV$ forand flavours $a$ and use the maximum sensitivity
-$|S_{f}(\sigma_{corr,i},f_{a}(x_{max},\mu=5GeV))|$ in the $x$ range
-to stand for the sensitive strength and $x$. I draw contour plots
-(Fig. \ref{fig:Sens_corr_error}) to indicate the sensitivities of
-$\beta_{ID,j}\equiv\sigma_{corr,i}$ with x, y axes representing $(ID,j)$.
-Where ID indicates the experimental ID and j indicates the j-th correlated
-error of the corresponding ID in .dta files (labels are like \char`\"{}r(k)
-= $R^{2}$ b1 b2 b3......\char`\"{}, I exclude $R^{2}$ here).
+In addition to uncorrelated errors, I also explore the sensitivities
+to PDFs and physical quantities $Q$ imposed by correlated errors
+of LHC measurements. For the i-th correlated error in the measurement
+ID $\beta_{ID,i}$, we define it's sensitivities to PDFs and $Q$
+as $S(\beta_{ID,i},f_{a}(x,\mu))=\delta\beta_{ID,i}C(\beta_{ID,i},f_{a}(x,\mu))$
+and $S(\beta_{ID,i},Q)=\delta\beta_{ID,i}C(\beta_{ID,i},Q)$. Where
+i denote the ordering of $\beta_{ID,i}$ in .dta files (labels ``r(k)
+= $R^{2}$ $\beta_{ID,1}$ $\beta_{ID,2}$ $\beta_{ID,3}$......''
+in .dta files)
 
-I also make the $\beta_{ID,j}$ list with high sensitivities to PDFs
-and quantities (in ./Temporary\_Results/Constrain\_Physical\_Quantities\_tmp/Sens\_correlated\_error/MaxSenscorrerror\_info.txt).
-I select only $|S_{f}(\sigma_{corr,i},f_{a}(x_{max},\mu=5GeV))|>1$
-for the flavour $a$ and $\beta_{ID,j}$. I find that most $\beta_{ID,j}$
-with large sensitivities are in ID = 247, 249, 542, 544, 545, 566,
-568. Especially, $\beta_{ID,j}$ of 249 are the most sensitive among
-all correlated errors; Almost all $|S|>3$ $\beta_{ID,j}$ are in
-249.
+I identify the $\beta_{ID,i}$ with strong enough sensitivities to
+various PDFs and $Q$. Since $S(\beta_{ID,i},f_{a}(x,\mu))$ depend
+on $x$ and $\mu$, I calculate the $S(\beta_{ID,i},f_{a}(x,\mu))$
+at $\mu=5GeV$ and $x=10^{-5},10^{-4},10^{-3},10^{-2},10^{-1},0.3,0.8$
+and use the maximum $|S(\beta_{ID,i},f_{a}(x,\mu))|$ among $x$ values
+to stand for the sensitivity to the PDF of flavour $a$. Afterwards,
+I list all $\beta_{ID,i}$ with $|S_{max}(\beta_{ID,i},f_{a}(x,\mu=5GeV))|>1$
+and $|S(\beta_{ID,i},Q)|>1$ in (./Temporary\_Results/Constrain\_Physical\_Quantities\_tmp/Sens\_correlated\_error/MaxSenscorrerror\_info.txt
+of https://smu.box.com/s/sdd9qbw6wvee6n7u6441j2f2jil7s2t7). Besides,
+I illustrate the sensitivities with the green to red spectrum on the
+$(\beta_{ID,i},ID)$ grid (Fig. \ref{fig:Sens_corr_error}). I find
+that most $\beta_{ID,j}$ with large sensitivities are in ID = 247,
+249, 542, 544, 545, 566, 568. Especially, $\beta_{ID,j}$ of 249 are
+the most sensitive among all correlated errors; Almost all $|S|>3$
+$\beta_{ID,j}$ are in 249 and the maximum is $|S_{max}(\beta_{249,7},f_{d}(10^{-4},5GeV))|=9.45$.
 \begin{figure*}
 \includegraphics[clip,width=0.3\textwidth]{plots/constrain_quantities/sens_correrror_+1_f8_thumbnail}
 
 \caption{The $|S_{f}(\beta_{ID,j},\sigma_{H,8TeV})|$ for LHC datasets.}
 \label{fig:Sens_corr_error} 
 \end{figure*}
+\item 
 \end{enumerate}
 \clearpage\newpage
 
