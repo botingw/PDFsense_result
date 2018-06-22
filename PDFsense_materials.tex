@@ -573,6 +573,11 @@ that most $\beta_{ID,j}$ with large sensitivities are in ID = 247,
 249, 542, 544, 545, 566, 568. Especially, $\beta_{ID,j}$ of 249 are
 the most sensitive among all correlated errors; Almost all $|S|>3$
 $\beta_{ID,j}$ are in 249 and the maximum is $|S_{max}(\beta_{249,7},f_{d}(10^{-4},5GeV))|=9.45$.
+
+{[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{1}}\textbf{\textcolor{red}{!}}{]}
+Compare $\underset{i}{\Sigma}|S(\beta_{ID,i},f_{a}(x,\mu))|$ with
+$\underset{i}{\Sigma}|S(r_{ID,i},f_{a}(x,\mu))|$ for each ID and
+flavour 
 \begin{figure*}
 \includegraphics[clip,width=0.3\textwidth]{plots/constrain_quantities/sens_correrror_+1_f8_thumbnail}
 
@@ -957,77 +962,116 @@ for the LHC jet, ttbar, and ZpT datasets at $Q=1.3$ GeV.}
 \subsection{construct theoretical predictions are the linear combination of different
 flavour PDFs }
 
-We want to know how the data constrain the PDF space rather than just
-know the sensitivity to each flavour. Advantage: We don't need to
-guess and test which combination of flavour has the strongest constraint
-by the user function again and again.
+We want to know which direction in the PDF space (the PDF space means
+the 6 dimensions spanned by $f_{\bar{d}}$ to $f_{s}$ at $(x,\mu)$
+specified by data points) do datasets constrain rather than just know
+the sensitivities of PDFs for various flavours. There are various
+advandages. First, the constrained PDF direction and it's sensitivity
+is more informative for identifying the constraint of datasets to
+PDFs than sensitivities of PDFs for various flavours. Besides, We
+don't need to guess and test which combination of flavour has the
+strongest constraint by the user function again and again. We can
+extract the information from the constrained direction. In addition,
+if we know the relation between the theoretical values and PDFs, we
+can possibly directly estimate the sizes of PDF uncertainties imposed
+by datasets (seems the reweighting method could do the similar thing).
+We can also investigate the distribution of the directions to illustrate
+which directions are more correlated with various datasets and the
+strength of sensitivities to these directions (which are roughly proportional
+to residuals of data points).
 
-Other advantages: if we know the relation between the theoretical
-values and PDFs, whether we can directly estimate the scale of PDF
-uncertainties imposed by experimental measurements or at least get
-more insight understanding of how measurements constrain PDFs? 
-
-We can approximate a linear relation among theoretical prediction
-and PDFs at the specified $(x,\mu)$. Here we temporary ignore the
-nonlinear terms, the correlation of replicas among various flavours,
-and the contribution from PDFs that are not at $(x,\mu)$ and we absorb
-the unknown factors into a variable $X$. Then with
+We approximate that theoretical uncertainties are the linear combination
+of PDF uncertainties at the specified $(x,\mu)$ plus an unknown term
+$X$. That is: $(T_{i,r}-T_{i,0})=\underset{a}{\sum}c_{i,a}(f(x_{i},\mu_{i})_{a,r}-f(x_{i},\mu_{i})_{a,0})$
+for $T$, $c$, and $f$ denote the theoretical values, linear coefficients,
+and PDFs, $i$ denotes data points, $r$ denotes error replicas, and
+0 denotes the central replica. Note: we do not use $T_{i,r}=\underset{a}{\sum}c_{i,a}f(x_{i},\mu_{i})_{a,r}+const$
+as we can not get the well-fitted result. Here we temporary ignore
+the nonlinear terms and the contribution from PDFs that are not at
+$(x,\mu)$. We can do the linear regression between the error replicas
+of theoretical predictions and PDFs to acquire the linear relation.
+Because of replicas are far more than the 6 (the number of flavours
+in the fit), the quality of the linear regression should be acceptable.
+Following we derive the relation between theoretical/residual and
+PDF uncertainties and connect to the concept of correlation/sensitivity
+mentioned before: defining Hessian uncertainties of theoretical predictions
+and PDFs:
 
 \[
 \delta T_{i,R}=(T_{i,r+}-T_{i,r-})/2,\delta f_{i,R}=(f_{i,r+}-f_{i,r-})/2
 \]
 
 \[
-|\delta T_{i}|^{2}=\underset{R}{\sum}\delta T_{i,R}^{2},|\delta f_{i}|^{2}=\underset{R}{\sum}\delta f_{i,R}^{2}
+|\stackrel{\rightharpoonup}{\delta T_{i}}|^{2}=\stackrel[R]{N}{\sum}\delta T_{i,R}^{2},|\stackrel{\rightharpoonup}{\delta f_{i}}|^{2}=\stackrel[R]{N}{\sum}\delta f_{i,R}^{2}
 \]
 
-We have the following rules:
+The linear relation between theoretical errors and PDF errors:
 
 \[
-T_{i,r}=\underset{a}{\sum}c_{i,a}f(x_{i},\mu_{i})_{a,r}+X_{i,r}
+(T_{i,r}-T_{i,0})=\underset{a}{\sum}c_{i,a}(f(x_{i},\mu_{i})_{a,r}-f(x_{i},\mu_{i})_{a,0})+(X_{i,r}-X_{i,0})
 \]
 
 \[
 \delta T_{i,R}=\underset{a}{\sum}c_{i,a}(f_{i,a,r+}-f_{i,a,r-})/2+(X_{i,r+}-X_{i,r-})/2\equiv\underset{a}{\sum}c_{i,a}\delta f_{i,a,R}+\delta X_{i,R}
 \]
 
+Where $r+$, $r-$ denote the pairwisely positive and negative error
+replicas in one of the total $N$ PDF model dimensions and $R$ denotes
+the error in that dimension. $T$ are the theoretical predictions;
+$f$ are PDFs; $i$ are data points; $a$ are flavour indices of $\overset{-}{d}$,
+$\overset{-}{u}$,..., $s$. $c_{i,a}$ are the coefficients of the
+$f_{i,a}$. $X$ are unknown parts. The symbols $\stackrel{\rightharpoonup}{\delta T_{i}}$,
+$\stackrel{\rightharpoonup}{\delta f_{i}}$, and etc represent $N$
+dimensional vectors with Hessian errors $\delta T_{i,R}$, $\delta f_{i,R}$,
+and etc in each component so that $\stackrel{\rightharpoonup}{|\delta T_{i}}|$,
+$\stackrel{\rightharpoonup}{|\delta f_{i}}|$, and etc are the Hessian
+uncertainties of the given physical quantities $T_{i}$, $f_{i}$,
+and etc. 
+
 Because the total PDF uncertainties of physical quantities follow
-the Hessian uncertainty rule: $\delta Q=\sqrt{\underset{R}{\sum}\delta Q_{R}^{2}}$
-and the squre of the addition of two vectors is $(\stackrel{\rightharpoonup}{Q}_{1}+\stackrel{\rightharpoonup}{Q}_{2})^{2}=Q_{1}^{2}+Q_{2}^{2}+2|Q_{1}||Q_{2}|\rho$
-for the correlation $\rho$, the total theoretical uncertainty for
-each point $i$ is:
+the Hessian uncertainty rule: $|\stackrel{\rightharpoonup}{\delta Q}|=\sqrt{\stackrel[R]{N}{\sum}\delta Q_{R}^{2}}$
+and the square of the addition of two vectors is $(\stackrel{\rightharpoonup}{Q_{1}}+\stackrel{\rightharpoonup}{Q_{2}})^{2}=|\stackrel{\rightharpoonup}{Q_{1}}|^{2}+|\stackrel{\rightharpoonup}{Q_{2}}|^{2}+2|\stackrel{\rightharpoonup}{Q_{1}}||\stackrel{\rightharpoonup}{Q_{2}}|\rho$
+for the correlation $\rho$ between $\stackrel{\rightharpoonup}{Q_{1}}$
+and $\stackrel{\rightharpoonup}{Q_{2}}$ , the total theoretical uncertainty
+for each point $i$ is:
 
 \[
-|\delta T_{i}|^{2}=\underset{R}{\sum}(\underset{a}{\sum}c_{i,a}\delta f_{i,a,R}+\delta X_{i,R})^{2}\equiv(\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a})^{2}+(\delta(\delta X_{i}))^{2}+2|\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a}||\delta(\delta X_{i})|\rho\simeq(\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a})^{2}+(\delta(\delta X_{i}))^{2}
+|\stackrel{\rightharpoonup}{\delta T_{i}}|^{2}=\underset{R}{\sum}(\underset{a}{\sum}c_{i,a}\delta f_{i,a,R}+\delta X_{i,R})^{2}=|(\stackrel{\rightharpoonup}{\delta\underset{a}{\sum}c_{i,a}f_{i,a}})|^{2}+|\stackrel{\rightharpoonup}{\delta X_{i}}|^{2}+2|(\delta\stackrel{\rightharpoonup}{\underset{a}{\sum}c_{i,a}f_{i,a}})||\stackrel{\rightharpoonup}{\delta X_{i}}|\rho
+\]
+
+\[
+\simeq|(\stackrel{\rightharpoonup}{\delta\underset{a}{\sum}c_{i,a}f_{i,a}})|^{2}+|\stackrel{\rightharpoonup}{\delta X_{i}}|^{2}
 \]
 
 Where we assume the unknown quantity $X$ and the known PDF combination
-is uncorrelated, which means that the vectors $\stackrel{\rightharpoonup}{\delta X_{i}}$,
+is uncorrelated ($\rho\simeq0$), which means that the vectors $\stackrel{\rightharpoonup}{\delta X_{i}}$,
 $\stackrel{\rightharpoonup}{\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a}}$
 and $\stackrel{\rightharpoonup}{\delta T_{i}}$ form a right triangle.
-Therefore, the Hessian uncertainty correlation between $T_{i}$and
-$\underset{a}{\sum}c_{i,a}f_{i,a}$ is $C(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\simeq\frac{|\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a}|}{|\delta T_{i}|}$.
-If even the various PDFs of flavours are uncorrelated with each other,
-we have $C(T_{i},f_{i,a})\simeq\frac{\delta(c_{i,a}|\delta f_{i,a}|)}{|\delta T_{i}|}$.
+Therefore, the Hessian uncertainty correlation between $\stackrel{\rightharpoonup}{\delta T_{i}}$
+and $\stackrel{\rightharpoonup}{\underset{a}{\delta\sum}c_{i,a}f_{i,a}}$
+is $C(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})=cos\theta_{\stackrel{\rightharpoonup}{\delta T_{i}},\stackrel{\rightharpoonup}{\underset{a}{\delta\sum}c_{i,a}f_{i,a}}}\simeq\frac{|\delta\stackrel{\rightharpoonup}{\underset{a}{\sum}c_{i,a}f_{i,a}}|}{|\stackrel{\rightharpoonup}{\delta T_{i}}|}$,
+which indicates that $C(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})$
+could be seen as the percentage of theoretical uncertainties explained
+by $f_{\bar{d}}$,..., $f_{s}$. If even the various PDFs of flavours
+are uncorrelated with each other, we have $C(T_{i},f_{i,a})\simeq\frac{(c_{i,a}|\stackrel{\rightharpoonup}{\delta f_{i,a}}|)}{|\stackrel{\rightharpoonup}{\delta T_{i}}|}$.
 The physical explanation for the formulas is that the theoretical
 uncertainty is the error propagation of linear independent uncertainties
-of quantities $f_{\bar{d}}$, $f_{\bar{u}}$, $f_{g}$, $f_{u}$,
-$f_{d}$, $f_{s}$, and unknown $X$. Therefore, $c_{\bar{d}}(x,\mu),c_{\bar{u}}(x,\mu),c_{g}(x,\mu),c_{u}(x,\mu),c_{d}(x,\mu),c_{s}(x,\mu)$
+of PDFs $f_{\bar{d}}$, $f_{\bar{u}}$, $f_{g}$, $f_{u}$, $f_{d}$,
+$f_{s}$, and unknown $X$. Therefore, $c_{\bar{d}}(x,\mu),c_{\bar{u}}(x,\mu),c_{g}(x,\mu),c_{u}(x,\mu),c_{d}(x,\mu),c_{s}(x,\mu)$
 specify the relation between uncertainties on PDFs of flavours and
-experimental measurements. $C(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})$
-is the goodness of the specification. 
+experimental measurements.
 
 \subsubsection{Setup}
 
-for each dataset, using the linear fit $T_{i,r}=\underset{a}{\sum}c_{i,a}f(x_{i},\mu_{i})_{a,r}+const$
-to fit the 56 replicas for each point $i$
+for each dataset, using the linear fit $(T_{i,r}-T_{i,0})=\underset{a}{\sum}c_{i,a}(f(x_{i},\mu_{i})_{a,r}-f(x_{i},\mu_{i})_{a,0})$
+to fit the 56 error replicas for each point $i$
 
 \subsubsection{Verification of the linear independent approximation}
 
 To know whether the linear approximation works well, here are some
 ideas.
 \begin{enumerate}
-\item {[}\textbf{\textcolor{blue}{Y}}{]} by checking the relation $C(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\simeq\frac{|\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a}|}{|\delta T_{i}|}$
+\item {[}\textbf{\textcolor{blue}{Y}}{]} by checking the relation $C(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\simeq\frac{|\delta\stackrel{\rightharpoonup}{\underset{a}{\sum}c_{i,a}f_{i,a}}|}{|\stackrel{\rightharpoonup}{\delta T_{i}}|}$
 in the left of Fig. \ref{fig:linearfitByPDFs_verify}, we verify the
 formula. e.g. ID = 247 satisfies the relation and the goodness of
 the specification (correlations) of points are very high.
@@ -1067,8 +1111,8 @@ in ID = 203 and it becomes less dominant when $x>0.3$.
 \item {[}\textbf{\textcolor{blue}{Y}}{]} quantify the strength of constraint
 on the PDF space imposed by measurements and compare it with the components
 from PDF uncertainties of flavours (which flavours contribute the
-most to the theoretical uncertainties of measurements):Defining the
-sensitivity $S(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\equiv\frac{\delta r_{i}}{r_{ID,rms}}C(\delta r_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\simeq\frac{|\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a}|}{\sigma_{uncor,i}r_{ID,rms}}\simeq\frac{|\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a}|}{\sigma_{uncor,i}}$,
+most to the theoretical uncertainties of measurements): Defining the
+sensitivity $S(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\equiv\frac{\delta r_{i}}{r_{ID,rms}}C(\delta r_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\simeq\frac{|\delta\stackrel{\rightharpoonup}{\underset{a}{\sum}c_{i,a}f_{i,a}}|}{\sigma_{uncor,i}r_{ID,rms}}\simeq\frac{|\delta\stackrel{\rightharpoonup}{\underset{a}{\sum}c_{i,a}f_{i,a}}|}{\sigma_{uncor,i}}$,
 we can investigate the $\underset{a}{\sum}c_{i,a}f_{i,a}$ sensitivities
 on $(x,\mu)$ plane. To estimate the how much $f_{i,a}(x,\mu)$ contribute
 to the $\underset{a}{\sum}c_{i,a}f_{i,a}$ sensitivities, we assume
@@ -1093,7 +1137,7 @@ contradicting to $S(r_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\simeq\frac{\sqrt{\un
 \item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{3}}\textbf{\textcolor{red}{?}}{]}
 whether the sizes of components are representive for the sensitivities
 of PDFs in the definition $S(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\equiv\frac{\delta r_{i}}{r_{ID,rms}}C(\delta r_{i},\underset{a}{\sum}c_{i,a}f_{i,a})$.
-In other words, in which conditions $\frac{|\delta(\delta f_{i,a})|}{\sigma_{uncor}}=\delta r_{i}C(r_{i},f_{i,a})$
+In other words, in which conditions $\frac{|c_{i,a}(\delta f_{i,a})|}{\sigma_{uncor}}=\delta r_{i}C(r_{i},f_{i,a})$
 \item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{?}}\textbf{\textcolor{red}{?}}{]}
 can the knowledge of coefficients help us to rank the constraint on
 PDFs imposed by measurements better?
@@ -1109,6 +1153,16 @@ potential $c_{i,n}\delta f_{i,n}/\sigma_{uncor,i}$ constraint on
 ID = 504/514/535/538
 \item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{1}}\textbf{\textcolor{red}{!!}}{]}
 investigate the Q dependency of $S(r_{i},\underset{a}{\sum}c_{i,a}f_{i,a})$ 
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{3}}\textbf{\textcolor{red}{!!}}{]}
+we can not fit the relation $T_{i,r}=\underset{a}{\sum}c_{i,a}f(x_{i},\mu_{i})_{a,r}+const$
+well (the constant terms are oftenly too large and $C(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\ncong\frac{|\stackrel{\rightharpoonup}{\underset{a}{\sum}c_{i,a}f_{i,a}}|}{|\stackrel{\rightharpoonup}{T_{i}}|}$
+). If it is caused by the contribution of PDFs that are not at $(x,\mu)$,
+the LO PDF should fit well. Test it with CT14LO.
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{3}}\textbf{\textcolor{red}{!}}{]}
+Test the stability of coefficients of datasets. Coefficients in $(T_{i,r}-T_{i,0})=\underset{a}{\sum}c_{i,a}(f(x_{i},\mu_{i})_{a,r}-f(x_{i},\mu_{i})_{a,0})+(X_{i,r}-X_{i,0})$
+relation should not depend on the datasets incorporated in PDF fits.
+Via comparing the fitted coefficients in data points of CT14HERA2NNLO
+and CT14HERA2NNLONoJet, we can verify it.
 \end{enumerate}
 
 \subsubsection{a temporary conclusion}
@@ -1119,7 +1173,7 @@ $n$
 \item $T_{i}=\underset{a}{\sum}c_{i,a}f_{i,a}+const$ does not satisfy $C(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})=\underset{a}{\sum}c_{i,a}f_{i,a}/T_{i}$.
 I can not tell whether $T_{i}=\underset{a}{\sum}c_{i,a}f_{i,a}+const$
 is a reasonable approximation. Instead, we can verify the approximation
-$C(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\simeq\frac{|\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a}|}{|\delta T_{i}|}$
+$C(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\simeq\frac{|\delta\stackrel{\rightharpoonup}{\underset{a}{\sum}c_{i,a}f_{i,a}}|}{|\stackrel{\rightharpoonup}{\delta T_{i}}|}$
 is acceptable and provides some useful information about the PDF sensitivity
 imposed by datasets. 
 \item we display the $c_{n}$ versus $x$ to demonstrate the measured PDF
@@ -1132,8 +1186,9 @@ the correlations among different $\delta f_{i,n}$ are also important
 and our analysis does not include the sensitivity contribution from
 $C(f_{n1}(x,\mu),f_{n2}(x,\mu))$.
 \item the $c_{n}$ in many datasets are numerical unstable or have large
-uncertainties. I don't know whether the instability will disappear
-when considering the $\mu$ dependency.
+uncertainties. When considering the $\mu$ dependency, we find that
+$c_{n}$ strongly depend on $(x,\mu)$, so even $c_{n}$ and their
+ratios spread widely even in same datasets.
 \item large $c_{n}$ does not mean the $f_{n}$ is the main source of the
 corresponding theoretical uncertainty or $f_{n}$ is the most sensitive
 flavour. For instance, the $c_{\bar{u}}(x,\mu)$ of jet datasets are

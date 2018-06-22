@@ -3737,6 +3737,28 @@ reference "fig:Sens_corr_error"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+[
+\series bold
+\color blue
+N
+\color teal
+1
+\color red
+!
+\series default
+\color inherit
+] Compare 
+\begin_inset Formula $\underset{i}{\Sigma}|S(\beta_{ID,i},f_{a}(x,\mu))|$
+\end_inset
+
+ with 
+\begin_inset Formula $\underset{i}{\Sigma}|S(r_{ID,i},f_{a}(x,\mu))|$
+\end_inset
+
+ for each ID and flavour 
 \begin_inset Float figure
 wide true
 sideways false
@@ -7277,20 +7299,24 @@ construct theoretical predictions are the linear combination of different
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 We want to know how the data constrain the PDF space rather than just know
  the sensitivity to each flavour.
  Advantage: We don't need to guess and test which combination of flavour
  has the strongest constraint by the user function again and again.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Other advantages: if we know the relation between the theoretical values
  and PDFs, whether we can directly estimate the scale of PDF uncertainties
  imposed by experimental measurements or at least get more insight understanding
  of how measurements constrain PDFs? 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 We can approximate a linear relation among theoretical prediction and PDFs
  at the specified 
 \begin_inset Formula $(x,\mu)$
@@ -7311,7 +7337,7 @@ We can approximate a linear relation among theoretical prediction and PDFs
  Then with
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \family roman
 \series medium
@@ -7334,7 +7360,7 @@ We can approximate a linear relation among theoretical prediction and PDFs
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \family roman
 \series medium
@@ -7357,11 +7383,11 @@ We can approximate a linear relation among theoretical prediction and PDFs
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 We have the following rules:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \[
 T_{i,r}=\underset{a}{\sum}c_{i,a}f(x_{i},\mu_{i})_{a,r}+X_{i,r}
@@ -7372,7 +7398,7 @@ T_{i,r}=\underset{a}{\sum}c_{i,a}f(x_{i},\mu_{i})_{a,r}+X_{i,r}
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \[
 \delta T_{i,R}=\underset{a}{\sum}c_{i,a}(f_{i,a,r+}-f_{i,a,r-})/2+(X_{i,r+}-X_{i,r-})/2\equiv\underset{a}{\sum}c_{i,a}\delta f_{i,a,R}+\delta X_{i,R}
@@ -7383,7 +7409,7 @@ T_{i,r}=\underset{a}{\sum}c_{i,a}f(x_{i},\mu_{i})_{a,r}+X_{i,r}
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Because the total PDF uncertainties of physical quantities follow the Hessian
  uncertainty rule: 
 \begin_inset Formula $\delta Q=\sqrt{\underset{R}{\sum}\delta Q_{R}^{2}}$
@@ -7404,7 +7430,7 @@ Because the total PDF uncertainties of physical quantities follow the Hessian
  is:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \[
 |\delta T_{i}|^{2}=\underset{R}{\sum}(\underset{a}{\sum}c_{i,a}\delta f_{i,a,R}+\delta X_{i,R})^{2}\equiv(\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a})^{2}+(\delta(\delta X_{i}))^{2}+2|\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a}||\delta(\delta X_{i})|\rho\simeq(\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a})^{2}+(\delta(\delta X_{i}))^{2}
@@ -7415,7 +7441,7 @@ Because the total PDF uncertainties of physical quantities follow the Hessian
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Where we assume the unknown quantity 
 \begin_inset Formula $X$
 \end_inset
@@ -7569,16 +7595,496 @@ and
  
 \end_layout
 
+\end_inset
+
+We want to know which direction in the PDF space (the PDF space means the
+ 6 dimensions spanned by 
+\begin_inset Formula $f_{\bar{d}}$
+\end_inset
+
+ to 
+\begin_inset Formula $f_{s}$
+\end_inset
+
+ at 
+\begin_inset Formula $(x,\mu)$
+\end_inset
+
+ specified by data points) do datasets constrain rather than just know the
+ sensitivities of PDFs for various flavours.
+ There are various advandages.
+ First, the constrained PDF direction and it's sensitivity is more informative
+ for identifying the constraint of datasets to PDFs than sensitivities of
+ PDFs for various flavours.
+ Besides, We don't need to guess and test which combination of flavour has
+ the strongest constraint by the user function again and again.
+ We can extract the information from the constrained direction.
+ In addition, if we know the relation between the theoretical values and
+ PDFs, we can possibly directly estimate the sizes of PDF uncertainties
+ imposed by datasets (seems the reweighting method could do the similar
+ thing).
+ We can also investigate the distribution of the directions to illustrate
+ which directions are more correlated with various datasets and the strength
+ of sensitivities to these directions (which are roughly proportional to
+ residuals of data points).
+\end_layout
+
+\begin_layout Standard
+We approximate that theoretical uncertainties are the linear combination
+ of PDF uncertainties at the specified 
+\begin_inset Formula $(x,\mu)$
+\end_inset
+
+ plus an unknown term 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ That is: 
+\begin_inset Formula $(T_{i,r}-T_{i,0})=\underset{a}{\sum}c_{i,a}(f(x_{i},\mu_{i})_{a,r}-f(x_{i},\mu_{i})_{a,0})$
+\end_inset
+
+ for 
+\begin_inset Formula $T$
+\end_inset
+
+, 
+\begin_inset Formula $c$
+\end_inset
+
+, and 
+\begin_inset Formula $f$
+\end_inset
+
+ denote the theoretical values, linear coefficients, and PDFs, 
+\begin_inset Formula $i$
+\end_inset
+
+ denotes data points, 
+\begin_inset Formula $r$
+\end_inset
+
+ denotes error replicas, and 0 denotes the central replica.
+ Note: we do not use 
+\begin_inset Formula $T_{i,r}=\underset{a}{\sum}c_{i,a}f(x_{i},\mu_{i})_{a,r}+const$
+\end_inset
+
+ as we can not get the well-fitted result.
+ Here we temporary ignore the nonlinear terms and the contribution from
+ PDFs that are not at 
+\begin_inset Formula $(x,\mu)$
+\end_inset
+
+.
+ We can do the linear regression between the error replicas of theoretical
+ predictions and PDFs to acquire the linear relation.
+ Because of replicas are far more than the 6 (the number of flavours in
+ the fit), the quality of the linear regression should be acceptable.
+ Following we derive the relation between theoretical/residual and PDF uncertain
+ties and connect to the concept of correlation/sensitivity mentioned before:
+ defining Hessian uncertainties of theoretical predictions and PDFs:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\delta T_{i,R}=(T_{i,r+}-T_{i,r-})/2,\delta f_{i,R}=(f_{i,r+}-f_{i,r-})/2
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+|\stackrel{\rightharpoonup}{\delta T_{i}}|^{2}=\stackrel[R]{N}{\sum}\delta T_{i,R}^{2},|\stackrel{\rightharpoonup}{\delta f_{i}}|^{2}=\stackrel[R]{N}{\sum}\delta f_{i,R}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The linear relation between theoretical errors and PDF errors:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(T_{i,r}-T_{i,0})=\underset{a}{\sum}c_{i,a}(f(x_{i},\mu_{i})_{a,r}-f(x_{i},\mu_{i})_{a,0})+(X_{i,r}-X_{i,0})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\delta T_{i,R}=\underset{a}{\sum}c_{i,a}(f_{i,a,r+}-f_{i,a,r-})/2+(X_{i,r+}-X_{i,r-})/2\equiv\underset{a}{\sum}c_{i,a}\delta f_{i,a,R}+\delta X_{i,R}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where 
+\begin_inset Formula $r+$
+\end_inset
+
+, 
+\begin_inset Formula $r-$
+\end_inset
+
+ denote the pairwisely positive and negative error replicas in one of the
+ total 
+\begin_inset Formula $N$
+\end_inset
+
+ PDF model dimensions and 
+\begin_inset Formula $R$
+\end_inset
+
+ denotes the error in that dimension.
+ 
+\begin_inset Formula $T$
+\end_inset
+
+ are the theoretical predictions; 
+\begin_inset Formula $f$
+\end_inset
+
+ are PDFs; 
+\begin_inset Formula $i$
+\end_inset
+
+ are data points; 
+\begin_inset Formula $a$
+\end_inset
+
+ are flavour indices of 
+\begin_inset Formula $\overset{-}{d}$
+\end_inset
+
+, 
+\begin_inset Formula $\overset{-}{u}$
+\end_inset
+
+,..., 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ 
+\begin_inset Formula $c_{i,a}$
+\end_inset
+
+ are the coefficients of the 
+\begin_inset Formula $f_{i,a}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ are unknown parts.
+ The symbols 
+\begin_inset Formula $\stackrel{\rightharpoonup}{\delta T_{i}}$
+\end_inset
+
+, 
+\begin_inset Formula $\stackrel{\rightharpoonup}{\delta f_{i}}$
+\end_inset
+
+, and etc represent 
+\begin_inset Formula $N$
+\end_inset
+
+ dimensional vectors with Hessian errors 
+\begin_inset Formula $\delta T_{i,R}$
+\end_inset
+
+, 
+\begin_inset Formula $\delta f_{i,R}$
+\end_inset
+
+, and etc in each component so that 
+\begin_inset Formula $\stackrel{\rightharpoonup}{|\delta T_{i}}|$
+\end_inset
+
+, 
+\begin_inset Formula $\stackrel{\rightharpoonup}{|\delta f_{i}}|$
+\end_inset
+
+, and etc are the Hessian uncertainties of the given physical quantities
+ 
+\begin_inset Formula $T_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+, and etc.
+ 
+\end_layout
+
+\begin_layout Standard
+Because the total PDF uncertainties of physical quantities follow the Hessian
+ uncertainty rule: 
+\begin_inset Formula $|\stackrel{\rightharpoonup}{\delta Q}|=\sqrt{\stackrel[R]{N}{\sum}\delta Q_{R}^{2}}$
+\end_inset
+
+ and the square of the addition of two vectors is 
+\begin_inset Formula $(\stackrel{\rightharpoonup}{Q_{1}}+\stackrel{\rightharpoonup}{Q_{2}})^{2}=|\stackrel{\rightharpoonup}{Q_{1}}|^{2}+|\stackrel{\rightharpoonup}{Q_{2}}|^{2}+2|\stackrel{\rightharpoonup}{Q_{1}}||\stackrel{\rightharpoonup}{Q_{2}}|\rho$
+\end_inset
+
+ for the correlation 
+\begin_inset Formula $\rho$
+\end_inset
+
+ between 
+\begin_inset Formula $\stackrel{\rightharpoonup}{Q_{1}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\stackrel{\rightharpoonup}{Q_{2}}$
+\end_inset
+
+ , the total theoretical uncertainty for each point 
+\begin_inset Formula $i$
+\end_inset
+
+ is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+|\stackrel{\rightharpoonup}{\delta T_{i}}|^{2}=\underset{R}{\sum}(\underset{a}{\sum}c_{i,a}\delta f_{i,a,R}+\delta X_{i,R})^{2}=|(\stackrel{\rightharpoonup}{\delta\underset{a}{\sum}c_{i,a}f_{i,a}})|^{2}+|\stackrel{\rightharpoonup}{\delta X_{i}}|^{2}+2|(\delta\stackrel{\rightharpoonup}{\underset{a}{\sum}c_{i,a}f_{i,a}})||\stackrel{\rightharpoonup}{\delta X_{i}}|\rho
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\simeq|(\stackrel{\rightharpoonup}{\delta\underset{a}{\sum}c_{i,a}f_{i,a}})|^{2}+|\stackrel{\rightharpoonup}{\delta X_{i}}|^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where we assume the unknown quantity 
+\begin_inset Formula $X$
+\end_inset
+
+ and the known PDF combination is uncorrelated (
+\begin_inset Formula $\rho\simeq0$
+\end_inset
+
+), which means that the 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+vectors 
+\begin_inset Formula $\stackrel{\rightharpoonup}{\delta X_{i}}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\stackrel{\rightharpoonup}{\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a}}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ and 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\stackrel{\rightharpoonup}{\delta T_{i}}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ form a right triangle.
+ Therefore, the Hessian uncertainty correlation between 
+\begin_inset Formula $\stackrel{\rightharpoonup}{\delta T_{i}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\stackrel{\rightharpoonup}{\underset{a}{\delta\sum}c_{i,a}f_{i,a}}$
+\end_inset
+
+ is 
+\begin_inset Formula $C(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})=cos\theta_{\stackrel{\rightharpoonup}{\delta T_{i}},\stackrel{\rightharpoonup}{\underset{a}{\delta\sum}c_{i,a}f_{i,a}}}\simeq\frac{|\delta\stackrel{\rightharpoonup}{\underset{a}{\sum}c_{i,a}f_{i,a}}|}{|\stackrel{\rightharpoonup}{\delta T_{i}}|}$
+\end_inset
+
+, which indicates that 
+\begin_inset Formula $C(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})$
+\end_inset
+
+ could be seen as the percentage of theoretical uncertainties explained
+ by 
+\begin_inset Formula $f_{\bar{d}}$
+\end_inset
+
+,..., 
+\begin_inset Formula $f_{s}$
+\end_inset
+
+.
+ If even the various PDFs of flavours are uncorrelated with each other,
+ we have 
+\begin_inset Formula $C(T_{i},f_{i,a})\simeq\frac{(c_{i,a}|\stackrel{\rightharpoonup}{\delta f_{i,a}}|)}{|\stackrel{\rightharpoonup}{\delta T_{i}}|}$
+\end_inset
+
+.
+ The physical explanation for the formulas is that the theoretical uncertainty
+ is the error propagation of linear independent uncertainties of PDFs 
+\begin_inset Formula $f_{\bar{d}}$
+\end_inset
+
+, 
+\begin_inset Formula $f_{\bar{u}}$
+\end_inset
+
+, 
+\begin_inset Formula $f_{g}$
+\end_inset
+
+, 
+\begin_inset Formula $f_{u}$
+\end_inset
+
+, 
+\begin_inset Formula $f_{d}$
+\end_inset
+
+, 
+\begin_inset Formula $f_{s}$
+\end_inset
+
+, and unknown 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $c_{\bar{d}}(x,\mu),c_{\bar{u}}(x,\mu),c_{g}(x,\mu),c_{u}(x,\mu),c_{d}(x,\mu),c_{s}(x,\mu)$
+\end_inset
+
+ specify the relation between uncertainties on PDFs of flavours and experimental
+ measurements.
+\end_layout
+
 \begin_layout Subsubsection
 Setup
 \end_layout
 
 \begin_layout Standard
 for each dataset, using the linear fit 
-\begin_inset Formula $T_{i,r}=\underset{a}{\sum}c_{i,a}f(x_{i},\mu_{i})_{a,r}+const$
+\begin_inset Formula $(T_{i,r}-T_{i,0})=\underset{a}{\sum}c_{i,a}(f(x_{i},\mu_{i})_{a,r}-f(x_{i},\mu_{i})_{a,0})$
 \end_inset
 
- to fit the 56 replicas for each point 
+ to fit the 56 error replicas for each point 
 \begin_inset Formula $i$
 \end_inset
 
@@ -7601,7 +8107,7 @@ Y
 \series default
 \color inherit
 ] by checking the relation 
-\begin_inset Formula $C(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\simeq\frac{|\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a}|}{|\delta T_{i}|}$
+\begin_inset Formula $C(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\simeq\frac{|\delta\stackrel{\rightharpoonup}{\underset{a}{\sum}c_{i,a}f_{i,a}}|}{|\stackrel{\rightharpoonup}{\delta T_{i}}|}$
 \end_inset
 
  in the left of Fig.
@@ -7777,8 +8283,8 @@ Y
 ] quantify the strength of constraint on the PDF space imposed by measurements
  and compare it with the components from PDF uncertainties of flavours (which
  flavours contribute the most to the theoretical uncertainties of measurements):
-Defining the sensitivity 
-\begin_inset Formula $S(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\equiv\frac{\delta r_{i}}{r_{ID,rms}}C(\delta r_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\simeq\frac{|\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a}|}{\sigma_{uncor,i}r_{ID,rms}}\simeq\frac{|\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a}|}{\sigma_{uncor,i}}$
+ Defining the sensitivity 
+\begin_inset Formula $S(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\equiv\frac{\delta r_{i}}{r_{ID,rms}}C(\delta r_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\simeq\frac{|\delta\stackrel{\rightharpoonup}{\underset{a}{\sum}c_{i,a}f_{i,a}}|}{\sigma_{uncor,i}r_{ID,rms}}\simeq\frac{|\delta\stackrel{\rightharpoonup}{\underset{a}{\sum}c_{i,a}f_{i,a}}|}{\sigma_{uncor,i}}$
 \end_inset
 
 , we can investigate the 
@@ -7961,7 +8467,7 @@ N
 
 .
  In other words, in which conditions 
-\begin_inset Formula $\frac{|\delta(\delta f_{i,a})|}{\sigma_{uncor}}=\delta r_{i}C(r_{i},f_{i,a})$
+\begin_inset Formula $\frac{|c_{i,a}(\delta f_{i,a})|}{\sigma_{uncor}}=\delta r_{i}C(r_{i},f_{i,a})$
 \end_inset
 
 
@@ -8062,6 +8568,55 @@ N
  
 \end_layout
 
+\begin_layout Enumerate
+[
+\series bold
+\color blue
+N
+\color teal
+3
+\color red
+!!
+\series default
+\color inherit
+] we can not fit the relation 
+\begin_inset Formula $T_{i,r}=\underset{a}{\sum}c_{i,a}f(x_{i},\mu_{i})_{a,r}+const$
+\end_inset
+
+ well (the constant terms are oftenly too large and 
+\begin_inset Formula $C(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\ncong\frac{|\stackrel{\rightharpoonup}{\underset{a}{\sum}c_{i,a}f_{i,a}}|}{|\stackrel{\rightharpoonup}{T_{i}}|}$
+\end_inset
+
+ ).
+ If it is caused by the contribution of PDFs that are not at 
+\begin_inset Formula $(x,\mu)$
+\end_inset
+
+, the LO PDF should fit well.
+ Test it with CT14LO.
+\end_layout
+
+\begin_layout Enumerate
+[
+\series bold
+\color blue
+N
+\color teal
+3
+\color red
+!
+\series default
+\color inherit
+] Test the stability of coefficients of datasets.
+ Coefficients in 
+\begin_inset Formula $(T_{i,r}-T_{i,0})=\underset{a}{\sum}c_{i,a}(f(x_{i},\mu_{i})_{a,r}-f(x_{i},\mu_{i})_{a,0})+(X_{i,r}-X_{i,0})$
+\end_inset
+
+ relation should not depend on the datasets incorporated in PDF fits.
+ Via comparing the fitted coefficients in data points of CT14HERA2NNLO and
+ CT14HERA2NNLONoJet, we can verify it.
+\end_layout
+
 \begin_layout Subsubsection
 a temporary conclusion
 \end_layout
@@ -8094,7 +8649,7 @@ the statistical quantities (average, median, etc) is not a good way to reveal
 
  is a reasonable approximation.
  Instead, we can verify the approximation 
-\begin_inset Formula $C(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\simeq\frac{|\delta\underset{a}{\sum}c_{i,a}\delta f_{i,a}|}{|\delta T_{i}|}$
+\begin_inset Formula $C(T_{i},\underset{a}{\sum}c_{i,a}f_{i,a})\simeq\frac{|\delta\stackrel{\rightharpoonup}{\underset{a}{\sum}c_{i,a}f_{i,a}}|}{|\stackrel{\rightharpoonup}{\delta T_{i}}|}$
 \end_inset
 
  is acceptable and provides some useful information about the PDF sensitivity
@@ -8178,12 +8733,23 @@ the
 \end_inset
 
  in many datasets are numerical unstable or have large uncertainties.
- I don't know whether the instability will disappear when considering the
- 
+ When considering the 
 \begin_inset Formula $\mu$
 \end_inset
 
- dependency.
+ dependency, we find that 
+\begin_inset Formula $c_{n}$
+\end_inset
+
+ strongly depend on 
+\begin_inset Formula $(x,\mu)$
+\end_inset
+
+, so even 
+\begin_inset Formula $c_{n}$
+\end_inset
+
+ and their ratios spread widely even in same datasets.
 \end_layout
 
 \begin_layout Enumerate
