@@ -3504,6 +3504,39 @@ N
 [
 \series bold
 \color blue
+N
+\color teal
+?
+\series default
+\color inherit
+] (https://data.nnpdf.science/talks/rojo-NNPDFs-KCL.pdf) PDF uncertainties
+ are important for following 
+\begin_inset Formula $\sigma_{H}(8TeV)$
+\end_inset
+
+ channels: gg->H, VBP, WH, ZH, ttH; Higgs decay channels: 
+\begin_inset Formula $H->\tau\tau$
+\end_inset
+
+, H->ZZ, H->WW, 
+\begin_inset Formula $H->\gamma\gamma$
+\end_inset
+
+; SUSY heavy productions: 
+\begin_inset Formula $\stackrel{\sim}{g}\stackrel{\sim}{g}X$
+\end_inset
+
+, 
+\begin_inset Formula $\stackrel{\sim}{q}\stackrel{\sim}{q}^{*}X$
+\end_inset
+
+; large x gluon (improve the accuracy of high mass graviton)
+\end_layout
+
+\begin_layout Enumerate
+[
+\series bold
+\color blue
 Y
 \series default
 \color inherit
@@ -8175,8 +8208,8 @@ physical problems and applications
 \end_layout
 
 \begin_layout Standard
-Note: results are in ./Temporary_Results/other_ideas_tmp/LinearFitPDFs_tmp/
- of https://smu.box.com/s/sdd9qbw6wvee6n7u6441j2f2jil7s2t7
+(Note: results are in ./Temporary_Results/other_ideas_tmp/LinearFitPDFs_tmp/
+ of https://smu.box.com/s/sdd9qbw6wvee6n7u6441j2f2jil7s2t7)
 \end_layout
 
 \begin_layout Standard
