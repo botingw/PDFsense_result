@@ -2057,6 +2057,11 @@ name "sec:Case-Study:-LHeC"
 \end_layout
 
 \begin_layout Standard
+(results are in ./Temporary_Results/pseudo_data_tmp/ of https://smu.box.com/s/sdd9q
+bw6wvee6n7u6441j2f2jil7s2t7)
+\end_layout
+
+\begin_layout Standard
 ......Here provide the prediction of the sensitivity analysis of LHeC&JlabEIC
  DIS NC and CC datasets 
 \begin_inset CommandInset ref
@@ -3457,6 +3462,11 @@ name "tab:LHeC"
 
 \begin_layout Subsection
 Case Study: After@LHC
+\end_layout
+
+\begin_layout Standard
+(results are in ./Temporary_Results/pseudo_data_tmp/AfterLHC of https://smu.box.com
+/s/sdd9qbw6wvee6n7u6441j2f2jil7s2t7)
 \end_layout
 
 \begin_layout Standard
