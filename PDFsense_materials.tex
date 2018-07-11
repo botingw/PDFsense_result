@@ -276,7 +276,7 @@ and respective histograms \ref{fig:CorrSensH14}, \ref{fig:Corrgluon},
 at 14 TeV indicate the PDF sensitive to the future LHC Higgs survey
 \ref{fig:CorrSensH14} 
 \item {[}\textbf{\textcolor{blue}{Y}}{]} sensitivity to gluon PDF shows
-demonstrate that the constraint of gluon at small x region ($10^{-3}-10^{-5}$)
+demonstrate that the constraint of gluon at small-x region ($10^{-3}-10^{-5}$)
 is from HERA2 data and LHC jet data provides a fluent constraint to
 gluon at $x>10^{-3}$ \ref{fig:Corrgluon}, \ref{fig:Sensgluon}
 \end{enumerate}
@@ -434,13 +434,13 @@ much less sensitivities than other channels (\textasciitilde{}30\%
 and \textasciitilde{}4\%).
 \item {[}\textbf{\textcolor{blue}{Y}}{]} the large $\delta r$ enhance the
 sensitivities of LHeC\&EIC data to PDFs especially at the large and
-small x regions ($x>0.5\&x<10^{-3}$) \ref{fig:LHeCEIC1y-dr}
+small-x regions ($x>0.5\&x<10^{-3}$) \ref{fig:LHeCEIC1y-dr}
 \item {[}\textbf{\textcolor{blue}{Y}}{]} LHeC DISNC datasets constrain the
-small x ($x<10^{-3}$) region of the gluon PDF \ref{fig:LHeCEIC1y-sens},
+small-x ($x<10^{-3}$) region of the gluon PDF \ref{fig:LHeCEIC1y-sens},
 \ref{fig:LHeCEIC1y-corr}
 \item {[}\textbf{\textcolor{blue}{Y}}{]} LHeC\&EIC DISCC and DISNC datasets
-constrain u and d at large x and small x regions ($x>0.5\&x<10^{-3}$).
-For the small x region, the high sensitivity perhaps results from
+constrain u and d at large-x and small-x regions ($x>0.5\&x<10^{-3}$).
+For the small-x region, the high sensitivity perhaps results from
 few present constraints on PDFs in that region 
 \item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{?}}\textbf{\textcolor{red}{!}}{]}
 LHeC DISCC data is correlated to middle x region ($10^{-3}\sim10^{-2}$)
@@ -549,7 +549,7 @@ PDF uncertainties are important for following $\sigma_{H}(8TeV)$
 channels: gg-\textgreater{}H, VBP, WH, ZH, ttH; Higgs decay channels:
 $H->\tau\tau$, H-\textgreater{}ZZ, H-\textgreater{}WW, $H->\gamma\gamma$;
 SUSY heavy productions: $\stackrel{\sim}{g}\stackrel{\sim}{g}X$,
-$\stackrel{\sim}{q}\stackrel{\sim}{q}^{*}X$; large x gluon (improve
+$\stackrel{\sim}{q}\stackrel{\sim}{q}^{*}X$; large-x gluon (improve
 the accuracy of high mass graviton)
 \item {[}\textbf{\textcolor{blue}{Y}}{]} sensitivities of correlated systematic
 errors to various physical observables (Higgs cross sections, weak
@@ -605,39 +605,26 @@ uncertainties.
 
 \subsection{Mellin Moments }
 
-......Compare with lattice predictions and constrain PDFs by applying
-penalties to the PDFs that disagree with the lattice predictions in
-the fit
-\begin{enumerate}
-\item {[}\textbf{\textcolor{blue}{Y}}{]} \ref{tab:Mellin_total_sens} provides
-the Mellin moment quantities that accept the most sensitivities from
-the HERA2 and LHC datasets, and the B-C and gluon PDFs are sensitive
-to jet data \ref{fig:Mellin_B-C}
-\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{?}}\textbf{\textcolor{red}{!}}{]}
-$(u^{-}-d^{-})x^{0}$ should be 1 (constant) but its total sensitivity
-is the same amount compared with most Mellin moments (see row 1 and
-2 in \ref{tab:Mellin_total_sens}). We can lower the order of precision
-to reduce the fluctuations on it. However, it also indicates that
-even physical quantities have no correlation/sensitivity with datasets/PDFs,
-the numerical fluctuations still contribute some sensitivities to
-PDFs. Therefore, to avoid considering the sensivities from fluctuations,
-perhaps we don't want to consider too low sensitivity as the real
-sensitivity. Perhaps we also want to figure out ways to remove the
-fluctuations or identify whether the sources of sensitivities are
-fluctuations.
-\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{1}}\textbf{\textcolor{red}{!!}}{]}
-some Mellin moments are sensitive to data at a narrow x band such
-as in Fig. \ref{fig:Melling_x-1x0}, \ref{fig:Mellin_x2x3}. This
-perhaps indicates that Mellin moments can be well-measured by just
-imposing strong constraints at specific regions of PDFs. One way to
-clarify it is to draw $x^{n}f(x,\mu)_{a}$ as the function of x for
-n = 1, 2, 3 and a = the flavour index. Assume that the peak of the
-PDFs have the most strong sensitivity, the x bands in Fig. \ref{fig:Melling_x-1x0},
-\ref{fig:Mellin_x2x3} should overlap with the peak of corresponding
-$x^{n}f(x,\mu)_{a}$ at x-axis.
-\item \textbf{({*} PN {*})} {[}\textbf{\textcolor{blue}{Y}}{]} The $\langle(1-x)^{N}\rangle_{F}$
-moments may be sensitive to the small-$x$ behavior for the PDF combinations
-that are integrable in the limit $x\rightarrow0$. A $\langle(1-x)^{N}\rangle_{F}$
+(results are in PDFsense\_Tasks\_and\_Results of SMU box: https://smu.box.com/s/dcuo0cjwfdsniuhmxwmn45njkmiy36jo)
+
+We can do the Mellin transformation on PDFs to get Mellin moments
+$\langle x{}^{N}\rangle_{F}=\int_{0}^{1}dx\ x^{N}f(x)$. With enough
+orders of $N$, we can reconstruct PDFs $f(x)$. Nowadays, we are
+capable of estimating the first few Mellin moments via Lattice QCD
+calculations, so we can compare PDFs from fits and lattice QCD calculations.
+One application is using lattice calculation to constrain PDFs in
+the fitting processes (via giving $\chi^{2}$ penalties to PDFs that
+are incompatible with lattice calculations). We calculate the sensitivities
+of datasets in the HERA2 fit and some LHC datasets to the first three
+Mellin moments for some flavours, which demonstrates datasets imposing
+the most constraint to these Mellin moments, where the PDFset is CT14HERA2NNLO
+and the factorization scale is 4 GeV. We also calculate $\langle(1-x)^{N}\rangle_{F}$
+to identify datasets that are sensitive to small-x PDFs as the $x^{N}$
+terms are only sensitive to larger x PDFs.
+
+\textbf{({*} PN {*})} The $\langle(1-x)^{N}\rangle_{F}$ moments may
+be sensitive to the small-$x$ behavior for the PDF combinations that
+are integrable in the limit $x\rightarrow0$. A $\langle(1-x)^{N}\rangle_{F}$
 is a linear combination of $\langle x^{k}\rangle_{F}$ moments: 
 \begin{equation}
 \langle(1-x)^{N}\rangle_{F}=\sum_{k=0}^{N}C_{k}^{N}\ (-1)^{k}\ \langle x^{k}\rangle_{F},
@@ -659,30 +646,127 @@ we write
 \end{eqnarray}
 We can similarly compute $\langle(1-x)^{N}\rangle_{T}$ for $T(x)=T_{q}^{-}(x)=q(x)-\overline{q}(x)$
 with $q=u,d,...$; as well as for $T(x)=T_{3}^{-}(x)=u(x)-\overline{u}(x)-d(x)+\overline{d}(x)$.
-\end{enumerate}
-Result: We make ranking tables and sensitivity plots for $x^{n}$,
-$(1-x)^{n}$ (in PDFsense\_Tasks\_and\_Results of SMU box). For $(1-x)^{n}$,
-the flavours that HERA2 points are sensitive to have the most total
-sensitivity because of the large amount of HERA2 points (e.g. T24)
-\ref{fig:Melling_1-xn}. Also, the sensitivities are not sensitive
-to order $n$ and the high sensitive $x$ regions are in $(10^{-2},1)$,
-which seems means that it is hard to measure the small $x$ PDFs through
-Melling moments $(1-x)^{n}q(x)$. Besides, we find that W/Z datasets
-and BCDMS, CDHSW, CCFR, NuTeV, HERA2 datasets contribute the most
-total sensitivity to the flavours we investigate, indicating that
-DIS and VBP events are main sources of the sensitivities to the Melling
-moments. 
 
-\textcolor{red}{note: the total sensitivity table uses the old formula,
-it should be modify latter}
+{[}\textbf{\textcolor{blue}{Y}}{]} For $\langle x{}^{N}\rangle_{F}$,
+we study sensitivities of g, u+, d+, s+, u- -d-, T3, T8, T24, s-d,
+c-s, b-c mellin moments. And for $\langle(1-x)^{N}\rangle_{F}$, we
+study sensitivities of u-,d-,u-+d-,u- -d-. We select PDFs of these
+flavours for the effects of $(1-x)^{N}$ in the small-x region are
+prominent due to their convergence in the small-x region. Where $N=0\sim3$.
+Statistically, datasets that are most sensitive to the investigated
+Mellin moments are ID = 101\textasciitilde{}111 (BCDMS, NMC,CDHSW,
+CCFR), 124\textasciitilde{}127 (NuTeV, CCFR), 160 (HERA2), 201\textasciitilde{}203
+(E605, E866), 542\textasciitilde{}545 (LHC jet datasets).
+
+need to add:
+\begin{enumerate}
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{2}}\textbf{\textcolor{red}{!!!}}{]}
+N=-1 for Figures of $\langle(1-x)^{N}\rangle_{F}$: according to https://www.jlab.org/indico/event/252/session/17/contribution/113/material/slides/0.pdf,
+Mellin moments necessary for reconstructing pion PDFs are N=-1\textasciitilde{}2. 
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{2}}\textbf{\textcolor{red}{!!!}}{]}
+N=-1 for ranking tables of figures of $\langle x{}^{N}\rangle_{F}$
+and $\langle(1-x)^{N}\rangle_{F}$ 
+\end{enumerate}
+Following are results of $\langle x{}^{N}\rangle_{F}$:
+\begin{enumerate}
+\item {[}\textbf{\textcolor{blue}{Y}}{]} According to Table. x, the most
+sensitive flavours are correlated with the gluon PDF (g, B-C).
+\item {[}\textbf{\textcolor{blue}{Y}}{]} when N become larger, Mellin moments
+are sensitive to larger x PDFs. Besides, for $N>0$, the high sensitive
+regions are in (0.01, 1), indicating that Mellin moments can not resolve
+x\textless{}0.01 regions of PDFs for $N>0$. The results are due to
+the log-scale insensitivity of $x^{N}$. We will also see in the $\langle(1-x)^{N}\rangle_{F}$
+paragraph, even $(1-x)^{N}$ terms are not sensitive to $x<0.01$
+regions.
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{3}}\textbf{\textcolor{red}{?}}{]}
+According to 2, whether we need to figure out new Mellin moments to
+resolve PDFs below $x=0.01$ 
+\item {[}\textbf{\textcolor{blue}{Y}}{]} We find, for most N\textgreater{}0
+Mellin moments, only narrow x bands of data points are strong correlated
+with them ($C(\langle x{}^{N}\rangle_{a},r_{i})$\textgreater{}0.7)
+(Fig. \ref{fig:Mellin_s} left panels). Moreover, $C(\langle x{}^{N}\rangle_{a},f_{a}(x,\mu))$
+versus x also have the most strong correlation in these x bands (Fig.
+\ref{fig:Mellin_s} right panels). The finding shows that Mellin moments
+are mainly determined by small-x ranges of PDFs. Therefore, we can
+substantially increase accuracies of Mellin moments by constraining
+PDFs in these x ranges. 
+
+{[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{?}}\textbf{\textcolor{red}{!}}{]}
+However, for some Mellin moments, we still can not explain why peaks
+of $C(\langle x{}^{N}\rangle_{a},f_{i,a}(x_{i},\mu_{i}))$ and $C(\langle x{}^{N}\rangle_{a},r_{i})$
+are not exactly at the same x bands or totally different, which means
+we don't know whether constraining $f_{i,a}(x_{i},\mu_{i})$ are still
+useful for constraining $\langle x{}^{N}\rangle_{a}$. For example,$\langle x{}^{0}\rangle_{s+}$
+is correlated with data with x\textasciitilde{}0.1 but being correlated
+with $s+(x,\mu)$ with x smaller than 0.01 (Fig. \ref{fig:Mellin_s}
+left-up and right-up panels). For $\langle x{}^{0}\rangle_{u+}$,
+the case is that it is only correlated with $u+(x,\mu)$ with x smaller
+than $10^{-4}$ but being correlated with data with x\textless{}0.005
+(Fig. \ref{fig:Mellin_s} left-down and right-down panels). If the
+strong $C(\langle x{}^{N}\rangle_{a},r_{i})$ are due to the strong
+$C(\langle x{}^{N}\rangle_{a},f_{i,a}(x_{i},\mu_{i}))$, it is reasonable
+to believe that $C(\langle x{}^{N}\rangle_{a},f_{i,a}(x_{i},\mu_{i}))>C(\langle x{}^{N}\rangle_{a},r_{i})$,
+which contradicts to $\langle x{}^{0}\rangle_{u+}$ case.
+\item {[}\textbf{\textcolor{blue}{Y}}{]} $(u^{-}-d^{-})x^{0}$ should be
+1 (constant) but its total sensitivity is the same amount compared
+with most Mellin moments (see row 1 and 2 in \ref{tab:Mellin_total_sens}).
+We can lower the order of precision to reduce the fluctuations on
+it. However, it also indicates that even physical quantities have
+no correlation/sensitivity with datasets/PDFs, the numerical fluctuations
+still contribute some sensitivities to PDFs. Therefore, to avoid considering
+the sensivities from fluctuations, perhaps we don't want to consider
+too low sensitivity as the real sensitivity. Perhaps we also want
+to figure out ways to remove the fluctuations or identify whether
+the sources of sensitivities are fluctuations.
+
+Solution: because the $(u^{-}-d^{-})x^{0}$ uncertainty ratio is very
+small (under $10^{-4}$), we do not need to discuss its' sensitivity.
+Usually uncertainties of physical qunatities are larger than 0.1\%,
+so signals of numerical errors would not impact the sensitivities
+or correlations.
+\end{enumerate}
+Following are results of $\langle(1-x)^{N}\rangle_{F}$:
+\begin{enumerate}
+\item {[}\textbf{\textcolor{blue}{Y}}{]} We also make ranking tables for
+$\langle(1-x)^{N}\rangle_{F}$
+\item {[}\textbf{\textcolor{blue}{Y}}{]} As mentioned before, $C(\langle(1-x){}^{N}\rangle_{f},r_{i})$
+are strong only in x\textgreater{}0.01 (Fig. \ref{fig:Mellin_u-1-x})
+except for T24 (percept T24 is associated with the gluon PDF). Hence,
+$\langle(1-x)^{N}\rangle_{F}$ can not resolve small-x PDFs.
+\end{enumerate}
+
+\textcolor{red}{note: the total sensitivity table (Tab. \ref{tab:Mellin_total_sens})
+uses the old formula, it should be modify latter}
 
 \begin{figure*}
-\includegraphics[clip,width=0.3\textwidth]{plots/MellinMoment/corrdr_xQ+1_f55_samept}
+\includegraphics[clip,width=0.3\textwidth]{plots/MellinMoment/mellin_moment_data_x/corr_xQ+1_f22_samept}
+\ \ \
+\includegraphics[clip,width=0.45\textwidth]{plots/MellinMoment/mellin_moment_PDF_corr_x/splus_Melling_PDF_CT14HERA2NNLO_Q4} 
 
-\includegraphics[clip,width=0.3\textwidth]{plots/MellinMoment/corrdr_xQ+1_f57_samept}
+\includegraphics[clip,width=0.3\textwidth]{plots/MellinMoment/mellin_moment_data_x/corr_xQ+1_f25_samept}
+\ \ \
+\includegraphics[clip,width=0.45\textwidth]{plots/MellinMoment/mellin_moment_PDF_corr_x/uplus_Melling_PDF_CT14HERA2NNLO_Q4} 
 
-\caption{data sets sensitivity to the 1st and 3rd order B-C of Melling moment}
-\label{fig:Mellin_B-C} 
+\includegraphics[clip,width=0.3\textwidth]{plots/MellinMoment/mellin_moment_data_x/corr_xQ+1_f10_samept}
+\ \ \
+
+\caption{Left: Correlation of the HERA2+LHC datasets and the 0st and 3rd order
+s+ and u+ Melling moments. Right: Correlation of s+, u+ PDFs and their
+respective Mellin moments. The factorization scales of Mellin moments
+and PDFs are 4 GeV. }
+\label{fig:Mellin_s} 
+\end{figure*}
+
+\begin{figure*}
+\includegraphics[clip,width=0.3\textwidth]{plots/MellinMoment/mellin_moment_data_1-x/corr_xQ+1_f9_samept}
+\ \ \
+\includegraphics[clip,width=0.45\textwidth]{plots/MellinMoment/mellin_moment_PDF_corr_1-x/uminus_Melling_PDF_CT14HERA2NNLO_Q4} 
+
+\caption{Left: Correlation of the HERA2+LHC datasets and the 0st and 3rd order
+u- (1-x) Melling moments. Right: Correlation of u- PDFs and its' respective
+(1-x) Mellin moments. The factorization scales of Mellin moments and
+PDFs are 4 GeV. }
+\label{fig:Mellin_u-1-x} 
 \end{figure*}
 
 \begin{table}[ht]
@@ -714,28 +798,6 @@ moment quantities imposed by HERA2 + LHC datasets}
 \label{tab:Mellin_total_sens} 
 \end{table}
 
-\begin{figure*}
-\includegraphics[clip,width=0.3\textwidth]{plots/MellinMoment/x0x-1_corr/corr_xQ+1_f28_samept}
-
-\caption{datasets correlation to $x^{-1}$ of Melling moment }
-\label{fig:Melling_x-1x0} 
-\end{figure*}
-
-\begin{figure*}
-\includegraphics[clip,width=0.3\textwidth]{plots/MellinMoment/x2x3_corr/corr_xQ+1_f18_samept}
-
-\ \ \
-\includegraphics[clip,width=0.3\textwidth]{plots/MellinMoment/x2x3_corr/corr_xQ+1_f22_samept} 
-
-\caption{data sets sensitivity to $x^{2}$, $x^{3}$ of Melling moment}
-\label{fig:Mellin_x2x3} 
-\end{figure*}
-\begin{figure*}
-\includegraphics[clip,width=0.3\textwidth]{plots/MellinMoment/1-x/corrdr_xQ+1_f34_samept}
-
-\caption{datasets correlation to $x^{-1}$ of Melling moment }
-\label{fig:Melling_1-xn} 
-\end{figure*}
 
 \section{Case Study: comparison of the fit with jets and with no jets}
 
