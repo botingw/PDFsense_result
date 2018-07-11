@@ -2042,6 +2042,10 @@ reference "tab8"
 \end_layout
 
 \begin_layout Section
+Case Study: New Collider Pseudodata
+\end_layout
+
+\begin_layout Subsection
 Case Study: LHeC and EIC 
 \begin_inset CommandInset label
 LatexCommand label
@@ -3412,7 +3416,21 @@ key "LHeCdata"
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:LHeC"
+reference "fig:LHeCEIC1y-sens"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LHeCEIC1y-corr"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LHeCEIC1y-dr"
 
 \end_inset
 
@@ -3426,6 +3444,269 @@ reference "fig:LHeC"
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:LHeC"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Case Study: After@LHC
+\end_layout
+
+\begin_layout Standard
+The idea After@LHC fixed target experiments is using high boost of p-A collissio
+n and high liminosity to explore large-x (0.3~1) PDFs, enabling us to explore
+ abundant PDF knowledge.
+ Following are some opportunities of After@LHC:
+\end_layout
+
+\begin_layout Enumerate
+large-x gluon and heavy quarks
+\end_layout
+
+\begin_layout Enumerate
+Boer-Mulders effect (orrelation between the parton 
+\begin_inset Formula $k_{T}$
+\end_inset
+
+ and its spin)
+\end_layout
+
+\begin_layout Enumerate
+Sivers effect (correlation between the parton 
+\begin_inset Formula $k_{T}$
+\end_inset
+
+ and the proton spin)
+\end_layout
+
+\begin_layout Standard
+We analyze the sensitivities from 
+\begin_inset Formula $d\sigma^{DY}/dy_{\mu\mu}^{cm}$
+\end_inset
+
+ psuedodata for pp collisions at 
+\begin_inset Formula $\sqrt{S}=115GeV$
+\end_inset
+
+ with the 
+\begin_inset Formula $10fb^{-1}$
+\end_inset
+
+ luminosity and CT14NLO theoretical predictions.
+ Because the psuedodata does not attach correlated errors or shifted data,
+ I use 
+\begin_inset Formula $(T_{i}-D_{noshift})/\sigma_{uncor}$
+\end_inset
+
+ as residuals.
+ Formulas of 
+\begin_inset Formula $(x,\mu)$
+\end_inset
+
+ are: 
+\begin_inset Formula $\mu=Q=M_{ll}$
+\end_inset
+
+ 
+\begin_inset Formula $x_{1,2}=Q/\sqrt{S}e^{\pm y}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+results:
+\end_layout
+
+\begin_layout Enumerate
+[
+\series bold
+\color blue
+Y
+\series default
+\color inherit
+] The mean 
+\begin_inset Formula $\delta r$
+\end_inset
+
+ is 11.02 so the sensitivities are in general very high.
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ in (0.003, 0.1) of 
+\begin_inset Formula $\bar{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{d}$
+\end_inset
+
+ are the most sensitive (Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:AfterLHC-sens"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+[
+\series bold
+\color blue
+N
+\color teal
+?
+\series default
+\color inherit
+] I still don't know how long is the runtime of the data so I can not normalize
+ the sensitivity to 1 year runtime as the LHeC and EIC case.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/Pseudo_Data/AfterLHC/corrdr_xQ+1_f-1_samept.pdf
+	lyxscale 50
+	width 30text%
+	clip
+
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/Pseudo_Data/LHeCEIC_1y/corrdr_xQ+1_f2_samept.png
+	lyxscale 50
+	width 30text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/LHeC/corrdr_xQ+1_f3_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/LHeC/corrdr_xQ+1_f-1_samept.png
+	lyxscale 50
+	width 45text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Select sensitivity plots for the After@LHC pseudodata, in this case showing
+ 
+\begin_inset Formula $|S_{\bar{u}}|(x_{i},\mu_{i})$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:AfterLHC-sens"
 
 \end_inset
 

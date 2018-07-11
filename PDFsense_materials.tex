@@ -407,7 +407,9 @@ old W/Z datasets: dbar, ubar, u, d, s, uval, dbar/ubar, d/u. new W/Z
 datasets: dbar/ubar, d/u. By Table \ref{tab7}, \ref{tab8}
 \end{enumerate}
 
-\section{Case Study: LHeC and EIC \label{sec:Case-Study:-LHeC}}
+\section{Case Study: New Collider Pseudodata}
+
+\subsection{Case Study: LHeC and EIC \label{sec:Case-Study:-LHeC}}
 
 ......Here provide the prediction of the sensitivity analysis of LHeC\&JlabEIC
 DIS NC and CC datasets \ref{tab:LHeC}. \textcolor{red}{} We analyze
@@ -525,9 +527,47 @@ NC (down-triangle) and CC (empty-circle).}
 scattering pseudodata for the LHeC from Ref.~\cite{LHeCdata}. For
 each channel, here we list the specific physical process, number of
 associated pseudodata points, as well as the symbol indicating the
-channel in the $|S_{f}|(x_{i},\mu_{i})$ plots of Fig.~\ref{fig:LHeC}. }
+channel in the $|S_{f}|(x_{i},\mu_{i})$ plots of Fig.~\ref{fig:LHeCEIC1y-sens},
+\ref{fig:LHeCEIC1y-corr}, \ref{fig:LHeCEIC1y-dr}. }
 \label{tab:LHeC} 
 \end{table}
+
+\subsection{Case Study: After@LHC}
+
+The idea After@LHC fixed target experiments is using high boost of
+p-A collission and high liminosity to explore large-x (0.3\textasciitilde{}1)
+PDFs, enabling us to explore abundant PDF knowledge. Following are
+some opportunities of After@LHC:
+\begin{enumerate}
+\item large-x gluon and heavy quarks
+\item Boer-Mulders effect (orrelation between the parton $k_{T}$ and its
+spin)
+\item Sivers effect (correlation between the parton $k_{T}$ and the proton
+spin)
+\end{enumerate}
+We analyze the sensitivities from $d\sigma^{DY}/dy_{\mu\mu}^{cm}$
+psuedodata for pp collisions at $\sqrt{S}=115GeV$ with the $10fb^{-1}$
+luminosity and CT14NLO theoretical predictions. Because the psuedodata
+does not attach correlated errors or shifted data, I use $(T_{i}-D_{noshift})/\sigma_{uncor}$
+as residuals. Formulas of $(x,\mu)$ are: $\mu=Q=M_{ll}$ $x_{1,2}=Q/\sqrt{S}e^{\pm y}$.
+
+results:
+\begin{enumerate}
+\item {[}\textbf{\textcolor{blue}{Y}}{]} The mean $\delta r$ is 11.02 so
+the sensitivities are in general very high. $x$ in (0.003, 0.1) of
+$\bar{u}$ and $\bar{d}$ are the most sensitive (Fig. \ref{fig:AfterLHC-sens}).
+\item {[}\textbf{\textcolor{blue}{N}}\textbf{\textcolor{teal}{?}}{]} I still
+don't know how long is the runtime of the data so I can not normalize
+the sensitivity to 1 year runtime as the LHeC and EIC case.
+\end{enumerate}
+\begin{figure*}
+\includegraphics[clip,width=0.3\textwidth]{plots/Pseudo_Data/AfterLHC/corrdr_xQ+1_f-1_samept}
+\ \ \
+
+\caption{Select sensitivity plots for the After@LHC pseudodata, in this case
+showing $|S_{\bar{u}}|(x_{i},\mu_{i})$.}
+\label{fig:AfterLHC-sens} 
+\end{figure*}
 
 \section{Case Study: Constraining Physical Qunatities}
 
