@@ -1216,7 +1216,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename plots/processes/all_expt/Allexpt_corr_xQ+1_f8_samept.pdf
-	width 30text%
+	width 49text%
 
 \end_inset
 
@@ -1248,7 +1248,7 @@ status collapsed
 
 \begin_inset Graphics
 	filename plots/processes/all_expt/Allexpt_corrdr_xQ+1_f8_samept.pdf
-	width 30text%
+	width 49text%
 
 \end_inset
 
@@ -1361,7 +1361,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename plots/processes/all_expt/corr_xQ+1_f0_samept_nohigh.pdf
-	width 30text%
+	width 49text%
 
 \end_inset
 
@@ -1393,7 +1393,7 @@ status collapsed
 
 \begin_inset Graphics
 	filename plots/processes/all_expt/Allexpt_corr_hist+1_f0_samept.pdf
-	width 27text%
+	width 49text%
 
 \end_inset
 
@@ -1453,7 +1453,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename plots/processes/all_expt/corrdr_xQ+1_f0_samept_nohigh.pdf
-	width 30text%
+	width 49text%
 
 \end_inset
 
@@ -1485,7 +1485,7 @@ status collapsed
 
 \begin_inset Graphics
 	filename plots/processes/all_expt/Allexpt_corrdr_hist+1_f0_samept.pdf
-	width 27text%
+	width 49text%
 
 \end_inset
 
@@ -1750,7 +1750,7 @@ status collapsed
 \begin_inset Graphics
 	filename plots/processes/jet/new/corrdr_xQ+1_f8_samept.png
 	lyxscale 50
-	width 30text%
+	width 49text%
 	clip
 
 \end_inset
@@ -1762,7 +1762,7 @@ status collapsed
 \begin_inset Graphics
 	filename plots/processes/ttbar/corrdr_xQ+1_f8_samept.png
 	lyxscale 50
-	width 30text%
+	width 49text%
 	clip
 
 \end_inset
@@ -1796,7 +1796,7 @@ status collapsed
 \begin_inset Graphics
 	filename plots/processes/Zpt/corrdr_xQ+1_f8_samept.png
 	lyxscale 50
-	width 30text%
+	width 49text%
 	clip
 
 \end_inset
@@ -1941,7 +1941,7 @@ status collapsed
 \begin_inset Graphics
 	filename plots/processes/W/new/corrdr_xQ+1_f13_samept.png
 	lyxscale 50
-	width 30text%
+	width 49text%
 	clip
 
 \end_inset
@@ -2057,8 +2057,11 @@ name "sec:Case-Study:-LHeC"
 \end_layout
 
 \begin_layout Standard
-(results are in ./Temporary_Results/pseudo_data_tmp/ of https://smu.box.com/s/sdd9q
-bw6wvee6n7u6441j2f2jil7s2t7)
+(results are in ./Temporary_Results/pseudo_data_tmp/ of 
+\end_layout
+
+\begin_layout Standard
+https://smu.box.com/s/sdd9qbw6wvee6n7u6441j2f2jil7s2t7)
 \end_layout
 
 \begin_layout Standard
@@ -2315,7 +2318,7 @@ status open
 \begin_inset Graphics
 	filename plots/Pseudo_Data/LHeCEIC_1y/corrdr_xQ+1_f0_samept.png
 	lyxscale 50
-	width 30text%
+	width 60text%
 	clip
 
 \end_inset
@@ -2349,7 +2352,7 @@ status collapsed
 \begin_inset Graphics
 	filename plots/Pseudo_Data/LHeCEIC_1y/corrdr_xQ+1_f2_samept.png
 	lyxscale 50
-	width 30text%
+	width 60text%
 	clip
 
 \end_inset
@@ -2567,7 +2570,7 @@ status collapsed
 \begin_inset Graphics
 	filename plots/Pseudo_Data/LHeCEIC_1y/corr_xQ+1_f3_samept.png
 	lyxscale 50
-	width 30text%
+	width 60text%
 	clip
 
 \end_inset
@@ -2601,7 +2604,7 @@ status collapsed
 \begin_inset Graphics
 	filename plots/Pseudo_Data/LHeCEIC_1y/corr_xQ+1_f-1_samept.png
 	lyxscale 50
-	width 30text%
+	width 60text%
 	clip
 
 \end_inset
@@ -2708,7 +2711,7 @@ status open
 \begin_inset Graphics
 	filename plots/Pseudo_Data/LHeCEIC_1y/dr_xQ+1_samept.png
 	lyxscale 50
-	width 30text%
+	width 60text%
 	clip
 
 \end_inset
@@ -3465,8 +3468,11 @@ Case Study: After@LHC
 \end_layout
 
 \begin_layout Standard
-(results are in ./Temporary_Results/pseudo_data_tmp/AfterLHC of https://smu.box.com
-/s/sdd9qbw6wvee6n7u6441j2f2jil7s2t7)
+(results are in ./Temporary_Results/pseudo_data_tmp/AfterLHC of 
+\end_layout
+
+\begin_layout Standard
+https://smu.box.com/s/sdd9qbw6wvee6n7u6441j2f2jil7s2t7)
 \end_layout
 
 \begin_layout Standard
@@ -3593,7 +3599,7 @@ status open
 \begin_inset Graphics
 	filename plots/Pseudo_Data/AfterLHC/corrdr_xQ+1_f-1_samept.pdf
 	lyxscale 50
-	width 30text%
+	width 60text%
 	clip
 
 \end_inset
@@ -4092,7 +4098,7 @@ status open
 \begin_inset Graphics
 	filename plots/constrain_quantities/sens_correrror_+1_f8_thumbnail.png
 	lyxscale 50
-	width 30text%
+	width 60text%
 	clip
 
 \end_inset
@@ -5249,7 +5255,7 @@ status open
 \begin_inset Graphics
 	filename plots/MellinMoment/mellin_moment_data_x/corr_xQ+1_f22_samept.png
 	lyxscale 50
-	width 30text%
+	width 45text%
 	clip
 
 \end_inset
@@ -5295,7 +5301,7 @@ status collapsed
 \begin_inset Graphics
 	filename plots/MellinMoment/mellin_moment_data_x/corr_xQ+1_f25_samept.png
 	lyxscale 50
-	width 30text%
+	width 45text%
 	clip
 
 \end_inset
@@ -5341,7 +5347,7 @@ status collapsed
 \begin_inset Graphics
 	filename plots/MellinMoment/mellin_moment_data_x/corr_xQ+1_f10_samept.png
 	lyxscale 50
-	width 30text%
+	width 45text%
 	clip
 
 \end_inset
@@ -5430,7 +5436,7 @@ status open
 \begin_inset Graphics
 	filename plots/MellinMoment/mellin_moment_data_1-x/corr_xQ+1_f9_samept.png
 	lyxscale 50
-	width 30text%
+	width 49text%
 	clip
 
 \end_inset
@@ -7632,7 +7638,7 @@ status open
 \begin_inset Graphics
 	filename plots/HERA2_HERA2NoJet/HERA2/residual_xQ+1_samept_thumb.png
 	lyxscale 50
-	width 30text%
+	width 45text%
 	clip
 
 \end_inset
@@ -7666,7 +7672,7 @@ status collapsed
 \begin_inset Graphics
 	filename plots/HERA2_HERA2NoJet/HERA2NoJet/residual_xQ+1_samept_thumb.png
 	lyxscale 50
-	width 30text%
+	width 45text%
 	clip
 
 \end_inset
@@ -7678,7 +7684,7 @@ status collapsed
 \begin_inset Graphics
 	filename plots/HERA2_HERA2NoJet/HERA2/dr_xQ+1_samept_thumb.png
 	lyxscale 50
-	width 30text%
+	width 45text%
 	clip
 
 \end_inset
@@ -7712,7 +7718,7 @@ status collapsed
 \begin_inset Graphics
 	filename plots/HERA2_HERA2NoJet/HERA2NoJet/dr_xQ+1_samept_thumb.png
 	lyxscale 50
-	width 30text%
+	width 45text%
 	clip
 
 \end_inset
@@ -7762,7 +7768,7 @@ status open
 \begin_inset Graphics
 	filename plots/HERA2_HERA2NoJet/HERA2/corr_xQ+1_f0_samept_thumb.png
 	lyxscale 50
-	width 30text%
+	width 45text%
 	clip
 
 \end_inset
@@ -7796,7 +7802,7 @@ status collapsed
 \begin_inset Graphics
 	filename plots/HERA2_HERA2NoJet/HERA2NoJet/corr_xQ+1_f0_samept_thumb.png
 	lyxscale 50
-	width 30text%
+	width 45text%
 	clip
 
 \end_inset
@@ -7808,7 +7814,7 @@ status collapsed
 \begin_inset Graphics
 	filename plots/HERA2_HERA2NoJet/HERA2/corrdr_xQ+1_f0_samept_thumb.png
 	lyxscale 50
-	width 30text%
+	width 45text%
 	clip
 
 \end_inset
@@ -7842,7 +7848,7 @@ status collapsed
 \begin_inset Graphics
 	filename plots/HERA2_HERA2NoJet/HERA2NoJet/corrdr_xQ+1_f0_samept_thumb.png
 	lyxscale 50
-	width 30text%
+	width 45text%
 	clip
 
 \end_inset
@@ -7884,7 +7890,7 @@ status open
 \begin_inset Graphics
 	filename plots/HERA2_HERA2NoJet/rd3/CT14HERA2NNLOall_AbsSens_newSens_formula_cutbrokenpoints/residual_all_norm_Reciprocate_distance_rd3B.eps
 	lyxscale 50
-	width 30text%
+	width 45text%
 	clip
 
 \end_inset
@@ -7918,7 +7924,7 @@ status collapsed
 \begin_inset Graphics
 	filename plots/HERA2_HERA2NoJet/rd3/HERA2_no_jet/residual_all_norm_Reciprocate_distance_rd3B.eps
 	lyxscale 50
-	width 30text%
+	width 45text%
 	clip
 
 \end_inset
@@ -8073,7 +8079,7 @@ status open
 \begin_inset Graphics
 	filename plots/HERA2_HERA2NoJet/tensorprojector/pca.pdf
 	lyxscale 50
-	width 30text%
+	width 49text%
 	clip
 
 \end_inset
@@ -8107,7 +8113,7 @@ status collapsed
 \begin_inset Graphics
 	filename plots/HERA2_HERA2NoJet/tensorprojector/tsne.pdf
 	lyxscale 50
-	width 30text%
+	width 49text%
 	clip
 
 \end_inset
@@ -8331,7 +8337,7 @@ status open
 \begin_inset Graphics
 	filename plots/sens_xrange/Sens_xrange_HERA2plusLHC_CT14HERA2NNLO_Q1_3.pdf
 	lyxscale 50
-	width 30text%
+	width 49text%
 	clip
 
 \end_inset
@@ -8364,7 +8370,7 @@ status collapsed
 
 \begin_inset Graphics
 	filename plots/sens_xrange/Sens_xrange_HERA2plusLHC_CT14HERA2NNLO_Q125.pdf
-	width 30text%
+	width 49text%
 
 \end_inset
 
@@ -8397,7 +8403,7 @@ status collapsed
 \begin_inset Graphics
 	filename plots/sens_xrange/HERA2_LHC_JP_TTbar_Zpt_singlesens_g.pdf
 	lyxscale 50
-	width 30text%
+	width 49text%
 	clip
 
 \end_inset
@@ -10029,7 +10035,7 @@ status open
 \begin_inset Graphics
 	filename plots/LinearFitPDFs/Corr_dfxQoverdTPearsonC_247.pdf
 	lyxscale 50
-	width 30text%
+	width 49text%
 	clip
 
 \end_inset
@@ -10063,7 +10069,7 @@ status collapsed
 \begin_inset Graphics
 	filename plots/LinearFitPDFs/BestFit_coefsdfNorm_vs_x_203.pdf
 	lyxscale 50
-	width 30text%
+	width 49text%
 	clip
 
 \end_inset
@@ -10097,7 +10103,7 @@ status collapsed
 \begin_inset Graphics
 	filename plots/LinearFitPDFs/BestFit_coefsRatio_vs_x_203.pdf
 	lyxscale 50
-	width 30text%
+	width 49text%
 	clip
 
 \end_inset
